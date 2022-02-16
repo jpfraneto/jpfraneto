@@ -1,0 +1,42 @@
+[
+  {
+    "year": "2022",
+    "timeline": [
+      {
+        "title": {
+          "es": "Nació mi hija Mila 🐣",
+          "en": "My little Mila was born"
+        },
+        "description": {
+          "es": "Descripción de esta entrada",
+          "en": "Description of this thing"
+        }
+      }
+    ]
+  },
+  {
+    "year": "2016",
+    "timeline": [
+      {
+        "title": {
+          "es": "Mudanza a Puerto Varas",
+          "en": "Moved to Puerto Varas"
+        },
+        "description": {
+          "es": "Descripción de esta entrada",
+          "en": "Description of this thing"
+        }
+      },
+      {
+        "title": {
+          "es": "Me gradué de la Universidad",
+          "en": "Finished University"
+        },
+        "description": {
+          "es": "Descripción de esta entrada",
+          "en": "Description of this thing"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts"],
+  "sourcesContent": ["import { defineDocumentType, makeSource } from 'contentlayer/source-files';\nimport highlight from 'rehype-highlight';\n\nexport const Post = defineDocumentType(() => ({\n  name: 'Post',\n  filePathPattern: `**/*.md`,\n  fields: {\n    title: { type: 'string', required: true },\n    date: { type: 'date' },\n  },\n}));\n\nexport default makeSource({\n  contentDirPath: 'posts',\n  documentTypes: [Post],\n  markdown: { rehypePlugins: [highlight] },\n});\n"],
+  "mappings": ";AAAA;AACA;AAEO,IAAM,OAAO,mBAAmB,MAAO;AAAA,EAC5C,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,QAAQ;AAAA,IACN,OAAO,EAAE,MAAM,UAAU,UAAU;AAAA,IACnC,MAAM,EAAE,MAAM;AAAA;AAAA;AAIlB,IAAO,8BAAQ,WAAW;AAAA,EACxB,gBAAgB;AAAA,EAChB,eAAe,CAAC;AAAA,EAChB,UAAU,EAAE,eAAe,CAAC;AAAA;",
+  "names": []
+}
