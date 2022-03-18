@@ -1,4 +1,7 @@
 module.exports = {
+  images: {
+    domains: ['i.discogs.com'],
+  },
   experimental: { esmExternals: true },
   pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
   webpack(config, options) {

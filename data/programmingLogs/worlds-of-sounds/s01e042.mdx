@@ -1,0 +1,20 @@
+---
+title: Pushing it to production to iterate
+date: 092022III
+index: 042
+description: Day 042 of 108 - The Open Source Factory Last Sprint
+loomRecording: https://www.loom.com/share/768266989928445bb1c4914d126d7d5e
+music: https://soundcloud.com/temple-tears/temple-tears-kamiwaza-21-05-21-home-stage
+building: www.worldsofsound.com
+sessionDuration: 2hours04minutes
+---
+
+Was it that the problem that I was facing was a small detail in the mongodb.js file? There was a variable called options that did not exist in the scope of the production environment. Maybe that was just it. Now I'm going to check it.
+
+Holy shit. That was it. The very interesting part was how I debugged it: In the logs of Vercel I got a message that there was a variable called options that was not defined, so what I did was to search in VScode for 'options' and what came was that file, and there I was able to recognize this missing assignment. This is something that I'll have to keep in mind for the future!
+
+---
+
+It's funny how those small errors can take up so much time of the process and then you find them and realize that they were so small and it just works like that. Pushing forward until you realize how stupid you were! And it feels good, humbling to feel this way.
+
+Today was a good session. I'm not in the best place personally because yesterday was a tough day, but I managed to put in this 2 hours that will add up, I'm sure. The app is getting better, I feel more comfortable with it, and it is working in production, which enables me to play with it and through that process add stuff.

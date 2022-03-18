@@ -1,11 +1,11 @@
-import Navbar from '../components/Navbar';
+import BottomNavbar from '../components/Layout/BottomNavbar';
 import '../styles/globals.css';
 
 function App({ Component, pageProps }) {
   return (
     <>
-      <Navbar />
       <Component {...pageProps} />
+      <BottomNavbar />
     </>
   );
 }
