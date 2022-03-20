@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
 
 .main {
-  height: calc(100vh - 30px);
+  height: 100vh;
   width: 100%;
   background-image: url('/images/jpultima.jpeg');
   background-repeat: no-repeat;
@@ -36,7 +36,7 @@
 .thirdEyeContainer {
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 50%;
   transform: translateX(-50%);
 }
 
@@ -103,4 +103,26 @@
   width: 388px;
   margin: 0 auto;
   border: solid white 3px;
+}
+
+.linksList {
+  position: absolute;
+  left: 50%;
+  bottom: 40%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.linksList ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.linksList ul li {
+  margin: 0 8px;
+}
+
+.activeThirdEye {
+  background-color: red;
 }

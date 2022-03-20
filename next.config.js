@@ -1,4 +1,6 @@
-module.exports = {
+const { withContentlayer } = require('next-contentlayer');
+
+module.exports = withContentlayer()({
   images: {
     domains: ['i.discogs.com'],
   },
@@ -18,4 +20,4 @@ module.exports = {
 
     return config;
   },
-};
+});
