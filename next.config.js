@@ -2,7 +2,7 @@ const { withContentlayer } = require('next-contentlayer');
 
 module.exports = withContentlayer()({
   images: {
-    domains: ['i.discogs.com'],
+    domains: ['i.discogs.com', 'images.unsplash.com'],
   },
   experimental: { esmExternals: true },
   pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],

@@ -1,0 +1,8 @@
+.contentContainer {
+  width: 777px;
+  background-color: pink;
+  margin: 0 auto;
+  height: 100vh;
+  overflow-y: scroll;
+  text-align: center;
+}

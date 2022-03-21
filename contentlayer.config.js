@@ -2,46 +2,39 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 
 export const ProgrammingLog = defineDocumentType(() => ({
   name: 'ProgrammingLog',
-  filePathPattern: `**/*.mdx`,
+  filePathPattern: `programming-logs/**/*.mdx`,
+  contentType: 'mdx',
   fields: {
     title: {
       type: 'string',
-      description: 'The title of the programming log',
       required: true,
     },
     date: {
       type: 'string',
-      description: 'The date of the post',
       required: true,
     },
     index: {
       type: 'number',
-      description: 'The index of the post',
       required: true,
     },
     description: {
       type: 'string',
-      description: 'The description of the post',
       required: true,
     },
     loomRecording: {
       type: 'string',
-      description: 'The recording of the session',
       required: true,
     },
     music: {
       type: 'string',
-      description: 'The music that was played in the session',
       required: false,
     },
     building: {
       type: 'string',
-      description: 'The project that is being built in this session',
       required: false,
     },
-    duration: {
+    sessionDuration: {
       type: 'string',
-      description: 'The duration of the session',
       required: false,
     },
   },
@@ -49,12 +42,52 @@ export const ProgrammingLog = defineDocumentType(() => ({
     url: {
       type: 'string',
       resolve: programmingLog =>
-        `/programming-logs/${programmingLog._raw.flattenedPath}`,
+        `/programming/programming-logs/${programmingLog.date}`,
+    },
+  },
+}));
+
+export const YogaLog = defineDocumentType(() => ({
+  name: 'YogaLog',
+  filePathPattern: `yoga-logs/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+    },
+    kriya: {
+      type: 'string',
+    },
+    date: {
+      type: 'string',
+      required: true,
+    },
+    index: {
+      type: 'number',
+      required: true,
+    },
+    description: {
+      type: 'string',
+      required: true,
+    },
+    loomRecording: {
+      type: 'string',
+      required: true,
+    },
+    sessionDuration: {
+      type: 'string',
+      required: false,
+    },
+  },
+  computedFields: {
+    url: {
+      type: 'string',
+      resolve: yogaLog => `/yoga/${yogaLog._raw.flattenedPath}`,
     },
   },
 }));
 
 export default makeSource({
-  contentDirPath: 'data/programming-logs',
-  documentTypes: [ProgrammingLog],
+  contentDirPath: 'data',
+  documentTypes: [ProgrammingLog, YogaLog],
 });

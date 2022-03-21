@@ -5,6 +5,7 @@ import { compareDesc, format, parseISO } from 'date-fns';
 import { allProgrammingLogs } from 'contentlayer/generated';
 
 export async function getStaticProps() {
+  console.log('asd', allProgrammingLogs);
   const logs = allProgrammingLogs.sort((a, b) => {
     return a.index > b.index;
   });
@@ -12,15 +13,17 @@ export async function getStaticProps() {
 }
 
 function ProgrammingLogCard(log) {
+  console.log(log);
   return (
     <div>
       <p>
-        {log.date} {log.index} {log.url}
+        {log.date} {log.index}
       </p>
       <h2>
         <Link href={log.url}>
           <a>{log.title}</a>
         </Link>
+        <p>{log.url}</p>
       </h2>
     </div>
   );

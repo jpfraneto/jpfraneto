@@ -1,0 +1,10 @@
+.container {
+  background-color: red;
+  height: 100vh;
+}
+
+.linksList ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}

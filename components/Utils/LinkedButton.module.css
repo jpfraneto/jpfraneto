@@ -1,0 +1,14 @@
+.btnContainer {
+  margin: 8px auto;
+  width: fit-content;
+}
+
+.btn {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  padding: 6px 12px;
+}
