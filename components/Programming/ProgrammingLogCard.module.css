@@ -1,0 +1,11 @@
+.logCard {
+  border: solid black 2px;
+  margin: 2px 3px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.logCard:hover {
+  background-color: black;
+  color: white;
+}

@@ -5,17 +5,17 @@ import { allProgrammingLogs } from 'contentlayer/generated';
 
 export async function getStaticPaths() {
   const paths = allProgrammingLogs.map(log => {
-    return [{ params: { date: log.date } }];
+    return { params: { date: log.date } };
   });
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const log = allProgrammingLogs.find(log => {
-    return log.date === `${params.date}`;
+    return log.date === params.date;
   });
   return { props: { log } };
 }

@@ -24,7 +24,7 @@ export default function Home() {
           <p>Doing things in a new way. </p>
           <p>
             This website is an exploration into my ideas, into my capacities,
-            into what I believe
+            into what I believe.
           </p>
           <p>It is my window to the world.</p>
           <p>It is where I show you my world.</p>
@@ -39,6 +39,97 @@ export default function Home() {
               <a className={styles.enterBtn}>Enter</a>
             </Link>
           </div>
+        </div>
+        <div class='wrapper'>
+          <svg
+            class='triangle-canvas'
+            viewBox='0 0 1000 1000'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <polygon
+              class='triangle triangle-1'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-2'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-3'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-4'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-5'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-6'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-7'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-8'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-9'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-10'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-11'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-12'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-13'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-14'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-15'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-16'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-17'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-18'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-19'
+              points='500,200 759,650 241,650'
+            />
+            <polygon
+              class='triangle triangle-20'
+              points='500,200 759,650 241,650'
+            />
+          </svg>
+        </div>
+        <div className={styles.bottomNavbar}>
+          <p>From South America, with ♡</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,7 @@
+.cardContainer {
+  width: fit-content;
+  border: solid black 1px;
+  margin: 8px;
+  padding: 8px;
+  width: 333px;
+}

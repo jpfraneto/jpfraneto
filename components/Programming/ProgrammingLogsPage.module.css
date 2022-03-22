@@ -1,0 +1,17 @@
+.mainContainer {
+  height: 100vh;
+  background-color: pink;
+}
+
+.logsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.otherContainer {
+  width: 88%;
+  margin-top: 20px;
+  height: 200px;
+  background-color: blueviolet;
+  margin: 0 auto;
+}

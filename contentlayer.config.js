@@ -7,35 +7,27 @@ export const ProgrammingLog = defineDocumentType(() => ({
   fields: {
     title: {
       type: 'string',
-      required: true,
     },
     date: {
       type: 'string',
-      required: true,
     },
     index: {
       type: 'number',
-      required: true,
     },
     description: {
       type: 'string',
-      required: true,
     },
     loomRecording: {
       type: 'string',
-      required: true,
     },
     music: {
       type: 'string',
-      required: false,
     },
     building: {
       type: 'string',
-      required: false,
     },
     sessionDuration: {
       type: 'string',
-      required: false,
     },
   },
   computedFields: {
@@ -66,10 +58,7 @@ export const YogaLog = defineDocumentType(() => ({
       type: 'number',
       required: true,
     },
-    description: {
-      type: 'string',
-      required: true,
-    },
+
     loomRecording: {
       type: 'string',
       required: true,

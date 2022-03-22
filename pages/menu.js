@@ -10,12 +10,12 @@ const menuOptions = [
   { link: '/woodwork', name: 'Woodwork', id: 'woodwork123' },
   { link: '/talking', name: 'Talking', id: 'talking123' },
   { link: '/thoughts', name: 'Thoughts', id: 'thoughts123' },
+  { link: '/music', name: 'Music', id: 'music123' },
 ];
 
 const Menu = () => {
   return (
     <div className={styles.container}>
-      <h3>Menu</h3>
       <div className={styles.linksList}>
         <ul>
           {menuOptions.map(item => (

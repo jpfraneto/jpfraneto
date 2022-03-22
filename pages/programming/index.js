@@ -3,30 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { compareDesc, format, parseISO } from 'date-fns';
 import { allProgrammingLogs } from 'contentlayer/generated';
+import ProgrammingLogsPage from '../../components/Programming/ProgrammingLogsPage';
 
 export async function getStaticProps() {
-  console.log('asd', allProgrammingLogs);
   const logs = allProgrammingLogs.sort((a, b) => {
-    return a.index > b.index;
+    return a.index > b.index ? 1 : -1;
   });
   return { props: { logs } };
-}
-
-function ProgrammingLogCard(log) {
-  console.log(log);
-  return (
-    <div>
-      <p>
-        {log.date} {log.index}
-      </p>
-      <h2>
-        <Link href={log.url}>
-          <a>{log.title}</a>
-        </Link>
-        <p>{log.url}</p>
-      </h2>
-    </div>
-  );
 }
 
 export default function Home({ logs }) {
@@ -35,12 +18,7 @@ export default function Home({ logs }) {
       <Head>
         <title>PROGRAMMING LOGS!</title>
       </Head>
-
-      <h1>Here go the programming logs</h1>
-
-      {logs.map((log, idx) => (
-        <ProgrammingLogCard key={idx} {...log} />
-      ))}
+      <ProgrammingLogsPage logs={logs} />
     </div>
   );
 }

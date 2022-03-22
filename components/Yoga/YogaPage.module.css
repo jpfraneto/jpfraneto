@@ -1,0 +1,11 @@
+.mainContainer {
+  height: 100vh;
+  text-align: center;
+  padding: 8px;
+  background-color: red;
+}
+
+.logsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
