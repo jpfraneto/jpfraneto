@@ -1,0 +1,7 @@
+.albumCardContainer {
+  border: solid black 1px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  width: fit-content;
+}

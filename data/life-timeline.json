@@ -553,23 +553,5 @@
         }
       }
     ]
-  },
-  {
-    "year": {
-      "es": "65 millones a.C.",
-      "en": "65 Millions B.C."
-    },
-    "timeline": [
-      {
-        "title": {
-          "es": "Los dinosaurios vagaban por la tierra",
-          "en": "Dinosaurs Roamed the Earth"
-        },
-        "description": {
-          "es": "RAWWWWWWRRR 🦖 🦂 🦕",
-          "en": "RAWWWWWWRRR 🦖 🦂 🦕"
-        }
-      }
-    ]
   }
 ]

@@ -1,8 +1,16 @@
 .contentContainer {
   width: 777px;
-  background-color: pink;
   margin: 0 auto;
   height: 100vh;
   overflow-y: scroll;
   text-align: center;
+}
+
+.contentContainer button {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
 }

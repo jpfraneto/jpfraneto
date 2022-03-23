@@ -1,8 +1,11 @@
 .logCard {
   border: solid black 2px;
   margin: 2px 3px;
+  width: 111px;
+  text-align: center;
   padding: 3px;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .logCard:hover {

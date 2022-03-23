@@ -42,3 +42,11 @@
   position: fixed;
   bottom: 8px;
 }
+
+@media only screen and (max-width: 800px) {
+  .main {
+    flex-direction: column;
+    font-size: 0.8rem;
+    justify-content: flex-start;
+  }
+}

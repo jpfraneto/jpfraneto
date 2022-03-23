@@ -1,0 +1,13 @@
+.mainContainer {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.albumsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.albumImage {
+  cursor: pointer;
+}

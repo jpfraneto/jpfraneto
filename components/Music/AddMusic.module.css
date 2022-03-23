@@ -1,0 +1,48 @@
+.mainContainer {
+  height: 100vh;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addAlbumFormContainer {
+  background-color: white;
+  height: fit-content;
+  min-width: 333px;
+  width: 44%;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+
+.addAlbumForm {
+  width: 100%;
+}
+
+.addAlbumForm > * {
+  width: 88%;
+  height: 33px;
+  border-radius: 8px;
+  border: solid black 1px;
+  padding: 2px 4px;
+  display: block;
+  margin: 8px auto;
+}
+
+.addAlbumForm button {
+  font-size: 1.6rem;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addAlbumForm button:hover {
+  background-color: white;
+  color: black;
+}
