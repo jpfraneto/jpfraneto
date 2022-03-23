@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 
 const ContentLayout = ({ content }) => {
   const router = useRouter();
+  if (!content) return <p>Loading...</p>;
   return (
     <div className={styles.contentContainer}>
       <h1>

@@ -1,4 +1,11 @@
-export default function App() {
+import React, { useState, useEffect } from 'react';
+
+import { setup, isSupported } from '@loomhq/record-sdk';
+import { oembed } from '@loomhq/loom-embed';
+
+const BUTTON_ID = 'loom-record-sdk-button';
+
+export default function Sandbox() {
   const [videoHTML, setVideoHTML] = useState('');
 
   useEffect(() => {
