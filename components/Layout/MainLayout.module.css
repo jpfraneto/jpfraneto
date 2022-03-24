@@ -1,0 +1,6 @@
+.mainLayoutContainer {
+  height: calc(100vh - 44px);
+  width: 100%;
+  overflow-y: scroll;
+  border: solid white 4px;
+}

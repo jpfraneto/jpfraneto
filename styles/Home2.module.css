@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
 
 .main {
-  height: 100vh;
-  width: 100%;
   background-image: url('/images/jpultima.jpeg');
   background-repeat: no-repeat;
   background-position: center;
@@ -13,7 +11,7 @@
   color: white;
   position: relative;
   padding: 8px;
-  border: 8px white solid;
+  height: 100%;
 }
 
 .enterBtnContainer {
@@ -45,8 +43,7 @@
 
 @media only screen and (max-width: 800px) {
   .main {
-    flex-direction: column;
     font-size: 0.8rem;
-    justify-content: flex-start;
+    text-align: right;
   }
 }

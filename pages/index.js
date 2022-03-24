@@ -1,17 +1,25 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home2.module.css';
 import Image from 'next/image';
 
 export default function Home() {
+  const welcomes = ['Bienvenid@', 'Welcome', 'Bounjour'];
+  const [welcomeText, setWelcomeText] = useState(welcomes[0]);
+  useEffect(() => {
+    setInterval(() => {
+      setWelcomeText(welcomes[Math.floor(Math.random() * welcomes.length)]);
+    }, 2000);
+  }, []);
   return (
-    <div>
+    <div className={styles.main}>
       <Head>
         <title>· jp ·</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className={styles.main}>
+      <>
         <div className={styles.presentationContainer}>
           <h3>My name is jp, and I'm in a quest.</h3>
           <p>To reimagine how we interact with the web.</p>
@@ -36,7 +44,7 @@ export default function Home() {
           <h4>I'm glad you are here.</h4>
           <div className={styles.enterBtnContainer}>
             <Link href='/menu'>
-              <a className={styles.enterBtn}>Enter</a>
+              <a className={styles.enterBtn}>{welcomeText}</a>
             </Link>
           </div>
         </div>
@@ -44,7 +52,7 @@ export default function Home() {
         <div className={styles.bottomNavbar}>
           <p>From South America, with ♡</p>
         </div>
-      </div>
+      </>
     </div>
   );
 }

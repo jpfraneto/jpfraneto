@@ -1,0 +1,9 @@
+.loomRecordingContainer {
+  width: 222px;
+  margin: 8px;
+}
+
+.mainLayoutContainer {
+  display: flex;
+  justify-content: center;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import ContentLayout from '../../../components/Layout/ContentLayout';
 import { allYogaLogs } from 'contentlayer/generated';
+import YogaLayout from '../../../components/Yoga/YogaLayout';
 
 export async function getStaticPaths() {
   const paths = allYogaLogs.map(log => {
@@ -19,6 +20,10 @@ export async function getStaticProps({ params }) {
   return { props: { log } };
 }
 
+// export default function YogaLogPage({ log }) {
+//   return <ContentLayout content={log} />;
+// }
+
 export default function YogaLogPage({ log }) {
-  return <ContentLayout content={log} />;
+  return <YogaLayout content={log} />;
 }

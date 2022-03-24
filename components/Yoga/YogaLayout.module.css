@@ -1,0 +1,35 @@
+.mainContainer {
+  max-width: 888px;
+  width: 80%;
+  margin: 20px auto;
+  background-color: red;
+  display: flex;
+}
+
+.contentContainer {
+  width: 70%;
+  background-color: peru;
+}
+
+.innerContainer {
+  text-align: center;
+  width: 88%;
+  margin: 0 auto;
+}
+
+.navContainer {
+  width: 30%;
+  padding: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+  .contentContainer {
+    width: 90%;
+  }
+  .navContainer {
+    width: 90%;
+  }
+}

@@ -22,7 +22,6 @@ export async function getStaticProps({ params }) {
   const album = await db
     .collection('albums')
     .findOne({ _id: new ObjectId(params.id) });
-  console.log('THE ALBUM IS: ', { ...album });
   return { props: { album: { ...album, _id: album._id.toString() } } };
 }
 

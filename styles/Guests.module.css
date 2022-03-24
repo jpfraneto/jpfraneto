@@ -1,4 +1,53 @@
 .guestsContainer {
-  height: 100vh;
-  background-color: red;
+  height: 100%;
+  background-color: violet;
+  padding: 8px;
+  text-align: center;
+}
+
+.sayHelloBtn {
+  font-size: 3rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: 2px 2px black;
+  cursor: pointer;
+}
+
+.loomRecorderContainer {
+  width: 444px;
+  border: solid black 2px;
+  margin: 10px auto;
+}
+
+.loomRecorderBtn {
+  background: url(https://i.imgur.com/tXLqhgC.png) no-repeat;
+  background-size: 90px;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  border: none;
+}
+
+.nameInputField {
+  width: 88%;
+  background-color: violet;
+  color: black;
+  padding: 2px 8px;
+  border: none;
+  filter: brightness(85%);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.addRecordingBtn {
+  border: solid black 2px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: rgb(179, 97, 179);
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.addRecordingBtn:hover {
+  filter: brightness(85%);
 }
