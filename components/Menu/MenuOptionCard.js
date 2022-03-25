@@ -6,15 +6,20 @@ import LinkedButton from '../Utils/LinkedButton';
 
 const MenuOptionCard = ({ name, link }) => {
   return (
-    <div className={styles.cardContainer}>
-      <h3>{name}</h3>
-      <div className={styles.imageContainer}>
-        <p>IMAGE</p>
-      </div>
-
-      <LinkedButton link={link} text={name} />
-    </div>
+    <Link href={link}>
+      <a>{name}</a>
+    </Link>
   );
+  // return (
+  //   <div className={styles.cardContainer}>
+  //     <h3>{name}</h3>
+  //     <div className={styles.imageContainer}>
+  //       <p>IMAGE</p>
+  //     </div>
+
+  //     <LinkedButton link={link} text={name} />
+  //   </div>
+  // );
 };
 
 export default MenuOptionCard;

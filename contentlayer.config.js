@@ -76,7 +76,49 @@ export const YogaLog = defineDocumentType(() => ({
   },
 }));
 
+export const EducationLog = defineDocumentType(() => ({
+  name: 'EducationLog',
+  filePathPattern: `education/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    name: {
+      type: 'string',
+    },
+    website: {
+      type: 'string',
+    },
+    provider: {
+      type: 'string',
+    },
+    dateFrom: {
+      type: 'string',
+    },
+    dateTo: {
+      type: 'string',
+    },
+
+    extraInfo: {
+      type: 'string',
+    },
+    image: {
+      type: 'string',
+    },
+    tags: {
+      type: 'string',
+    },
+    id: {
+      type: 'string',
+    },
+  },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: educationLog => `/${educationLog._raw.flattenedPath}`,
+    },
+  },
+}));
+
 export default makeSource({
-  contentDirPath: 'data',
-  documentTypes: [ProgrammingLog, YogaLog],
+  contentDirPath: 'thoughts',
+  documentTypes: [ProgrammingLog, YogaLog, EducationLog],
 });

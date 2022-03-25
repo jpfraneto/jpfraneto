@@ -15,7 +15,7 @@ const GuestsPage = ({ looms }) => {
   const [videoInfo, setVideoInfo] = useState({});
   const [sayHello, setSayHello] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [loomResponseId, setLoomResponseId] = useState(null);
+  const [loomVideos, setLoomVideos] = useState(looms);
   useEffect(() => {
     async function setupLoom() {
       const { supported, error } = await isSupported();
@@ -60,60 +60,58 @@ const GuestsPage = ({ looms }) => {
     const response = await fetch('/api/loom', reqParams);
     const data = await response.json();
     setLoading(false);
-    setLoomResponseId(data.insertedId);
+    setSayHello(false);
+    setLoomVideos(prev => [...prev, { _id: data.insertedId, videoInfo }]);
   };
   return (
     <div className={styles.guestsContainer}>
-      {loomResponseId ? (
-        <p>It was added to the DB with the following id {loomResponseId}!</p>
-      ) : (
-        <>
-          {!loading ? (
-            <>
-              {' '}
-              <button
-                className={styles.sayHelloBtn}
-                onClick={() => setSayHello(!sayHello)}
-              >
-                {!sayHello ? 'Say Hello!' : 'Dont say Hello!'}
-              </button>
-              <LoomsLayout looms={looms} />
-              {sayHello && (
-                <div className={styles.loomRecorderContainer}>
-                  <p>Click this button to spread a message:</p>
-                  <button
-                    className={styles.loomRecorderBtn}
-                    id={BUTTON_ID}
-                  ></button>
-                  <div dangerouslySetInnerHTML={{ __html: videoHTML }}></div>
-                  {videoHTML && (
+      <>
+        {' '}
+        <button
+          className={styles.sayHelloBtn}
+          onClick={() => setSayHello(!sayHello)}
+        >
+          {!sayHello ? 'Say Hello!' : 'Dont say Hello!'}
+        </button>
+        <LoomsLayout looms={loomVideos} />
+        {sayHello && (
+          <div className={styles.loomRecorderContainer}>
+            {loading ? (
+              <p>Loading!!</p>
+            ) : (
+              <>
+                {' '}
+                <p>Click this button to spread a message:</p>
+                <button
+                  className={styles.loomRecorderBtn}
+                  id={BUTTON_ID}
+                ></button>
+                <div dangerouslySetInnerHTML={{ __html: videoHTML }}></div>
+                {videoHTML && (
+                  <div>
                     <div>
-                      <div>
-                        <input
-                          className={styles.nameInputField}
-                          type='text'
-                          name='guestName'
-                          placeholder='Who are you?'
-                          onChange={handleChange}
-                        />
-                      </div>
+                      <input
+                        className={styles.nameInputField}
+                        type='text'
+                        name='guestName'
+                        placeholder='Who are you?'
+                        onChange={handleChange}
+                      />
                     </div>
-                  )}
-                  <button
-                    type='button'
-                    className={styles.addRecordingBtn}
-                    onClick={addVideoToDB}
-                  >
-                    Add Message
-                  </button>
-                </div>
-              )}
-            </>
-          ) : (
-            <p>Loading!!</p>
-          )}
-        </>
-      )}
+                  </div>
+                )}
+                <button
+                  type='button'
+                  className={styles.addRecordingBtn}
+                  onClick={addVideoToDB}
+                >
+                  Add Message
+                </button>
+              </>
+            )}
+          </div>
+        )}
+      </>
     </div>
   );
 };
@@ -125,7 +123,7 @@ export async function getStaticProps() {
   const data = await db.collection('looms').find({}).toArray();
   return {
     props: {
-      looms: data,
+      looms: JSON.parse(JSON.stringify(data)),
     },
   };
 }
