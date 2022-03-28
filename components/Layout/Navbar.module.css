@@ -1,7 +1,7 @@
 .navContainer {
   height: 44px;
   width: 100%;
-  background-color: bisque;
+  background-color: black;
   border-bottom: 4px solid black;
   font-size: 2rem;
   font-weight: bold;
@@ -14,7 +14,8 @@
 
 .navContainer a {
   text-decoration: none;
-  color: black;
+  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 .sayHiBtn {
@@ -32,6 +33,11 @@
 .sayHiBtn:hover {
   background-color: black;
   color: violet;
+  box-shadow: 0 0 5px 5px violet;
+}
+
+.nameLink {
+  font-family: ;
 }
 
 @media only screen and (max-width: 800px) {

@@ -41,7 +41,7 @@ export const ProgrammingLog = defineDocumentType(() => ({
 
 export const YogaLog = defineDocumentType(() => ({
   name: 'YogaLog',
-  filePathPattern: `yoga-logs/*.mdx`,
+  filePathPattern: `yoga/*.mdx`,
   contentType: 'mdx',
   fields: {
     title: {
@@ -52,7 +52,6 @@ export const YogaLog = defineDocumentType(() => ({
     },
     date: {
       type: 'string',
-      required: true,
     },
     index: {
       type: 'number',
@@ -71,7 +70,7 @@ export const YogaLog = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: 'string',
-      resolve: yogaLog => `/yoga/${yogaLog._raw.flattenedPath}`,
+      resolve: yogaLog => `/${yogaLog._raw.flattenedPath}`,
     },
   },
 }));

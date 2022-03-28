@@ -1,10 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home2.module.css';
 import Image from 'next/image';
+import LanguageContext from './context/Language';
 
 export default function Home() {
+  const value = useContext(LanguageContext);
+
   const welcomes = ['Bienvenid@', 'Welcome', 'Bounjour'];
   const [welcomeText, setWelcomeText] = useState(welcomes[0]);
   useEffect(() => {
@@ -12,6 +15,12 @@ export default function Home() {
       setWelcomeText(welcomes[Math.floor(Math.random() * welcomes.length)]);
     }, 2000);
   }, []);
+  // const activeBtn = {
+  //   'box-shadow': '0 0 5px 5px black',
+  // };
+  // const changeLanguage = newLanguage => {
+  //   value.setLanguageSelected(newLanguage);
+  // };
   return (
     <div className={styles.main}>
       <Head>
@@ -47,6 +56,17 @@ export default function Home() {
               <a className={styles.enterBtn}>{welcomeText}</a>
             </Link>
           </div>
+          {/* <div className={styles.languagesDiv}>
+            <button onClick={() => changeLanguage('es')}>
+              Me gusta hablar weas en español.
+            </button>
+            <button style={activeBtn} onClick={() => changeLanguage('en')}>
+              I don't understand what the other button means
+            </button>
+            <button onClick={() => changeLanguage('ta')}>
+              அகத்தின் அழகு முகத்தில் தெரியும்.
+            </button>
+          </div> */}
         </div>
 
         <div className={styles.bottomNavbar}>

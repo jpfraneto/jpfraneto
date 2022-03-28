@@ -6,7 +6,7 @@ const ProgrammingLogCard = ({ log, setLog }) => {
   return (
     <Link href={log.url}>
       <div onMouseEnter={() => setLog(log)} className={styles.logCard}>
-        {log.index} - {log.date}
+        <p>{log.index}</p>
       </div>
     </Link>
   );

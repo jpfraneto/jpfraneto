@@ -1,11 +1,18 @@
 .logCard {
   border: solid black 2px;
   margin: 2px 3px;
-  width: 111px;
+  width: 33px;
+  height: 33px;
+  background-color: black;
+  color: white;
   text-align: center;
   padding: 3px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 100%;
+}
+
+.logCard p {
+  transform: translateY(2px);
 }
 
 .logCard:hover {

@@ -41,6 +41,28 @@
   bottom: 8px;
 }
 
+.languagesDiv {
+  background-color: violet;
+  margin-top: 20px;
+  width: fit-content;
+  padding: 22px;
+  border-radius: 8px;
+}
+
+.languagesDiv button {
+  display: block;
+  padding: 4px 6px;
+  background-color: transparent;
+  color: black;
+  border-radius: 8px;
+
+  border: none;
+}
+
+.languagesDiv button:hover {
+  box-shadow: 0 0 5px 5px black;
+}
+
 @media only screen and (max-width: 800px) {
   .main {
     font-size: 0.8rem;
