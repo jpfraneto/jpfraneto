@@ -1,0 +1,37 @@
+.mainContainer {
+  background-color: red;
+  height: calc(100vh - 48px);
+  text-align: center;
+}
+
+.textContainer {
+  max-width: 666px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.sadhanasContainer {
+  max-width: 1111px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legendDivContainer {
+  width: fit-content;
+  padding: 0 8px;
+  margin: 0 auto;
+  border: solid black 1px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.legendDiv {
+  border: solid black 1px;
+  border-radius: 8px;
+  padding: 3px 6px;
+  display: inline-block;
+  margin: 2px 4px;
+}

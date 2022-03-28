@@ -1,0 +1,8 @@
+.indexCircle {
+  width: 33px;
+  height: 33px;
+  border: solid 1px black;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}

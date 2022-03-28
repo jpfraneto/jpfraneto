@@ -55,7 +55,11 @@ export default function Home() {
             <Link href='/menu'>
               <a className={styles.enterBtn}>{welcomeText}</a>
             </Link>
+            <Link href='/sadhana-life'>
+              <a className={styles.enterBtn}>The Neo Samurai</a>
+            </Link>
           </div>
+
           {/* <div className={styles.languagesDiv}>
             <button onClick={() => changeLanguage('es')}>
               Me gusta hablar weas en español.

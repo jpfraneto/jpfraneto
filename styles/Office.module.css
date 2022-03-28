@@ -1,0 +1,22 @@
+.officeDiv {
+  text-align: center;
+}
+
+.dailiesNumber {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.dailiesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chosenDailyContainer {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 666px;
+}

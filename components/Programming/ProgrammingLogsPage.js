@@ -30,10 +30,16 @@ const ProgrammingLogsPage = ({ logs }) => {
     <div className={styles.mainContainer}>
       <h1>Programming Logs</h1>
       <select>
-        <option name='TOSF - Season 1' value='TOSF - Season 1'>
+        <option name='TOSF - Season 1' value='the-office'>
+          The Office - Human Music Dailies
+        </option>
+        <option name='TOSF - Season 1' value='tosf-season1-last-streak'>
           TOSF - Season 1
         </option>
       </select>
+      <p>Target: </p>
+      <p>Objectives:</p>
+      <p>Here goes the description of this project</p>
       <div className={styles.logsContainer}>
         {programmingLogs.map((log, index) => evaluateCircleFilling(log, index))}
       </div>

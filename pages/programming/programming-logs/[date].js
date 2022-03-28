@@ -21,7 +21,6 @@ export async function getStaticProps({ params }) {
 }
 
 export default function ProgrammingLogPage({ log }) {
-  console.log('the programming log is: ', log);
   return (
     <ContentLayout>
       <p>Aloja</p>
