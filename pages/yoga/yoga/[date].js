@@ -5,8 +5,6 @@ import YogaLayout from '../../../components/Yoga/YogaLayout';
 
 export async function getStaticPaths() {
   const paths = allYogaLogs.map(log => {
-    console.log('IN HERE, AND THE LOG IS: ', log.date);
-
     return { params: { date: log.date } };
   });
   return {

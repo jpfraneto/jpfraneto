@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const EducationCard = ({ ed }) => {
   return (
-    <Link href={`/${ed.slug}`} passHref>
+    <Link href={`${ed.slug}`} passHref>
       <div>{ed.name}</div>
     </Link>
   );

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
-import LanguageContext from '../../pages/context/Language';
+import LanguageContext from '../../context/Language';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {

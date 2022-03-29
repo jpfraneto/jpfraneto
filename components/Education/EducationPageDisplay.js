@@ -4,6 +4,7 @@ import ContentLayout from '../Layout/ContentLayout';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
 const EducationPageDisplay = ({ ed }) => {
+  if (!ed) return <h2>Loading!</h2>;
   const MarkdownComponent = useMDXComponent(ed.body.code);
 
   return (

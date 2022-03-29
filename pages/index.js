@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home2.module.css';
 import Image from 'next/image';
-import LanguageContext from './context/Language';
+import LanguageContext from '../context/Language';
 
 export default function Home() {
   const value = useContext(LanguageContext);

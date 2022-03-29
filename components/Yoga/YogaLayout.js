@@ -1,12 +1,13 @@
 import { useRouter } from 'next/router';
 import React, { useState, useContext } from 'react';
-import LanguageContext from '../../pages/context/Language';
+import LanguageContext from '../../context/Language';
 import styles from './YogaLayout.module.css';
 
 const YogaLayout = ({ content }) => {
   const router = useRouter();
   const value = useContext(LanguageContext);
   const [newLang, setNewLang] = useState(value.state.languageSelected);
+  if (!content) return <h2>There is no content available!</h2>;
   return (
     <div className={styles.mainContainer}>
       <div className={styles.contentContainer}>

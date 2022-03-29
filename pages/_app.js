@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import { useState } from 'react';
 import Navbar from '../components/Layout/Navbar';
 import MainLayout from '../components/Layout/MainLayout';
-import LanguageContext from './context/Language';
+import LanguageContext from '../context/Language';
 
 function App({ Component, pageProps }) {
   const [languageSelected, setLanguageSelected] = useState('en');
