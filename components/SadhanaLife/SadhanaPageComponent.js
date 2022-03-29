@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 
 const SadhanaPage = ({ sadhana }) => {
   const router = useRouter();
-  console.log('the sadhana is: ', sadhana);
+  if (!sadhana) return <h2>Loading!!</h2>;
   const buildingBlocks = new Array(+sadhana.targetDuration).fill(null);
   const [thisSadhana, setThisSadhana] = useState({
     ...sadhana,

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { connectToDatabase } from '../../lib/mongodb';
 import SadhanaPageComponent from '../../components/SadhanaLife/SadhanaPageComponent';
 
