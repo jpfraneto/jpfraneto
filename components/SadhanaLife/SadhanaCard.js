@@ -1,16 +1,16 @@
 import React from 'react';
 import styles from './SadhanaCard.module.css';
+import Link from 'next/link';
 import { GiTargeted } from 'react-icons/gi';
 import { useRouter } from 'next/router';
 
 const SadhanaCard = ({ sadhana }) => {
-  const router = useRouter();
+  console.log('the sadhana is: ', sadhana);
   return (
     <div
       className={styles.cardContainer}
-      onClick={() => router.push(`/sadhana-life/${sadhana.slug}`)}
       style={{
-        backgroundColor: sadhana.started
+        backgroundColor: sadhana.active
           ? sadhana.completed
             ? 'green'
             : 'yellow'
@@ -20,9 +20,14 @@ const SadhanaCard = ({ sadhana }) => {
       <h3>{sadhana.title}</h3>
       <span className={styles.targetSpan}>
         <GiTargeted /> {'  '}
-        {sadhana.targetDays}
+        {sadhana.targetDuration} {sadhana.periodicity}
       </span>
-      <p>{sadhana.description}</p>
+      <p>{sadhana.description?.substring(0, 88)}...</p>
+      <div className={styles.btnContainer}>
+        <Link href={`/sadhana-life/${sadhana._id}`}>
+          <a>Go</a>
+        </Link>
+      </div>
     </div>
   );
 };

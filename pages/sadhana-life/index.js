@@ -1,18 +1,18 @@
 import React from 'react';
+import { connectToDatabase } from '../../lib/mongodb';
 import SadhanaLifeContainer from '../../components/SadhanaLife/SadhanaLifeContainer';
 
 const SadhanaLifePage = ({ sadhanas }) => {
-  console.log('INSIDE HERE, THE SADHANAS ARE: ', sadhanas);
-  return <SadhanaLifeContainer />;
+  return <SadhanaLifeContainer sadhanas={sadhanas} />;
 };
 
 export async function getStaticProps() {
-  // const { db } = await connectToDatabase();
-  // const data = await db.collection('looms').find({}).toArray();
-  const data = [123, 213];
+  const { db } = await connectToDatabase();
+  const sadhanas = await db.collection('sadhanas').find({}).toArray();
+
   return {
     props: {
-      sadhanas: JSON.parse(JSON.stringify(data)),
+      sadhanas: JSON.parse(JSON.stringify(sadhanas)),
     },
   };
 }

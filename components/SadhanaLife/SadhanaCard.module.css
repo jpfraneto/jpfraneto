@@ -1,14 +1,11 @@
 .cardContainer {
-  width: fit-content;
-  height: 111px;
-  overflow-y: scroll;
+  max-width: 333px;
+  height: fit-content;
   border: solid black 1px;
   border-radius: 8px;
   padding: 8px;
   margin: 8px;
   text-align: center;
-
-  cursor: pointer;
 }
 
 .targetSpan {
@@ -16,4 +13,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btnContainer {
+  margin: 8px 0 4px;
+}
+
+.btnContainer a {
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+  text-decoration: none;
+  padding: 2px 8px;
+}
+
+.btnContainer a:hover {
+  background-color: black;
+  color: white;
 }

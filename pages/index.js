@@ -56,7 +56,7 @@ export default function Home() {
               <a className={styles.enterBtn}>{welcomeText}</a>
             </Link>
             <Link href='/sadhana-life'>
-              <a className={styles.enterBtn}>The Neo Samurai</a>
+              <a className={styles.enterBtn}>Sadhana Life</a>
             </Link>
           </div>
 

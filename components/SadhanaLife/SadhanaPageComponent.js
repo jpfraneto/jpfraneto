@@ -6,24 +6,37 @@ import { useRouter } from 'next/router';
 
 const SadhanaPage = ({ sadhana }) => {
   const router = useRouter();
-  const [thisSadhana, setThisSadhana] = useState(new Array(100).fill(null));
+  console.log('the sadhana is: ', sadhana);
+  const buildingBlocks = new Array(+sadhana.targetDuration).fill(null);
+  const [thisSadhana, setThisSadhana] = useState({
+    ...sadhana,
+    buildingBlocks,
+  });
   const [chosenDay, setChosenDay] = useState(null);
   return (
     <div className={styles.container}>
-      <h1>{router.query.title}</h1>
-      <p>Here goes the description</p>
-      <p>Completed 9/100</p>
+      <h1>{sadhana.title}</h1>
+      <h3>Description:</h3>
+      <p>{sadhana.description}</p>
+      <h3>Motivation:</h3>
+      <p>{sadhana.motivation}</p>
+
+      <p>
+        <strong>
+          Completed {sadhana.buildingBlocks.length}/{+sadhana.targetDuration}
+        </strong>
+      </p>
       <div className={styles.indexCirclesContainer}>
-        {thisSadhana.map((el, index) => (
+        {thisSadhana.buildingBlocks.map((el, index) => (
           <IndexCircle
             setChosenDay={setChosenDay}
             key={index}
             el={el}
-            i={index}
+            i={index + 1}
           />
         ))}
       </div>
-      <div>Here go the description of the chosen day {chosenDay}</div>
+      <div>Here goes the description of day {chosenDay}</div>
       <Link href='/sadhana-life'>
         <a>Go Back</a>
       </Link>
