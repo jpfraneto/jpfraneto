@@ -4,5 +4,15 @@
   border: solid 1px black;
   border-radius: 50%;
   font-weight: bold;
+  margin: 2px;
+}
+
+.availableBuildingBlock {
   cursor: pointer;
+  background-color: green;
+  color: white;
+}
+
+.nonAvailableBuildingBlock {
+  cursor: not-allowed;
 }

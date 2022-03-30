@@ -1,6 +1,6 @@
 import React from 'react';
-import { connectToDatabase } from '../../lib/mongodb';
-import SadhanaPageComponent from '../../components/SadhanaLife/SadhanaPageComponent';
+import { connectToDatabase } from '../../../lib/mongodb';
+import SadhanaPageComponent from '../../../components/SadhanaLife/SadhanaPageComponent';
 
 const SadhanaPage = ({ sadhana }) => {
   return <SadhanaPageComponent sadhana={sadhana} />;

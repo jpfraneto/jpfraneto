@@ -1,0 +1,41 @@
+.newSadhanaContainer {
+  text-align: center;
+  color: white;
+  min-height: calc(100vh - 54px);
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+  padding-bottom: 22px;
+}
+
+.newSadhanaForm div {
+  display: block;
+  max-width: 666px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.newSadhanaForm div label {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+}
+
+.newSadhanaForm div > * {
+  width: 100%;
+  text-align: center;
+}
+
+.newSadhanaForm div textarea {
+  height: 222px;
+}
+
+.newSadhanaForm button {
+  padding: 4px 8px;
+  background-color: violet;
+  border: solid black 2px;
+  margin-top: 10px;
+  font-size: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}

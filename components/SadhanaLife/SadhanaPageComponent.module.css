@@ -4,10 +4,27 @@
   text-align: center;
   max-width: 888px;
   margin: 0 auto;
+  position: relative;
 }
 
 .indexCirclesContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.addNewBuildingBlockBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.buildingBlockDisplay {
+  padding: 8px;
+  border-radius: 8px;
+  border: solid black 1px;
+  width: fit-content;
+  margin: 10px auto;
 }
