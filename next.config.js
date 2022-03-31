@@ -17,6 +17,8 @@ module.exports = withContentlayer()({
       'www.discogs.com',
       'geo-static.traxsource.com',
       'is3-ssl.mzstatic.com',
+      'images.cdn3.buscalibre.com',
+      'www.adictosaltrabajo.com',
     ],
   },
   experimental: { esmExternals: true },

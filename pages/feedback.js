@@ -71,7 +71,7 @@ const GuestsPage = ({ looms }) => {
           className={styles.sayHelloBtn}
           onClick={() => setSayHello(!sayHello)}
         >
-          {!sayHello ? 'Say Hello!' : 'Dont say Hello!'}
+          {!sayHello ? 'Give some feedback!' : 'Dont give feedback!'}
         </button>
         <LoomsLayout looms={loomVideos} />
         {sayHello && (

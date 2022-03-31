@@ -1,0 +1,28 @@
+.mainContainer {
+  text-align: center;
+}
+
+.containersContainer {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.notesContainer {
+  min-height: 100%;
+  width: 33%;
+  background-color: beige;
+}
+
+.thoughtsContainer {
+  min-height: 100%;
+  width: 33%;
+  background-color: pink;
+}
+
+.thirdPartyThoughts {
+  min-height: 100%;
+  width: 33%;
+  background-color: orange;
+}

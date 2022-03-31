@@ -1,7 +1,7 @@
 .contentContainer {
   max-width: 777px;
   margin: 0 auto;
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow-y: scroll;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;

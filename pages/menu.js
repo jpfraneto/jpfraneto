@@ -11,6 +11,7 @@ const menuOptions = [
   { link: '/talking', name: 'Talking', id: 'talking123' },
   { link: '/thoughts', name: 'Thoughts', id: 'thoughts123' },
   { link: '/music', name: 'Music', id: 'music123' },
+  { link: '/bookshelf', name: 'Bookshelf', id: 'bookshelf2135' },
 ];
 
 const Menu = () => {

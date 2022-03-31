@@ -1,5 +1,4 @@
 .container {
-  background-color: pink;
   min-height: calc(100vh - 48px);
   text-align: center;
   max-width: 888px;

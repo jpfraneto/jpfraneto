@@ -4,7 +4,6 @@ import IndexCircle from './IndexCircle';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { BsPlusSquareDotted } from 'react-icons/bs';
-import Moment from 'react-moment';
 
 const SadhanaPage = ({ sadhana }) => {
   const router = useRouter();
@@ -20,25 +19,17 @@ const SadhanaPage = ({ sadhana }) => {
       },
     });
   };
-  const buildingBlocks = [
-    ...sadhana.buildingBlocks,
-    ...new Array(+sadhana.targetDuration - sadhana.buildingBlocks.length).fill(
-      null
-    ),
-  ];
-
-  const [thisSadhana, setThisSadhana] = useState({
-    ...sadhana,
-    buildingBlocks,
-  });
   const [chosenBuildingBlock, setChosenBuildingBlock] = useState(null);
   return (
     <div className={styles.container}>
-      <div className={styles.addNewBuildingBlockBtn}>
-        <a onClick={goToBuildingBlock}>
-          <BsPlusSquareDotted />
-        </a>
-      </div>
+      {+sadhana.targetDuration !== sadhana.buildingBlocks.length && (
+        <div className={styles.addNewBuildingBlockBtn}>
+          <a onClick={goToBuildingBlock}>
+            <BsPlusSquareDotted />
+          </a>
+        </div>
+      )}
+
       <h1>{sadhana.title}</h1>
       <h3>Description:</h3>
       <p>{sadhana.description}</p>
@@ -51,7 +42,7 @@ const SadhanaPage = ({ sadhana }) => {
         </strong>
       </p>
       <div className={styles.indexCirclesContainer}>
-        {thisSadhana.buildingBlocks.map((el, index) => (
+        {sadhana.buildingBlocks.map((el, index) => (
           <IndexCircle
             setChosenBuildingBlock={setChosenBuildingBlock}
             key={index}
@@ -60,14 +51,18 @@ const SadhanaPage = ({ sadhana }) => {
           />
         ))}
       </div>
+
       {chosenBuildingBlock && (
         <div className={styles.buildingBlockDisplay}>
-          <p>{chosenBuildingBlock.index}</p>
-          <Moment date={chosenBuildingBlock.date} />
-          <h4>{chosenBuildingBlock.title}</h4>
-          <p>{chosenBuildingBlock.description}</p>
-          <p>Feeling: {chosenBuildingBlock.feeling}</p>
-          <p>Duration: {chosenBuildingBlock.duration}</p>
+          {Object.keys(chosenBuildingBlock).map((key, index) => {
+            return (
+              <div>
+                <p>
+                  <strong>{key}</strong> : {chosenBuildingBlock[key]}
+                </p>
+              </div>
+            );
+          })}
         </div>
       )}
 

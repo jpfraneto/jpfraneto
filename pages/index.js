@@ -52,11 +52,12 @@ export default function Home() {
           <h3>Welcome.</h3>
           <h4>I'm glad you are here.</h4>
           <div className={styles.enterBtnContainer}>
-            <Link href='/menu'>
-              <a className={styles.enterBtn}>{welcomeText}</a>
-            </Link>
+            <p>
+              If you want to know what I'm doing these days, click the following
+              button:
+            </p>
             <Link href='/sadhana-life'>
-              <a className={styles.enterBtn}>Sadhana Life</a>
+              <a className={styles.enterBtn}>Hello</a>
             </Link>
           </div>
 
