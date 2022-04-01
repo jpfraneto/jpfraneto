@@ -8,7 +8,10 @@ const SadhanaLifePage = ({ sadhanas }) => {
 
 export async function getStaticProps() {
   const { db } = await connectToDatabase();
-  const sadhanas = await db.collection('sadhanas').find({}).toArray();
+  const sadhanas = await db
+    .collection('sadhanas')
+    .find({}, { _id: 1 })
+    .toArray();
 
   return {
     props: {

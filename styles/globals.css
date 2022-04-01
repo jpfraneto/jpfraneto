@@ -3,6 +3,10 @@ html {
   height: 100vh;
 }
 
+:root {
+  --secondary: orange;
+}
+
 * {
   margin: 0;
   padding: 0;

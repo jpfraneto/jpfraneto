@@ -16,7 +16,7 @@ export async function getStaticPaths() {
   });
   return {
     paths,
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 
@@ -26,5 +26,8 @@ export async function getStaticProps({ params }) {
   const sadhana = sadhanas.find(sadhana => {
     return sadhana._id.toString() === params.id;
   });
-  return { props: { sadhana: JSON.parse(JSON.stringify(sadhana)) } };
+  return {
+    revalidate: 60,
+    props: { sadhana: JSON.parse(JSON.stringify(sadhana)) },
+  };
 }

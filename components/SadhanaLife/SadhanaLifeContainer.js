@@ -20,10 +20,7 @@ const SadhanaLifeContainer = ({ sadhanas }) => {
           This place is where I'll share my adventures and experiences in the
           different realms of action. The material here may be valuable for you.
         </p> */}
-        <p>
-          This is what happens when life provides you all the material well
-          being that you need in life.
-        </p>
+        <p>This is how I challenge myself to grow every day.</p>
         <br />
       </div>
 

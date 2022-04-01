@@ -26,4 +26,65 @@
   border: solid black 1px;
   width: fit-content;
   margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prevNextBtns {
+  display: flex;
+  align-items: center;
+}
+
+.indexNumber {
+  transform: translateY(-2px);
+  font-size: 2rem;
+}
+
+.prevNextBtns span {
+  margin: 0 8px;
+  cursor: pointer;
+  text-shadow: 2px 2px var(--secondary);
+}
+
+.buildingBlockDisplay > * {
+  margin: 2px auto;
+}
+
+.buildingBlockDisplay div {
+  margin: 2px auto;
+}
+
+.elementContainer {
+  width: 100%;
+  height: fit-content;
+}
+
+.contentBody {
+  font-family: 'Courier New', Courier, monospace;
+  border: solid var(--secondary) 1px;
+  border-radius: 8px;
+  margin: 11px 0;
+  padding: 8px;
+  background-color: black;
+  color: white;
+}
+
+.goBackBtnContainer {
+  margin-top: 10px;
+}
+
+.goBackBtn {
+  background-color: var(--secondary);
+  text-decoration: none;
+  border: solid black 1px;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.goBackBtn:hover {
+  background-color: black;
+  color: var(--secondary);
+  box-shadow: 0 0 5px 5px var(--secondary);
 }

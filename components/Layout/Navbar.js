@@ -6,7 +6,6 @@ import styles from './Navbar.module.css';
 const menuOptions = [
   { link: '/yoga', name: 'Yoga', id: 'yoga123' },
   { link: '/programming', name: 'Programming', id: 'programming123' },
-  { link: '/history', name: 'History', id: 'history123' },
   { link: '/woodwork', name: 'Woodwork', id: 'woodwork123' },
   { link: '/talking', name: 'Talking', id: 'talking123' },
   { link: '/thoughts', name: 'Thoughts', id: 'thoughts123' },

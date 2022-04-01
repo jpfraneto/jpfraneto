@@ -18,6 +18,10 @@
   margin-top: 22px;
 }
 
+.enterBtnContainer > * {
+  margin: 10px 0;
+}
+
 .enterBtn {
   border: solid black 1px;
   background-color: white;

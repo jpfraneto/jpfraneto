@@ -60,18 +60,6 @@ export default function Home() {
               <a className={styles.enterBtn}>Hello</a>
             </Link>
           </div>
-
-          {/* <div className={styles.languagesDiv}>
-            <button onClick={() => changeLanguage('es')}>
-              Me gusta hablar weas en español.
-            </button>
-            <button style={activeBtn} onClick={() => changeLanguage('en')}>
-              I don't understand what the other button means
-            </button>
-            <button onClick={() => changeLanguage('ta')}>
-              அகத்தின் அழகு முகத்தில் தெரியும்.
-            </button>
-          </div> */}
         </div>
 
         <div className={styles.bottomNavbar}>

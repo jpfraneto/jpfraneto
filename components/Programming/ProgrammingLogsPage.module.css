@@ -3,6 +3,12 @@
   text-align: center;
 }
 
+.mainContainer iframe {
+  width: 88vw;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
 .logsContainer {
   display: flex;
   flex-wrap: wrap;

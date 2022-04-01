@@ -18,6 +18,7 @@ const Sandbox = () => {
       building: el.building,
       sessionDuration: el.sessionDuration,
       _id: el._id,
+      content: el.body.raw,
     }));
     const reqParams = {
       method: 'POST',
