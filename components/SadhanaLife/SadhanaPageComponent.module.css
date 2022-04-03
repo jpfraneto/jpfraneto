@@ -21,11 +21,12 @@
 }
 
 .buildingBlockDisplay {
-  padding: 8px;
   border-radius: 8px;
   border: solid black 1px;
   width: fit-content;
   margin: 10px auto;
+  box-sizing: border-box;
+  padding: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,16 +49,8 @@
   text-shadow: 2px 2px var(--secondary);
 }
 
-.buildingBlockDisplay > * {
-  margin: 2px auto;
-}
-
-.buildingBlockDisplay div {
-  margin: 2px auto;
-}
-
 .elementContainer {
-  width: 100%;
+  max-width: 94vw;
   height: fit-content;
 }
 
@@ -66,7 +59,6 @@
   border: solid var(--secondary) 1px;
   border-radius: 8px;
   margin: 11px 0;
-  padding: 8px;
   background-color: black;
   color: white;
 }
@@ -87,4 +79,18 @@
   background-color: black;
   color: var(--secondary);
   box-shadow: 0 0 5px 5px var(--secondary);
+}
+
+.playerWrapper {
+  margin: 4px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 96vw;
+  }
+
+  .addNewBuildingBlockBtn {
+    display: none;
+  }
 }

@@ -1,6 +1,41 @@
 .mainContainer {
   height: calc(100vh - 48px);
   text-align: center;
+  background: rgb(255, 0, 0);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(244, 137, 0, 1) 14%,
+    rgba(225, 231, 34, 1) 24%,
+    rgba(71, 214, 74, 1) 35%,
+    rgba(81, 200, 223, 1) 50%,
+    rgba(98, 64, 140, 1) 70%,
+    rgba(218, 63, 203, 1) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(244, 137, 0, 1) 14%,
+    rgba(225, 231, 34, 1) 24%,
+    rgba(71, 214, 74, 1) 35%,
+    rgba(81, 200, 223, 1) 50%,
+    rgba(98, 64, 140, 1) 70%,
+    rgba(218, 63, 203, 1) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(244, 137, 0, 1) 14%,
+    rgba(225, 231, 34, 1) 24%,
+    rgba(71, 214, 74, 1) 35%,
+    rgba(81, 200, 223, 1) 50%,
+    rgba(98, 64, 140, 1) 70%,
+    rgba(218, 63, 203, 1) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#ffffff",GradientType=1);
 }
 
 .textContainer {

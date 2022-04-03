@@ -4,13 +4,15 @@ import LanguageContext from '../../context/Language';
 import styles from './Navbar.module.css';
 
 const menuOptions = [
-  { link: '/yoga', name: 'Yoga', id: 'yoga123' },
-  { link: '/programming', name: 'Programming', id: 'programming123' },
-  { link: '/woodwork', name: 'Woodwork', id: 'woodwork123' },
-  { link: '/talking', name: 'Talking', id: 'talking123' },
-  { link: '/thoughts', name: 'Thoughts', id: 'thoughts123' },
-  { link: '/music', name: 'Music', id: 'music123' },
-  { link: '/bookshelf', name: 'Bookshelf', id: 'bookshelf2135' },
+  // { link: '/yoga', name: 'Yoga', id: 'yoga123' },
+  // { link: '/programming', name: 'Programming', id: 'programming123' },
+  // { link: '/woodwork', name: 'Woodwork', id: 'woodwork123' },
+  { link: '/podcast', name: 'Podcast', id: 'podcast2135' },
+  { link: '/sadhana-life', name: 'Sadhana', id: 'sadhana2442' },
+
+  // { link: '/thoughts', name: 'Thoughts', id: 'thoughts123' },
+  // { link: '/music', name: 'Music', id: 'music123' },
+  // { link: '/bookshelf', name: 'Bookshelf', id: 'bookshelf2135' },
 ];
 
 const Navbar = () => {

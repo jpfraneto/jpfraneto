@@ -19,15 +19,15 @@ const SadhanaCard = ({ sadhana }) => {
     >
       <h3>{sadhana.title}</h3>
       <span className={styles.targetSpan}>
-        <GiTargeted /> {'  '}
+        <GiTargeted style={{ margin: '0 4px' }} /> {'    '}
         {sadhana.targetDuration} {sadhana.periodicity}
       </span>
-      <p>{sadhana.description?.substring(0, 88)}...</p>
       <div className={styles.btnContainer}>
         <Link href={`/sadhana-life/${sadhana._id}`}>
           <a>Go</a>
         </Link>
       </div>
+      <div className={styles.statusContainer}>Active</div>
     </div>
   );
 };

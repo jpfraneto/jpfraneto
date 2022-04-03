@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './LoomPlayer.module.css';
 
 const LoomPlayer = ({ url }) => {
   if (!url) return <></>;

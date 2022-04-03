@@ -30,35 +30,21 @@ export default function Home() {
 
       <>
         <div className={styles.presentationContainer}>
-          <h3>My name is jp, and I'm in a quest.</h3>
-          <p>To reimagine how we interact with the web.</p>
-          <p>
-            To be one of the spiders that build the future of how we communicate
-            with each other.
-          </p>
-          <p>From a place of vulnerability, of openness, of trust. </p>
-          <p>I feel very comfortable with the unknown. </p>
-          <p>Doing things in a new way. </p>
-          <p>
-            This website is an exploration into my ideas, into my capacities,
-            into what I believe.
-          </p>
-          <p>It is my window to the world.</p>
-          <p>It is where I show you my world.</p>
-          <p>To inspire.</p>
-          <p>To connect.</p>
-          <p>To experience awe.</p>
-          <p>To delve into who we are as a collective.</p>
-          <h3>Welcome.</h3>
-          <h4>I'm glad you are here.</h4>
-          <div className={styles.enterBtnContainer}>
-            <p>
-              If you want to know what I'm doing these days, click the following
-              button:
-            </p>
-            <Link href='/sadhana-life'>
-              <a className={styles.enterBtn}>Hello</a>
-            </Link>
+          <div className={styles.albumOfTheDayContainer}>
+            <Image
+              src='https://i.discogs.com/l5aSrn6nEIVC-FOdV5WcZmmrFIMjHGxkwS_QyoCG6mU/rs:fit/g:sm/q:90/h:538/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxMDg3/Ni0xNDc3Nzc3ODM4/LTE4OTQuanBlZw.jpeg'
+              width='200'
+              height='200'
+            />
+            <div className={styles.albumInformation}>
+              <h1>Album of the Day:</h1>
+              <h2>Beyond the Missouri Sky</h2>
+              <h4>Pat Metheny & Charlie Haden</h4>
+              <h4>1998</h4>
+              <a href='https://www.spotify.com' target='_blank'>
+                Listen
+              </a>
+            </div>
           </div>
         </div>
 

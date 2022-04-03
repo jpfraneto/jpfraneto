@@ -82,50 +82,58 @@ const SadhanaPage = ({ sadhana }) => {
               <GrLinkNext />
             </span>
           </h2>
-          {Object.keys(chosenBuildingBlock).map((key, index) => {
-            return (
-              <div className={styles.elementContainer}>
-                {[
-                  'loomRecording',
-                  'music',
-                  'building',
-                  '_id',
-                  'content',
-                  'index',
-                  '__v',
-                ].indexOf(key) === -1 ? (
-                  <p>
-                    <strong>{key}</strong> : {chosenBuildingBlock[key]}
-                  </p>
-                ) : (
-                  <>
-                    {key === 'content' && (
-                      <div className={styles.contentBody}>
-                        {chosenBuildingBlock[key]}
-                      </div>
-                    )}
-                    {key === 'loomRecording' && (
-                      <LoomPlayer url={chosenBuildingBlock[key]} />
-                    )}
-                    {key === 'music' && chosenBuildingBlock[key] && (
-                      <ReactPlayer url={chosenBuildingBlock[key]} />
-                    )}
-                    {key === 'building' && (
-                      <p>
-                        Building:{' '}
-                        <a
-                          href={`https://${chosenBuildingBlock[key]}`}
-                          target='_blank'
-                        >
+          <div className={styles.buildingBlocksContainer}>
+            {Object.keys(chosenBuildingBlock).map((key, index) => {
+              return (
+                <div className={styles.elementContainer}>
+                  {[
+                    'loomRecording',
+                    'music',
+                    'building',
+                    '_id',
+                    'content',
+                    'index',
+                    '__v',
+                  ].indexOf(key) === -1 ? (
+                    <p>
+                      <strong>{key}</strong> : {chosenBuildingBlock[key]}
+                    </p>
+                  ) : (
+                    <>
+                      {key === 'content' && (
+                        <div className={styles.contentBody}>
                           {chosenBuildingBlock[key]}
-                        </a>
-                      </p>
-                    )}
-                  </>
-                )}
-              </div>
-            );
-          })}
+                        </div>
+                      )}
+                      {key === 'loomRecording' && (
+                        <LoomPlayer url={chosenBuildingBlock[key]} />
+                      )}
+                      {key === 'music' && chosenBuildingBlock[key] && (
+                        <div className={styles.playerWrapper}>
+                          <ReactPlayer
+                            width='auto'
+                            height='auto'
+                            url={chosenBuildingBlock[key]}
+                          />
+                        </div>
+                      )}
+                      {key === 'building' && (
+                        <p>
+                          Building:{' '}
+                          <a
+                            href={`https://${chosenBuildingBlock[key]}`}
+                            target='_blank'
+                          >
+                            {chosenBuildingBlock[key]}
+                          </a>
+                        </p>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
           <h2 className={styles.prevNextBtns}>
             <span onClick={() => changeIndex(-1)}>
               <GrLinkPrevious />

@@ -67,6 +67,20 @@
   box-shadow: 0 0 5px 5px black;
 }
 
+.albumOfTheDayContainer {
+  border: solid 2px white;
+  display: inline-block;
+  padding: 8px;
+  width: fit-content;
+  margin-top: 11px;
+  display: flex;
+  border-radius: 8px;
+}
+
+.albumInformation {
+  padding: 0 8px;
+}
+
 @media only screen and (max-width: 800px) {
   .main {
     font-size: 0.8rem;

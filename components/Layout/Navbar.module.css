@@ -57,7 +57,10 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .navContainer {
+  .feedbackBtn {
     display: none;
+  }
+  .navContainer a {
+    font-size: 1.6rem;
   }
 }

@@ -6,6 +6,7 @@
   padding: 8px;
   margin: 8px;
   text-align: center;
+  position: relative;
 }
 
 .targetSpan {
@@ -31,4 +32,10 @@
 .btnContainer a:hover {
   background-color: black;
   color: white;
+}
+
+.statusContainer {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
 }

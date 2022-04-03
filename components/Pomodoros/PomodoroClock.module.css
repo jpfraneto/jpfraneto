@@ -1,0 +1,10 @@
+.clockContainer {
+  display: block;
+  width: fit-content;
+  padding: 22px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: antiquewhite;
+  border: solid black 1px;
+  border-radius: 8px;
+}
