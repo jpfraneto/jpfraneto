@@ -10,6 +10,7 @@
     rgba(143, 0, 255, 1) 100%
   );
   max-width: 100vw;
+  min-height: calc(100vh - 68px);
 }
 
 .mainContainer {
@@ -21,6 +22,8 @@
 
 .playerWrapper {
   position: relative;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .reactPlayer {
@@ -32,6 +35,7 @@
 .episodeInformation {
   margin: 12px auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: solid black 2px;
@@ -45,6 +49,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 20px;
+}
+
+.episodeInfoContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .episodeText {
@@ -66,5 +77,8 @@
 @media only screen and (max-width: 768px) {
   .mainContainer {
     width: 96%;
+  }
+  .episodeInfoContainer {
+    flex-direction: column;
   }
 }

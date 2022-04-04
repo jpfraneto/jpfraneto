@@ -37,13 +37,18 @@ export default function Home() {
               height='200'
             />
             <div className={styles.albumInformation}>
-              <h1>Album of the Day:</h1>
               <h2>Beyond the Missouri Sky</h2>
               <h4>Pat Metheny & Charlie Haden</h4>
               <h4>1998</h4>
-              <a href='https://www.spotify.com' target='_blank'>
-                Listen
-              </a>
+              <div className={styles.enterBtnContainer}>
+                <a
+                  href='https://www.spotify.com'
+                  target='_blank'
+                  className={styles.enterBtn}
+                >
+                  Listen
+                </a>
+              </div>
             </div>
           </div>
         </div>

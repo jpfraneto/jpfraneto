@@ -12,7 +12,7 @@ const BUTTON_ID = 'loom-record-sdk-button';
 
 const GuestsPage = ({ looms }) => {
   const [videoHTML, setVideoHTML] = useState();
-  const [videoInfo, setVideoInfo] = useState({});
+  const [videoInfo, setVideoInfo] = useState(null);
   const [sayHello, setSayHello] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loomVideos, setLoomVideos] = useState(looms);
@@ -100,13 +100,15 @@ const GuestsPage = ({ looms }) => {
                     </div>
                   </div>
                 )}
-                <button
-                  type='button'
-                  className={styles.addRecordingBtn}
-                  onClick={addVideoToDB}
-                >
-                  Add Message
-                </button>
+                {videoInfo && (
+                  <button
+                    type='button'
+                    className={styles.addRecordingBtn}
+                    onClick={addVideoToDB}
+                  >
+                    Add Message
+                  </button>
+                )}
               </>
             )}
           </div>

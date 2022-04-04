@@ -39,3 +39,9 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.newSadhanaForm button:hover {
+  background-color: black;
+  color: violet;
+  box-shadow: 2px 2px violet;
+}

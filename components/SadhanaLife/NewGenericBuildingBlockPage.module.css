@@ -1,0 +1,16 @@
+.newFormOptionAdder {
+  border: solid white 1px;
+  background-color: red;
+  padding: 8px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.newSadhanaContainer {
+  text-align: center;
+  color: white;
+  min-height: calc(100vh - 54px);
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+  padding-bottom: 22px;
+}

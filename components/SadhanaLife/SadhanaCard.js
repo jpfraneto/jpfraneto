@@ -27,7 +27,7 @@ const SadhanaCard = ({ sadhana }) => {
           <a>Go</a>
         </Link>
       </div>
-      <div className={styles.statusContainer}>Active</div>
+      <div className={styles.statusContainer}>{sadhana.status}</div>
     </div>
   );
 };
