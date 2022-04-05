@@ -1,5 +1,28 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 
+export const EssayLog = defineDocumentType(() => ({
+  name: 'EssayLog',
+  filePathPattern: `essays/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+    },
+    date: {
+      type: 'string',
+    },
+    tags: {
+      type: 'string',
+    },
+    estimatedReadingTime: {
+      type: 'number',
+    },
+    slug: {
+      type: 'string',
+    },
+  },
+}));
+
 export const ProgrammingLog = defineDocumentType(() => ({
   name: 'ProgrammingLog',
   filePathPattern: `programming-logs/**/*.mdx`,
@@ -44,10 +67,13 @@ export const YogaLog = defineDocumentType(() => ({
   filePathPattern: `yoga/*.mdx`,
   contentType: 'mdx',
   fields: {
-    title: {
+    teacher: {
       type: 'string',
     },
-    kriya: {
+    teacherInstagram: {
+      type: 'string',
+    },
+    yogatype: {
       type: 'string',
     },
     date: {
@@ -57,7 +83,6 @@ export const YogaLog = defineDocumentType(() => ({
       type: 'number',
       required: true,
     },
-
     loomRecording: {
       type: 'string',
       required: true,
@@ -66,11 +91,8 @@ export const YogaLog = defineDocumentType(() => ({
       type: 'string',
       required: false,
     },
-  },
-  computedFields: {
-    url: {
+    description: {
       type: 'string',
-      resolve: yogaLog => `/${yogaLog._raw.flattenedPath}`,
     },
   },
 }));
@@ -119,5 +141,5 @@ export const EducationLog = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'thoughts',
-  documentTypes: [ProgrammingLog, YogaLog, EducationLog],
+  documentTypes: [ProgrammingLog, YogaLog, EducationLog, EssayLog],
 });

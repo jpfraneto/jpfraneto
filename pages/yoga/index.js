@@ -18,7 +18,16 @@ export default function YogaLogs({ logs }) {
       <Head>
         <title>YOGA LOGS!</title>
       </Head>
-      <YogaPage logs={logs} />
+      {logs.map(log => (
+        <div>
+          <p>
+            Clase de {log.yogatype} con {log.teacher}
+          </p>
+          <Link href={`/yoga/${log.date}`}>
+            <a>{log.date}</a>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }

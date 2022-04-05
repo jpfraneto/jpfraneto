@@ -4,11 +4,12 @@ import LanguageContext from '../../context/Language';
 import styles from './Navbar.module.css';
 
 const menuOptions = [
-  // { link: '/yoga', name: 'Yoga', id: 'yoga123' },
+  { link: '/yoga', name: 'Yoga', id: 'yoga123' },
   // { link: '/programming', name: 'Programming', id: 'programming123' },
   // { link: '/woodwork', name: 'Woodwork', id: 'woodwork123' },
   { link: '/podcast', name: 'Podcast', id: 'podcast2135' },
   { link: '/sadhana-life', name: 'Sadhana', id: 'sadhana2442' },
+  { link: '/education', name: 'Education', id: 'educastiro023' },
 
   // { link: '/thoughts', name: 'Thoughts', id: 'thoughts123' },
   // { link: '/music', name: 'Music', id: 'music123' },

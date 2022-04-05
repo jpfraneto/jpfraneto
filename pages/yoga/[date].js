@@ -1,9 +1,11 @@
 import React from 'react';
-import ContentLayout from '../../../components/Layout/ContentLayout';
 import { allYogaLogs } from 'contentlayer/generated';
-import YogaLayout from '../../../components/Yoga/YogaLayout';
+import components from 'components/MDXComponents';
+import YogaLayout from 'layouts/yoga';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 
 export async function getStaticPaths() {
+  console.log('in here, all', allYogaLogs);
   const paths = allYogaLogs.map(log => {
     return { params: { date: log.date } };
   });
@@ -20,10 +22,11 @@ export async function getStaticProps({ params }) {
   return { props: { log } };
 }
 
-// export default function YogaLogPage({ log }) {
-//   return <ContentLayout content={log} />;
-// }
-
-export default function YogaLogPage({ log }) {
-  return <YogaLayout content={log} />;
+export default function Yoga({ log }) {
+  const Component = useMDXComponent(log.body.code);
+  return (
+    <YogaLayout content={log}>
+      <Component components={{ ...components }} />
+    </YogaLayout>
+  );
 }

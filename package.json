@@ -9,6 +9,7 @@
     "@loomhq/loom-embed": "^1.4.0",
     "@loomhq/record-sdk": "^2.35.9",
     "@mdx-js/loader": "^2.1.0",
+    "@mdx-js/react": "^2.1.1",
     "@visx/group": "^2.1.0",
     "@visx/mock-data": "^2.1.2",
     "@visx/scale": "^2.2.2",
