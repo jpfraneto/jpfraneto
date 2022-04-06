@@ -23,6 +23,30 @@ export const EssayLog = defineDocumentType(() => ({
   },
 }));
 
+export const BlogPost = defineDocumentType(() => ({
+  name: 'BlogPost',
+  filePathPattern: `blog/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+    },
+    description: {
+      type: 'string',
+    },
+
+    estimatedReadingTime: {
+      type: 'number',
+    },
+    slug: {
+      type: 'string',
+    },
+    author: {
+      type: 'string',
+    },
+  },
+}));
+
 export const ProgrammingLog = defineDocumentType(() => ({
   name: 'ProgrammingLog',
   filePathPattern: `programming-logs/**/*.mdx`,
@@ -58,6 +82,86 @@ export const ProgrammingLog = defineDocumentType(() => ({
       type: 'string',
       resolve: programmingLog =>
         `/programming/programming-logs/${programmingLog.date}`,
+    },
+  },
+}));
+
+export const SadhanaLog = defineDocumentType(() => ({
+  name: 'SadhanaLog',
+  filePathPattern: `sadhanas/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    id: {
+      type: 'string',
+    },
+    sadhana: {
+      type: 'string',
+    },
+    sadhanaslug: {
+      type: 'string',
+    },
+    title: {
+      type: 'string',
+    },
+    date: {
+      type: 'string',
+    },
+    index: {
+      type: 'number',
+    },
+    description: {
+      type: 'string',
+    },
+    loomRecording: {
+      type: 'string',
+    },
+    music: {
+      type: 'string',
+    },
+    building: {
+      type: 'string',
+    },
+    sessionDuration: {
+      type: 'string',
+    },
+  },
+  // computedFields: {
+  //   url: {
+  //     type: 'string',
+  //     resolve: sadhanaEntry =>
+  //       `/sadhanas/programming-logs/${programmingLog.date}`,
+  //   },
+  // },
+}));
+
+export const PodcastEpisode = defineDocumentType(() => ({
+  name: 'PodcastEpisode',
+  filePathPattern: `podcast/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    index: {
+      type: 'number',
+    },
+    date: {
+      type: 'string',
+    },
+    albumtitle: {
+      type: 'string',
+    },
+    albumartist: {
+      type: 'string',
+    },
+    albumyear: {
+      type: 'number',
+    },
+    albumImageUrl: {
+      type: 'string',
+    },
+    guest: {
+      type: 'string',
+    },
+    episodeUrl: {
+      type: 'string',
     },
   },
 }));
@@ -141,5 +245,13 @@ export const EducationLog = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'thoughts',
-  documentTypes: [ProgrammingLog, YogaLog, EducationLog, EssayLog],
+  documentTypes: [
+    ProgrammingLog,
+    YogaLog,
+    EducationLog,
+    EssayLog,
+    BlogPost,
+    SadhanaLog,
+    PodcastEpisode,
+  ],
 });

@@ -23,7 +23,7 @@ const SadhanaCard = ({ sadhana }) => {
         {sadhana.targetDuration} {sadhana.periodicity}
       </span>
       <div className={styles.btnContainer}>
-        <Link href={`/sadhana-life/${sadhana._id}`}>
+        <Link href={`/sadhanas/${sadhana.slug}`}>
           <a>Go</a>
         </Link>
       </div>

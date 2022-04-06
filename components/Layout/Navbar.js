@@ -10,6 +10,7 @@ const menuOptions = [
   { link: '/podcast', name: 'Podcast', id: 'podcast2135' },
   { link: '/sadhana-life', name: 'Sadhana', id: 'sadhana2442' },
   { link: '/education', name: 'Education', id: 'educastiro023' },
+  { link: '/blog', name: 'Blog', id: 'asdkjdakblog' },
 
   // { link: '/thoughts', name: 'Thoughts', id: 'thoughts123' },
   // { link: '/music', name: 'Music', id: 'music123' },

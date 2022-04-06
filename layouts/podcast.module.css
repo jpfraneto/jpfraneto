@@ -1,5 +1,6 @@
 .contentContainer {
-  width: 99%;
+  width: 94%;
+  padding: 0 8px;
   max-width: 777px;
   margin: 30px auto;
   text-align: center;
@@ -9,10 +10,6 @@
 .contentContainer h1 {
   font-size: 3rem;
   font-weight: bold;
-}
-
-.authorText {
-  text-align: right;
 }
 
 .tag {
@@ -37,7 +34,6 @@
 }
 
 .contentTextContainer {
-  margin-top: 20px;
   width: 100%;
   text-align: justify;
   font-size: 17px;
@@ -48,9 +44,12 @@
 .contentTextContainer p {
   margin: 20px 0;
 }
+.informationContainer {
+  display: flex;
+}
 
 @media only screen and (max-width: 800px) {
   .contentContainer {
-    width: 90%;
+    width: 100vw;
   }
 }

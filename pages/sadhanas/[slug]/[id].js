@@ -1,12 +1,13 @@
 import React from 'react';
-import { allYogaLogs } from 'contentlayer/generated';
+import { allSadhanaLogs } from 'contentlayer/generated';
 import components from 'components/MDXComponents';
-import YogaLayout from 'layouts/yoga';
+import { sadhanas } from '../../../utils/sadhanas';
 import { useMDXComponent } from 'next-contentlayer/hooks';
+import SadhanaLayout from 'layouts/sadhana';
 
 export async function getStaticPaths() {
-  const paths = allYogaLogs.map(log => {
-    return { params: { date: log.date } };
+  const paths = allSadhanaLogs.map(log => {
+    return { params: { id: log.id, slug: log.sadhanaslug } };
   });
   return {
     paths,
@@ -15,17 +16,17 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const log = allYogaLogs.find(log => {
-    return log.date === params.date;
+  const log = allSadhanaLogs.find(log => {
+    return log.id === params.id;
   });
   return { props: { log } };
 }
 
-export default function Yoga({ log }) {
+export default function Sadhana({ log }) {
   const Component = useMDXComponent(log.body.code);
   return (
-    <YogaLayout content={log}>
+    <SadhanaLayout content={log}>
       <Component components={{ ...components }} />
-    </YogaLayout>
+    </SadhanaLayout>
   );
 }
