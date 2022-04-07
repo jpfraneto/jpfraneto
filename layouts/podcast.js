@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import PodcastContainer from 'components/containers/PodcastContainer';
+import PodcastContainer from '../components/Containers/PodcastContainer';
 import styles from './podcast.module.css';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';

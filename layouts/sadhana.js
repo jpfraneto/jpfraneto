@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import SadhanaContainer from 'components/containers/SadhanaContainer';
+import SadhanaContainer from '../components/Containers/SadhanaContainer';
 import styles from './sadhana.module.css';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';

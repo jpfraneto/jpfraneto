@@ -52,6 +52,9 @@ export const ProgrammingLog = defineDocumentType(() => ({
   filePathPattern: `programming-logs/**/*.mdx`,
   contentType: 'mdx',
   fields: {
+    feeling: {
+      type: 'number',
+    },
     title: {
       type: 'string',
     },
@@ -91,6 +94,9 @@ export const SadhanaLog = defineDocumentType(() => ({
   filePathPattern: `sadhanas/**/*.mdx`,
   contentType: 'mdx',
   fields: {
+    feeling: {
+      type: 'number',
+    },
     id: {
       type: 'string',
     },

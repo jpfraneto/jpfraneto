@@ -31,24 +31,13 @@ export default function Home() {
       <>
         <div className={styles.presentationContainer}>
           <div className={styles.albumOfTheDayContainer}>
-            <Image
-              src='https://i.discogs.com/l5aSrn6nEIVC-FOdV5WcZmmrFIMjHGxkwS_QyoCG6mU/rs:fit/g:sm/q:90/h:538/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxMDg3/Ni0xNDc3Nzc3ODM4/LTE4OTQuanBlZw.jpeg'
-              width='200'
-              height='200'
-            />
             <div className={styles.albumInformation}>
-              <h2>Beyond the Missouri Sky</h2>
-              <h4>Pat Metheny & Charlie Haden</h4>
-              <h4>1998</h4>
-              <div className={styles.enterBtnContainer}>
-                <a
-                  href='https://www.spotify.com'
-                  target='_blank'
-                  className={styles.enterBtn}
-                >
-                  Listen
-                </a>
-              </div>
+              <h2>I learn by teaching, I think by writing.</h2>
+              <h3>Yoga</h3>
+              <h3>Programming</h3>
+              <h3>Podcast</h3>
+              <h3>Writing</h3>
+              <h3>Woodworking</h3>
             </div>
           </div>
         </div>

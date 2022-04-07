@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import YogaContainer from 'components/containers/YogaContainer';
+import YogaContainer from '../components/Containers/YogaContainer';
 import styles from './bloglayout.module.css';
 import Link from 'next/link';
 
