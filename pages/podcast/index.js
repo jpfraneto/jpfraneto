@@ -9,19 +9,12 @@ export async function getStaticProps() {
 }
 
 export default function PodcastEpisodes({ episodes }) {
-  console.log('the episodes are: ', episodes);
   return (
     <div>
       <Head>
         <title>Podcast Episodes</title>
       </Head>
-      {episodes.map(episode => (
-        <div>
-          <Link href={`/podcast/${episode.date}`} passHref>
-            <Image src={episode.albumImageUrl} width='150' height='150' />
-          </Link>
-        </div>
-      ))}
+      <main></main>
     </div>
   );
 }

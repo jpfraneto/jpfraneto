@@ -1,6 +1,6 @@
 import React from 'react';
 import { allPodcastEpisodes } from 'contentlayer/generated';
-import components from 'components/MDXComponents';
+import components from '../../components/MDXcomponents';
 import PodcastLayout from 'layouts/podcast';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 

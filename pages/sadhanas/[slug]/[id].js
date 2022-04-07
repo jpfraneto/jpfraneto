@@ -1,6 +1,6 @@
 import React from 'react';
 import { allSadhanaLogs } from 'contentlayer/generated';
-import components from 'components/MDXComponents';
+import components from '../../../components/MDXcomponents';
 import { sadhanas } from '../../../utils/sadhanas';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import SadhanaLayout from 'layouts/sadhana';

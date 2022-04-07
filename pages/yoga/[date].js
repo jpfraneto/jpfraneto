@@ -1,6 +1,6 @@
 import React from 'react';
 import { allYogaLogs } from 'contentlayer/generated';
-import components from 'components/MDXComponents';
+import components from '../../components/MDXcomponents';
 import YogaLayout from 'layouts/yoga';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
