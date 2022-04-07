@@ -1,0 +1,53 @@
+.newPodcastContainer {
+  text-align: center;
+  color: white;
+  min-height: calc(100vh - 54px);
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+  padding-bottom: 22px;
+}
+
+.newPodcastForm div {
+  display: block;
+  max-width: 666px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.newPodcastForm div label {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+}
+
+.newPodcastForm div > * {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+}
+
+.newPodcastForm select {
+  width: fit-content;
+}
+
+.newPodcastForm div textarea {
+  height: 222px;
+}
+
+.newPodcastForm button {
+  padding: 4px 8px;
+  background-color: violet;
+  border: solid black 2px;
+  margin-top: 10px;
+  font-size: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.newPodcastForm button:hover {
+  background-color: black;
+  color: violet;
+  box-shadow: 2px 2px violet;
+}

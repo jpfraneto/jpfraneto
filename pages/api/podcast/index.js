@@ -7,11 +7,16 @@ export default async function handler(req, res) {
     res.json({ podcasts: episodes });
   }
   if (req.method === 'POST') {
-    const response = await db.collection('podcast').insertOne(req.body);
-    console.log(
-      'the response after adding the episode to the db is: ',
-      response
-    );
+    const matchedPodcast = await db
+      .collection('podcast')
+      .findOne({ email: req.body.newPodcast.email });
+    if (matchedPodcast)
+      return res.json({
+        message: `There is already a recommendation associated with that email: ${matchedPodcast.album}`,
+      });
+    const response = await db
+      .collection('podcast')
+      .insertOne(req.body.newPodcast);
     res.json({
       message: 'The episode was successfully added to the db',
       success: true,
