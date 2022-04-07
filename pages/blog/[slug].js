@@ -1,6 +1,5 @@
 import React from 'react';
 import { allBlogPosts } from 'contentlayer/generated';
-import components from 'components/MDXComponents';
 import components from '../../components/MDXcomponents';
 import BlogLayout from 'layouts/blog';
 import { useMDXComponent } from 'next-contentlayer/hooks';
