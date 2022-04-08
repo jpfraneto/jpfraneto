@@ -81,9 +81,18 @@
   padding: 0 8px;
 }
 
+.albumInformation a {
+  text-decoration: none;
+  color: red;
+}
+
+.albumInformation a:hover {
+  color: yellow;
+}
+
 @media only screen and (max-width: 800px) {
   .main {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: right;
   }
 }

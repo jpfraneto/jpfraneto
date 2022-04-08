@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../styles/Podcast.module.css';
 import { allPodcastEpisodes } from 'contentlayer/generated';
 import { connectToDatabase } from '../../lib/mongodb';
+import PageLayout from '../../components/Layout/PageLayout';
 
 export async function getStaticProps() {
   const { db } = await connectToDatabase();
@@ -16,22 +16,29 @@ export async function getStaticProps() {
   };
 }
 
-const AlbumContainer = ({ children }) => {
-  return (
-    <Fragment>
-      <div className={styles.albumContainer}>{children}</div>
-    </Fragment>
-  );
-};
+// const AlbumContainer = ({ children }) => {
+//   return (
+//     <Fragment>
+//       <div className={styles.albumContainer}>{children}</div>
+//     </Fragment>
+//   );
+// };
 
 export default function PodcastEpisodes({ presentEpisode }) {
-  console.log('the present episode is: ', presentEpisode);
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Podcast Episodes</title>
       </Head>
-      <main className={styles.mainContainer}>
+      <PageLayout>
+        <h1>Podcast</h1>
+        <h2>
+          I believe that being human is a miracle, and this place is an
+          exploration into the way of looking at life that other humans have,
+          using the lens of music as that avenue.
+        </h2>
+      </PageLayout>
+      {/* <main className={styles.mainContainer}>
         <AlbumContainer>
           <h2>PAST</h2>
         </AlbumContainer>
@@ -68,7 +75,7 @@ export default function PodcastEpisodes({ presentEpisode }) {
             <a>I want to answer this question</a>
           </Link>
         </AlbumContainer>
-      </main>
+      </main> */}
     </div>
   );
 }

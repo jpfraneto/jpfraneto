@@ -1,0 +1,36 @@
+.mainContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.verticalContainer1 {
+  background-color: red;
+  width: 555px;
+  height: 150vh;
+  overflow: hidden;
+}
+.verticalContainer2 {
+  background-color: purple;
+  width: 555px;
+  height: 200vh;
+  overflow: hidden;
+}
+.verticalContainer3 {
+  background-color: orange;
+  width: 555px;
+  height: 200vh;
+  overflow: auto;
+}
+.verticalContainer4 {
+  background-color: green;
+  width: 555px;
+  height: 200vh;
+  overflow: hidden;
+}
+.verticalContainer5 {
+  background-color: blue;
+  width: 555px;
+  overflow: hidden;
+  height: 200vh;
+}

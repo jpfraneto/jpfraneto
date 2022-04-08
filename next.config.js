@@ -7,6 +7,7 @@ module.exports = withContentlayer()({
       'images.unsplash.com',
       'img.discogs.com',
       'encrypted-tbn0.gstatic.com',
+      'secure.img1-fg.wfcdn.com',
       'lh3.googleusercontent.com',
       'upload.wikimedia.org',
       '2.bp.blogspot.com',

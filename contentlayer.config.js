@@ -47,6 +47,32 @@ export const BlogPost = defineDocumentType(() => ({
   },
 }));
 
+export const KishanLog = defineDocumentType(() => ({
+  name: 'KishanLog',
+  filePathPattern: `kishan/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    date: {
+      type: 'string',
+    },
+    kriya: {
+      type: 'string',
+    },
+    meditation: {
+      type: 'string',
+    },
+    index: {
+      type: 'number',
+    },
+    recording: {
+      type: 'string',
+    },
+    duration: {
+      type: 'string',
+    },
+  },
+}));
+
 export const ProgrammingLog = defineDocumentType(() => ({
   name: 'ProgrammingLog',
   filePathPattern: `programming-logs/**/*.mdx`,
@@ -259,5 +285,6 @@ export default makeSource({
     BlogPost,
     SadhanaLog,
     PodcastEpisode,
+    KishanLog,
   ],
 });

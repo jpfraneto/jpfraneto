@@ -30,6 +30,9 @@ function App({ Component, pageProps }) {
         </MainLayout>
       </LanguageContext.Provider>
     </Fragment>
+    // <main className='main'>
+    //   <Component {...pageProps} />
+    // </main>
   );
 }
 

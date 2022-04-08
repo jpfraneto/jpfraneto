@@ -1,0 +1,105 @@
+{
+  "main": {
+    "id": "ea13ef00a73e3976",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e04f05d75c58a2d",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a17c803bcaaa21a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "20015efdac24382e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc289cebb84bd08a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ec87bce8183cb5ad",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 251
+  },
+  "right": {
+    "id": "29d6e223fe87471d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea38505ada0eaca8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c74ca633490754eb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1fcae4044398316e",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 171
+  },
+  "active": "8e04f05d75c58a2d",
+  "lastOpenFiles": [
+    "Nueva Nota.md",
+    "Podcast.md",
+    "06-04-2022.md",
+    "Templates/Content Template.md",
+    "Templates/Untitled 2.md",
+    "Templates/Untitled 1.md",
+    "Templates/People Template.md",
+    "Templates/Book Template.md",
+    "Templates/Daily Template.md",
+    "Templates/Weekly Template.md"
+  ]
+}

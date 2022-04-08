@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { compareDesc, format, parseISO } from 'date-fns';
 import { allYogaLogs } from 'contentlayer/generated';
 import YogaPage from '../../components/Yoga/YogaPage';
+import PageLayout from '../../components/Layout/PageLayout';
 
 export async function getStaticProps() {
   const logs = allYogaLogs.sort((a, b) => {
@@ -16,18 +17,17 @@ export default function YogaLogs({ logs }) {
   return (
     <div>
       <Head>
-        <title>YOGA LOGS!</title>
+        <title>Yoga</title>
       </Head>
-      {logs.map(log => (
-        <div>
-          <p>
-            Clase de {log.yogatype} con {log.teacher}
-          </p>
-          <Link href={`/yoga/${log.date}`}>
-            <a>{log.date}</a>
-          </Link>
-        </div>
-      ))}
+      <PageLayout>
+        <h1>Yoga</h1>
+        <h2>
+          This ancient technology is the means by which I connect to my atman,
+          to my spiritual essence, and it is the path that I travel so that I
+          can achieve the biggest goal in my life: be able to live in full
+          presence.
+        </h2>
+      </PageLayout>
     </div>
   );
 }

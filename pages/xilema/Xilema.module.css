@@ -1,0 +1,9 @@
+.xilemaWorksDisplay {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.xilemaWorksDisplay > * {
+  margin: 8px;
+  cursor: pointer;
+}
