@@ -95,7 +95,8 @@ export default function Home() {
                 .
               </h3>
               <p>
-                Welcome to my corner on the internet, where I discover who I am.
+                Welcome to my corner on the internet, where I discover who I am,
+                day by day.
               </p>
             </div>
           </div>

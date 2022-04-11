@@ -38,6 +38,7 @@
 
 .actualNavbar {
   height: 16px;
+  padding: 0 8px;
   overflow-x: scroll;
   background-color: black;
   color: white;
