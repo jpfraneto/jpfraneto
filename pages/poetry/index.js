@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from './poetry.module.css
-';
+import styles from './poetry.module.css';
 import PageLayout from '../../components/Layout/PageLayout';
 
 const Poetry = () => {
@@ -12,7 +11,6 @@ const Poetry = () => {
         <p>El último poema que escribí,</p>
         <p>Se me sale hasta por los poros.</p>
       </div>
-      
     </PageLayout>
   );
 };
