@@ -1,9 +1,9 @@
 .xilemaWorksDisplay {
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.xilemaWorksDisplay > * {
-  margin: 8px;
-  cursor: pointer;
+.imageWrapper > div {
 }

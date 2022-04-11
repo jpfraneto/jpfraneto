@@ -1,0 +1,13 @@
+.logLink {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.logLink:hover {
+  color: greenyellow;
+}
+
+.logsDateContainer {
+  margin: 8px;
+}

@@ -17,7 +17,9 @@ const Xilema = () => {
         {works.map(work => {
           return (
             <Link href={`/xilema/${work.slug}`}>
-              <Image src={work.image} width='222px' height='222px' />
+              <div className={styles.imageWrapper}>
+                <Image src={work.image} width='222px' height='222px' />
+              </div>
             </Link>
           );
         })}

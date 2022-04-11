@@ -1,8 +1,10 @@
 .pageContainer {
   max-width: 777px;
   width: 96%;
+  overflow-x: hidden;
   margin: 0 auto;
   text-align: center;
+  color: white;
 }
 
 .pageContainer h1 {
@@ -11,7 +13,7 @@
 }
 
 .pageContainer h2 {
-  font-family: 'Beau Rivage', cursive;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 0.8rem;
+  font-family: 'Comic Sans MS', cursive;
 }

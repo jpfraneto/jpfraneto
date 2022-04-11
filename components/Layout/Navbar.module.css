@@ -1,6 +1,7 @@
 .navContainer {
   height: 44px;
   width: 100%;
+  overflow-x: scroll;
   background-color: black;
   font-size: 2rem;
   font-weight: bold;
@@ -37,19 +38,23 @@
 
 .actualNavbar {
   height: 16px;
-  background-color: var(--secondary);
-  border-bottom: 2px solid black;
+  overflow-x: scroll;
+  background-color: black;
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 0.1px solid black;
 }
 
 .actualNavbar ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style-type: none;
   font-size: 0.8rem;
 }
 
 .navbarItemBtn {
   cursor: pointer;
+  margin: 0 3px;
 }
 
 .navbarItemBtn:hover {

@@ -14,6 +14,11 @@
   height: calc(100vh - 68px);
 }
 
+.main h3 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
 .enterBtnContainer {
   margin-top: 22px;
 }
@@ -83,7 +88,7 @@
 
 .albumInformation a {
   text-decoration: none;
-  color: red;
+  color: rgb(0, 229, 255);
 }
 
 .albumInformation a:hover {

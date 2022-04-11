@@ -1,11 +1,11 @@
 .contentContainer {
   width: 94%;
   padding: 0 8px;
+  color: white;
   max-width: 777px;
   margin: 30px auto;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
-  color: white;
 }
 
 .contentContainer h1 {
@@ -44,6 +44,20 @@
 
 .contentTextContainer p {
   margin: 20px 0;
+}
+
+.musicBtnContainer {
+  margin: 8px;
+}
+
+.musicBtn {
+  padding: 4px 8px;
+  border: salud white 1px;
+  background-color: aquamarine;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 800px) {

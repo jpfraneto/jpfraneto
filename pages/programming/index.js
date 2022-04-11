@@ -1,8 +1,19 @@
 import React from 'react';
-import styles from '../../styles/Programming.module.css';
+import styles from './styles.module.css';
 import PageLayout from '../../components/Layout/PageLayout';
+import { allProgrammingLogs } from 'contentlayer/generated';
+import Link from 'next/link';
+import ElementsList from '../../components/Layout/ElementsList';
 
-const Programming = () => {
+export async function getStaticProps() {
+  const logs = allProgrammingLogs.sort((a, b) => {
+    return a.index > b.index ? -1 : 1;
+  });
+
+  return { props: { logs } };
+}
+
+const Programming = ({ logs }) => {
   return (
     <PageLayout>
       <h1>Programming</h1>
@@ -12,6 +23,9 @@ const Programming = () => {
         reality the ideas that I had in my mind. This is where I will share what
         I have learned.
       </h2>
+      <ElementsList>
+        <p>The Open Source Factory</p>
+      </ElementsList>
     </PageLayout>
   );
 };
