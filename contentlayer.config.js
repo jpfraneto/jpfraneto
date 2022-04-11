@@ -1,5 +1,52 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 
+export const Draft = defineDocumentType(() => ({
+  name: 'Draft',
+  filePathPattern: `drafts/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    dbname: {
+      type: 'string',
+    },
+    sadhanaslug: {
+      type: 'string',
+    },
+    title: {
+      type: 'string',
+    },
+    music: {
+      type: 'string',
+    },
+    teacher: {
+      type: 'string',
+    },
+    teacherInstagram: {
+      type: 'string',
+    },
+    yogatype: {
+      type: 'string',
+    },
+    date: {
+      type: 'string',
+    },
+    index: {
+      type: 'number',
+    },
+    loomRecording: {
+      type: 'string',
+    },
+    building: {
+      type: 'string',
+    },
+    sessionDuration: {
+      type: 'number',
+    },
+    writtenAt: {
+      type: 'date',
+    },
+  },
+}));
+
 export const EssayLog = defineDocumentType(() => ({
   name: 'EssayLog',
   filePathPattern: `essays/*.mdx`,
@@ -286,5 +333,6 @@ export default makeSource({
     SadhanaLog,
     PodcastEpisode,
     KishanLog,
+    Draft,
   ],
 });

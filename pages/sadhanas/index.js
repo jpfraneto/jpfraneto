@@ -1,17 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { sadhanas } from '../../data/sadhanas/sadhanas';
-import SadhanaLifeContainer from '../../components/SadhanaLife/SadhanaLifeContainer';
+import { connectToDatabase3 } from '../../lib/mongodb3';
 import PageLayout from '../../components/Layout/PageLayout';
 
-export default function Sadhanas({ entries }) {
+export async function getStaticProps() {
+  const { db3 } = await connectToDatabase3();
+  const sadhanas = await db3.collection('sadhanas').find({}).toArray();
+  return { props: { sadhanas: JSON.parse(JSON.stringify(sadhanas)) } };
+}
+
+export default function Sadhanas({ sadhanas }) {
+  console.log('building', sadhanas);
   return (
     <div>
       <Head>
         <title>Sadhana Entries</title>
       </Head>
-      {/* <SadhanaLifeContainer sadhanas={sadhanas} /> */}
       <PageLayout>
         <h1>Sadhanas</h1>
         <h2>

@@ -1,20 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { compareDesc, format, parseISO } from 'date-fns';
-import { allYogaLogs } from 'contentlayer/generated';
 import YogaPage from '../../components/Yoga/YogaPage';
 import PageLayout from '../../components/Layout/PageLayout';
 import ElementsList from '../../components/Layout/ElementsList';
+import { connectToDatabase3 } from '../../lib/mongodb3';
 
 export async function getStaticProps() {
-  const logs = allYogaLogs.sort((a, b) => {
-    return a.index > b.index;
-  });
-  return { props: { logs } };
+  const { db3 } = await connectToDatabase3();
+  const yogaLogs = await db3.collection('yoga').find({}).toArray();
+  return { props: { yogaLogs: JSON.parse(JSON.stringify(yogaLogs)) } };
 }
 
-export default function YogaLogs({ logs }) {
+export default function YogaLogs({ yogaLogs }) {
   return (
     <div>
       <Head>
@@ -29,8 +27,8 @@ export default function YogaLogs({ logs }) {
           presence.
         </h2>
         <ElementsList>
-          {logs.map(log => (
-            <Link href={`/yoga/${log.date}`}>
+          {yogaLogs.map(log => (
+            <Link href={`/yoga/${log._id}`}>
               <a>{log.date}</a>
             </Link>
           ))}
