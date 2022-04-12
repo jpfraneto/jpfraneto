@@ -1,5 +1,32 @@
-.listDisplay > * {
+.listDisplay {
+  margin-top: 20px;
+}
+
+.listDisplay a {
+  display: block;
+}
+
+.listDisplay a:hover {
+  color: grey;
+}
+
+.listDisplay ol {
+  list-style-type: none;
+  text-align: center;
+}
+
+.listDisplay ol li a {
+  color: white;
+  text-decoration: none;
+}
+
+.listDisplay ol li a:hover {
+  color: grey;
+}
+
+.listDisplay > a {
   color: white;
   text-decoration: none;
   cursor: pointer;
+  margin-top: 2px;
 }

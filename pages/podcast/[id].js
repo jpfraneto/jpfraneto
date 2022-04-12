@@ -1,14 +1,14 @@
 import React from 'react';
 import components from '../../components/MDXcomponents';
-import YogaLayout from 'layouts/yoga';
+import PodcastLayout from 'layouts/podcast';
 import { connectToDatabase } from '../../lib/mongodb';
 import { ObjectId } from 'mongodb';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
 export async function getStaticPaths() {
   const { db } = await connectToDatabase();
-  const allYogaLogs = await db.collection('yoga').find({}).toArray();
-  const paths = allYogaLogs.map(log => {
+  const allPodcastLogs = await db.collection('podcast').find({}).toArray();
+  const paths = allPodcastLogs.map(log => {
     return { params: { id: log._id.toString() } };
   });
   return {
@@ -19,17 +19,17 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { db } = await connectToDatabase();
-  const thisYogaLog = await db
-    .collection('yoga')
+  const thisPodcastLog = await db
+    .collection('podcast')
     .findOne({ _id: new ObjectId(params.id) });
-  return { props: { log: JSON.parse(JSON.stringify(thisYogaLog)) } };
+  return { props: { log: JSON.parse(JSON.stringify(thisPodcastLog)) } };
 }
 
-export default function Yoga({ log }) {
+export default function Podcast({ log }) {
   const Component = useMDXComponent(log.body.code);
   return (
-    <YogaLayout content={log}>
+    <PodcastLayout content={log}>
       <Component components={{ ...components }} />
-    </YogaLayout>
+    </PodcastLayout>
   );
 }

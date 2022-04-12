@@ -3,10 +3,10 @@ import PodcastContainer from '../components/Containers/PodcastContainer';
 import styles from './podcast.module.css';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
+import ButtonBack from '../components/Layout/ButtonBack';
 import React from 'react';
 
 export default function PodcastLayout({ children, content }) {
-  console.log('the content is: ', content);
   return (
     <PodcastContainer date={content.date}>
       <article className={styles.contentContainer}>
@@ -19,9 +19,7 @@ export default function PodcastLayout({ children, content }) {
         <div className={styles.contentTextContainer}>{children}</div>
         <Image src={content.albumImageUrl} width='300' height='300' />
         <br />
-        <Link href={`/podcast`}>
-          <a>Back</a>
-        </Link>
+        <ButtonBack linkReference='/podcast' msg='Back to Podcast' />
       </article>
     </PodcastContainer>
   );

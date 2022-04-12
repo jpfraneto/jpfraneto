@@ -1,6 +1,5 @@
 .contentContainer {
-  width: 94%;
-  padding: 0 8px;
+  width: 99%;
   max-width: 777px;
   margin: 30px auto;
   text-align: center;
@@ -13,9 +12,8 @@
   font-weight: bold;
 }
 
-.teacherLink {
-  text-decoration: none;
-  color: grey;
+.authorText {
+  text-align: right;
 }
 
 .tag {
@@ -40,6 +38,7 @@
 }
 
 .contentTextContainer {
+  margin-top: 20px;
   width: 100%;
   text-align: justify;
   font-size: 17px;
@@ -52,7 +51,11 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .contentContainer h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
   .contentContainer {
-    width: 100vw;
+    width: 90%;
   }
 }

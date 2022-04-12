@@ -1,5 +1,5 @@
 .mainLayoutContainer {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 66px);
   overflow-y: scroll;
   width: 100%;
   border: solid white 1px;

@@ -2,30 +2,29 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import YogaPage from '../../components/Yoga/YogaPage';
-import { allYogaPages } from 'contentlayer/generated';
+import { allCuratoryPages } from 'contentlayer/generated';
 import PageLayout from '../../components/Layout/PageLayout';
 import components from '../../components/MDXcomponents';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import ElementsList from '../../components/Layout/ElementsList';
 
 export async function getStaticProps() {
-  return { props: { yogaLogs: allYogaPages } };
+  return { props: { curatoryLogs: allCuratoryPages } };
 }
 
-export default function YogaLogs({ yogaLogs }) {
-  const Component = useMDXComponent(yogaLogs[0].body.code);
+export default function Curatory({ curatoryLogs }) {
+  const Component = useMDXComponent(curatoryLogs[0].body.code);
   return (
     <div>
       <Head>
         <title>Yoga</title>
       </Head>
       <PageLayout>
-        <h1>Yoga</h1>
+        <h1>Curatory</h1>
         <h2>
-          This ancient technology is the means by which I connect to my atman,
-          to my spiritual essence, and it is the path that I travel so that I
-          can achieve the biggest goal in my life: be able to live in the
-          present.
+          This is where I write so that I can integrate the content that I
+          consume. I try to filter it before, so I hope that there is value for
+          you in this list of pieces that I have selected to consume.
         </h2>
         <ElementsList>
           <Component components={{ ...components }} />

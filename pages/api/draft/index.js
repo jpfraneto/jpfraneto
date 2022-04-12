@@ -1,12 +1,12 @@
-import { connectToDatabase3 } from '../../../lib/mongodb3';
+import { connectToDatabase } from '../../../lib/mongodb';
 
 export default async function handler(req, res) {
-  const { db3 } = await connectToDatabase3();
+  const { db } = await connectToDatabase();
   if (req.method === 'POST') {
     try {
       const newElement = { ...req.body.publishable };
       delete newElement['dbname'];
-      const response = await db3
+      const response = await db
         .collection(req.body.publishable.dbname)
         .insertOne(newElement);
       console.log('the response is: ', response);

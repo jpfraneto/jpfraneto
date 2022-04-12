@@ -2,6 +2,7 @@ import Image from 'next/image';
 import YogaContainer from '../components/Containers/YogaContainer';
 import styles from './bloglayout.module.css';
 import Link from 'next/link';
+import ButtonBack from '../components/Layout/ButtonBack';
 
 export default function YogaLayout({ children, content }) {
   return (
@@ -12,6 +13,7 @@ export default function YogaLayout({ children, content }) {
           <a
             target='_blank'
             href={`https://www.instagram.com/${content.teacherInstagram}`}
+            className={styles.teacherLink}
           >
             @{content.teacherInstagram}
           </a>
@@ -42,9 +44,7 @@ export default function YogaLayout({ children, content }) {
           </div>
         </div>
         <div className={styles.contentTextContainer}>{children}</div>
-        <Link href='/yoga'>
-          <a>Back to Yoga</a>
-        </Link>
+        <ButtonBack linkReference='/yoga' msg='Back to Yoga' />
       </article>
     </YogaContainer>
   );

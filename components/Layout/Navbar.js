@@ -5,7 +5,7 @@ import styles from './Navbar.module.css';
 
 const menuOptions = [
   { link: '/kishan', name: 'Kishan', id: 'kishan2133' },
-  { link: '/notes', name: 'Notes', id: 'notes234' },
+  { link: '/curatory', name: 'Curatory', id: 'curatory230' },
   { link: '/yoga', name: 'Yoga', id: 'yoga123' },
   { link: '/programming', name: 'Programming', id: 'programming123' },
   { link: '/education', name: 'Education', id: 'educastiro023' },
@@ -23,9 +23,9 @@ const Navbar = () => {
         <Link className={styles.nameLink} href='/'>
           <a>Jorge Pablo Franetovic Stocker</a>
         </Link>
-        <Link href='/feedback'>
+        {/* <Link href='/feedback'>
           <a className={styles.feedbackBtn}>Feedback</a>
-        </Link>
+        </Link> */}
       </div>
       <nav className={styles.actualNavbar}>
         <ul>

@@ -8,6 +8,24 @@ export const Draft = defineDocumentType(() => ({
     dbname: {
       type: 'string',
     },
+    albumtitle: {
+      type: 'string',
+    },
+    albumartist: {
+      type: 'string',
+    },
+    albumImageUrl: {
+      type: 'string',
+    },
+    guest: {
+      type: 'string',
+    },
+    episodeUrl: {
+      type: 'string',
+    },
+    url: {
+      type: 'string',
+    },
     sadhanaslug: {
       type: 'string',
     },
@@ -47,292 +65,117 @@ export const Draft = defineDocumentType(() => ({
   },
 }));
 
-export const EssayLog = defineDocumentType(() => ({
-  name: 'EssayLog',
-  filePathPattern: `essays/*.mdx`,
-  contentType: 'mdx',
-  fields: {
-    title: {
-      type: 'string',
-    },
-    date: {
-      type: 'string',
-    },
-    tags: {
-      type: 'string',
-    },
-    estimatedReadingTime: {
-      type: 'number',
-    },
-    slug: {
-      type: 'string',
-    },
-  },
-}));
-
-export const BlogPost = defineDocumentType(() => ({
-  name: 'BlogPost',
-  filePathPattern: `blog/**/*.mdx`,
-  contentType: 'mdx',
-  fields: {
-    title: {
-      type: 'string',
-    },
-    description: {
-      type: 'string',
-    },
-
-    estimatedReadingTime: {
-      type: 'number',
-    },
-    slug: {
-      type: 'string',
-    },
-    author: {
-      type: 'string',
-    },
-  },
-}));
-
-export const KishanLog = defineDocumentType(() => ({
-  name: 'KishanLog',
+export const KishanPage = defineDocumentType(() => ({
+  name: 'KishanPage',
   filePathPattern: `kishan/*.mdx`,
   contentType: 'mdx',
   fields: {
-    date: {
-      type: 'string',
-    },
-    kriya: {
-      type: 'string',
-    },
-    meditation: {
-      type: 'string',
-    },
-    index: {
-      type: 'number',
-    },
-    recording: {
-      type: 'string',
-    },
-    duration: {
+    dbname: {
       type: 'string',
     },
   },
 }));
 
-export const ProgrammingLog = defineDocumentType(() => ({
-  name: 'ProgrammingLog',
-  filePathPattern: `programming-logs/**/*.mdx`,
+export const CuratoryPage = defineDocumentType(() => ({
+  name: 'CuratoryPage',
+  filePathPattern: `curatory/*.mdx`,
   contentType: 'mdx',
   fields: {
-    feeling: {
-      type: 'number',
-    },
-    title: {
-      type: 'string',
-    },
-    date: {
-      type: 'string',
-    },
-    index: {
-      type: 'number',
-    },
-    description: {
-      type: 'string',
-    },
-    loomRecording: {
-      type: 'string',
-    },
-    music: {
-      type: 'string',
-    },
-    building: {
-      type: 'string',
-    },
-    sessionDuration: {
-      type: 'string',
-    },
-  },
-  computedFields: {
-    url: {
-      type: 'string',
-      resolve: programmingLog =>
-        `/programming/programming-logs/${programmingLog.date}`,
-    },
-  },
-}));
-
-export const SadhanaLog = defineDocumentType(() => ({
-  name: 'SadhanaLog',
-  filePathPattern: `sadhanas/**/*.mdx`,
-  contentType: 'mdx',
-  fields: {
-    feeling: {
-      type: 'number',
-    },
-    id: {
-      type: 'string',
-    },
-    sadhana: {
-      type: 'string',
-    },
-    sadhanaslug: {
-      type: 'string',
-    },
-    title: {
-      type: 'string',
-    },
-    date: {
-      type: 'string',
-    },
-    index: {
-      type: 'number',
-    },
-    description: {
-      type: 'string',
-    },
-    loomRecording: {
-      type: 'string',
-    },
-    music: {
-      type: 'string',
-    },
-    building: {
-      type: 'string',
-    },
-    sessionDuration: {
-      type: 'string',
-    },
-  },
-  // computedFields: {
-  //   url: {
-  //     type: 'string',
-  //     resolve: sadhanaEntry =>
-  //       `/sadhanas/programming-logs/${programmingLog.date}`,
-  //   },
-  // },
-}));
-
-export const PodcastEpisode = defineDocumentType(() => ({
-  name: 'PodcastEpisode',
-  filePathPattern: `podcast/*.mdx`,
-  contentType: 'mdx',
-  fields: {
-    index: {
-      type: 'number',
-    },
-    date: {
-      type: 'string',
-    },
-    albumtitle: {
-      type: 'string',
-    },
-    albumartist: {
-      type: 'string',
-    },
-    albumyear: {
-      type: 'number',
-    },
-    albumImageUrl: {
-      type: 'string',
-    },
-    guest: {
-      type: 'string',
-    },
-    episodeUrl: {
+    dbname: {
       type: 'string',
     },
   },
 }));
 
-export const YogaLog = defineDocumentType(() => ({
-  name: 'YogaLog',
+export const YogaPage = defineDocumentType(() => ({
+  name: 'YogaPage',
   filePathPattern: `yoga/*.mdx`,
   contentType: 'mdx',
   fields: {
-    teacher: {
-      type: 'string',
-    },
-    teacherInstagram: {
-      type: 'string',
-    },
-    yogatype: {
-      type: 'string',
-    },
-    date: {
-      type: 'string',
-    },
-    index: {
-      type: 'number',
-      required: true,
-    },
-    loomRecording: {
-      type: 'string',
-      required: true,
-    },
-    sessionDuration: {
-      type: 'string',
-      required: false,
-    },
-    description: {
+    dbname: {
       type: 'string',
     },
   },
 }));
 
-export const EducationLog = defineDocumentType(() => ({
-  name: 'EducationLog',
-  filePathPattern: `education/*.mdx`,
+export const ProgrammingPage = defineDocumentType(() => ({
+  name: 'ProgrammingPage',
+  filePathPattern: `programming/*.mdx`,
   contentType: 'mdx',
   fields: {
-    name: {
-      type: 'string',
-    },
-    website: {
-      type: 'string',
-    },
-    provider: {
-      type: 'string',
-    },
-    dateFrom: {
-      type: 'string',
-    },
-    dateTo: {
-      type: 'string',
-    },
-
-    extraInfo: {
-      type: 'string',
-    },
-    image: {
-      type: 'string',
-    },
-    tags: {
-      type: 'string',
-    },
-    id: {
+    dbname: {
       type: 'string',
     },
   },
-  computedFields: {
-    slug: {
+}));
+
+export const EducationPage = defineDocumentType(() => ({
+  name: 'EducationPage',
+  filePathPattern: `education/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    dbname: {
       type: 'string',
-      resolve: educationLog => `/${educationLog._raw.flattenedPath}`,
+    },
+  },
+}));
+
+export const PodcastPage = defineDocumentType(() => ({
+  name: 'PodcastPage',
+  filePathPattern: `podcast/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    dbname: {
+      type: 'string',
+    },
+  },
+}));
+
+export const SadhanaPage = defineDocumentType(() => ({
+  name: 'SadhanaPage',
+  filePathPattern: `sadhana/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    dbname: {
+      type: 'string',
+    },
+  },
+}));
+
+export const XilemaPage = defineDocumentType(() => ({
+  name: 'XilemaPage',
+  filePathPattern: `xilema/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    dbname: {
+      type: 'string',
+    },
+  },
+}));
+
+export const PoetryPage = defineDocumentType(() => ({
+  name: 'PoetryPage',
+  filePathPattern: `poetry/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    dbname: {
+      type: 'string',
     },
   },
 }));
 
 export default makeSource({
-  contentDirPath: 'thoughts',
+  contentDirPath: 'data',
   documentTypes: [
-    ProgrammingLog,
-    YogaLog,
-    EducationLog,
-    EssayLog,
-    BlogPost,
-    SadhanaLog,
-    PodcastEpisode,
-    KishanLog,
+    KishanPage,
+    CuratoryPage,
+    YogaPage,
+    ProgrammingPage,
+    EducationPage,
+    PodcastPage,
+    SadhanaPage,
+    XilemaPage,
+    PoetryPage,
     Draft,
   ],
 });

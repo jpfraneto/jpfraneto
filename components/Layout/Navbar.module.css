@@ -37,20 +37,38 @@
 }
 
 .actualNavbar {
-  height: 16px;
-  padding: 0 33px;
+  height: 22px;
+  padding: 0 11px;
   overflow-x: scroll;
-  background-color: black;
+  background: rgb(63, 94, 251);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#fc466b",GradientType=1);
   color: white;
   border-top: 1px solid white;
   border-bottom: 0.1px solid black;
 }
 
 .actualNavbar ul {
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   list-style-type: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .navbarItemBtn {
