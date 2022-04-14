@@ -19,7 +19,6 @@ export default function EducationLayout({ children, content }) {
             ))}
           </h3>
         )}
-        <h5>Estimated Reading Time: {content.estimatedReadingTime} minutes</h5>
         <hr />
         <div className={styles.contentTextContainer}>{children}</div>
         <ButtonBack linkReference='/education' msg='Back to Education' />

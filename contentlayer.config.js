@@ -76,9 +76,9 @@ export const KishanPage = defineDocumentType(() => ({
   },
 }));
 
-export const CuratoryPage = defineDocumentType(() => ({
-  name: 'CuratoryPage',
-  filePathPattern: `curatory/*.mdx`,
+export const ThoughtsPage = defineDocumentType(() => ({
+  name: 'ThoughtsPage',
+  filePathPattern: `thoughts/*.mdx`,
   contentType: 'mdx',
   fields: {
     dbname: {
@@ -109,6 +109,29 @@ export const ProgrammingPage = defineDocumentType(() => ({
   },
 }));
 
+export const ProgrammingProjects = defineDocumentType(() => ({
+  name: 'ProgrammingProjects',
+  filePathPattern: `programming/projects/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    name: {
+      type: 'string',
+    },
+    productionurl: {
+      type: 'string',
+    },
+    description: {
+      type: 'string',
+    },
+    videourl: {
+      type: 'string',
+    },
+    slug: {
+      type: 'string',
+    },
+  },
+}));
+
 export const EducationPage = defineDocumentType(() => ({
   name: 'EducationPage',
   filePathPattern: `education/*.mdx`,
@@ -126,6 +149,38 @@ export const PodcastPage = defineDocumentType(() => ({
   contentType: 'mdx',
   fields: {
     dbname: {
+      type: 'string',
+    },
+  },
+}));
+
+export const PodcastEpisode = defineDocumentType(() => ({
+  name: 'PodcastEpisode',
+  filePathPattern: `podcast/episodes/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    index: {
+      type: 'number',
+    },
+    album: {
+      type: 'string',
+    },
+    author: {
+      type: 'string',
+    },
+    albumImageUrl: {
+      type: 'string',
+    },
+    year: {
+      type: 'number',
+    },
+    date: {
+      type: 'string',
+    },
+    videourl: {
+      type: 'string',
+    },
+    duration: {
       type: 'string',
     },
   },
@@ -153,12 +208,27 @@ export const XilemaPage = defineDocumentType(() => ({
   },
 }));
 
-export const PoetryPage = defineDocumentType(() => ({
-  name: 'PoetryPage',
+export const Poem = defineDocumentType(() => ({
+  name: 'Poem',
   filePathPattern: `poetry/*.mdx`,
   contentType: 'mdx',
   fields: {
-    dbname: {
+    albumtitle: {
+      type: 'string',
+    },
+    albumartist: {
+      type: 'string',
+    },
+    albumyear: {
+      type: 'string',
+    },
+    slug: {
+      type: 'string',
+    },
+    albumImageUrl: {
+      type: 'string',
+    },
+    title: {
       type: 'string',
     },
   },
@@ -168,14 +238,16 @@ export default makeSource({
   contentDirPath: 'data',
   documentTypes: [
     KishanPage,
-    CuratoryPage,
+    ThoughtsPage,
     YogaPage,
     ProgrammingPage,
+    ProgrammingProjects,
     EducationPage,
     PodcastPage,
+    PodcastEpisode,
     SadhanaPage,
     XilemaPage,
-    PoetryPage,
+    Poem,
     Draft,
   ],
 });

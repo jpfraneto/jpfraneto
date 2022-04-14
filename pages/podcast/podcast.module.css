@@ -1,0 +1,11 @@
+.podcastImage {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px;
+}
+
+.podcastImage div {
+  margin: 0 2px;
+  width: 32%;
+}

@@ -10,15 +10,21 @@ export default function PodcastLayout({ children, content }) {
   return (
     <PodcastContainer date={content.date}>
       <article className={styles.contentContainer}>
-        <h1>{content.guest}</h1>
-        <h2>{content.albumtitle}</h2>
+        <h2>{content.album}</h2>
+        <p>{content.date}</p>
         <h3>
-          {content.albumartist} - {content.albumyear}
+          {content.author} - {content.year}
         </h3>
-        <ReactPlayer url={content.episodeUrl} />
-        <div className={styles.contentTextContainer}>{children}</div>
         <Image src={content.albumImageUrl} width='300' height='300' />
-        <br />
+        <div className={styles.playerWrapper}>
+          <ReactPlayer
+            width='100%'
+            height='100%'
+            className={styles.player}
+            url={content.videourl}
+          />
+        </div>{' '}
+        <div className={styles.contentTextContainer}>{children}</div>
         <ButtonBack linkReference='/podcast' msg='Back to Podcast' />
       </article>
     </PodcastContainer>

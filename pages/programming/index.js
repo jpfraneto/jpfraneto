@@ -1,10 +1,17 @@
 import React from 'react';
 import styles from './styles.module.css';
 import PageLayout from '../../components/Layout/PageLayout';
+import { allProgrammingProjects } from 'contentlayer/generated';
 import Link from 'next/link';
 import ElementsList from '../../components/Layout/ElementsList';
 
-const Programming = ({ logs }) => {
+export async function getStaticProps() {
+  console.log('the projects are: ', allProgrammingProjects);
+  return { props: { projects: allProgrammingProjects } };
+}
+
+const Programming = ({ projects }) => {
+  console.log('in here and the projects are: ', projects);
   return (
     <PageLayout>
       <h1>Programming</h1>
@@ -15,31 +22,13 @@ const Programming = ({ logs }) => {
         I have learned.
       </h2>
       <ElementsList>
-        <a target='_blank' href='https://www.human-music.com'>
-          Human-Music
-        </a>
-        <a target='_blank' href='http://www.theopensourcefactory.com'>
-          The Open Source Factory
-        </a>
-        <a target='_blank' href='http://www.drip-work.app'>
-          Drip-Work
-        </a>
-        <a target='_blank' href='http://www.mamiferas.org'>
-          Mamíferas
-        </a>
-        <a target='_blank' href='https://podcast.human-music.com'>
-          Timeless Integration
-        </a>
-        <a target='_blank' href='https://www.holamila.com'>
-          Hola Mila
-        </a>
-
-        <a target='_blank' href='https://www.worldsofsound.org'>
-          Rudra KY
-        </a>
-        <a target='_blank' href='https://www.jpfraneto.com'>
-          jpfraneto
-        </a>
+        {projects.map(project => {
+          return (
+            <Link href={`/programming/projects/${project.slug}`}>
+              <a>{project.name}</a>
+            </Link>
+          );
+        })}
       </ElementsList>
     </PageLayout>
   );

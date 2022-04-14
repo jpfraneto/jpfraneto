@@ -7,7 +7,6 @@ import PageLayout from '../../components/Layout/PageLayout';
 import ElementsList from '../../components/Layout/ElementsList';
 
 export async function getStaticProps() {
-  console.log('all education pages: ', allEducationPages);
   return { props: { logs: allEducationPages } };
 }
 

@@ -36,11 +36,11 @@ export default function Home() {
               <hr />
               <h3>
                 I learn by{' '}
-                <Link href='/kishan'>
+                <Link href='/teaching'>
                   <a>teaching</a>
                 </Link>
                 , I think by{' '}
-                <Link href='/notes'>
+                <Link href='/thoughts'>
                   <a>writing</a>
                 </Link>
                 .
