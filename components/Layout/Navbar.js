@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 import LanguageContext from '../../context/Language';
 import styles from './Navbar.module.css';
+import { AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
 
 const menuOptions = [
   { link: '/teaching', name: 'Teaching', id: 'kishan2133' },
@@ -23,9 +24,10 @@ const Navbar = () => {
         <Link className={styles.nameLink} href='/'>
           <a>Jorge Pablo Franetovic Stocker</a>
         </Link>
-        {/* <Link href='/feedback'>
-          <a className={styles.feedbackBtn}>Feedback</a>
-        </Link> */}
+        <div className={styles.contactElementsDiv}>
+          <AiOutlineWhatsApp />
+          <AiOutlineMail />
+        </div>
       </div>
       <nav className={styles.actualNavbar}>
         <ul>
