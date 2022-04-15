@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home2.module.css';
+import { AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
 import Image from 'next/image';
 import LanguageContext from '../context/Language';
 
@@ -15,12 +16,7 @@ export default function Home() {
       setWelcomeText(welcomes[Math.floor(Math.random() * welcomes.length)]);
     }, 2000);
   }, []);
-  // const activeBtn = {
-  //   'box-shadow': '0 0 5px 5px black',
-  // };
-  // const changeLanguage = newLanguage => {
-  //   value.setLanguageSelected(newLanguage);
-  // };
+
   return (
     <div className={styles.main}>
       <Head>
@@ -104,6 +100,17 @@ export default function Home() {
 
         <div className={styles.bottomNavbar}>
           <p>From South America, with ♡</p>
+        </div>
+        <div className={styles.mobileBottomNavbar}>
+          Get in Touch
+          <span className={styles.bottomNavIcon}>
+            <a target='_blank' href='https://wa.link/h20gg2'>
+              <AiOutlineWhatsApp />
+            </a>
+            <a target='_blank' href='mailto:jpfraneto@gmail.com'>
+              <AiOutlineMail />
+            </a>
+          </span>
         </div>
       </>
     </div>

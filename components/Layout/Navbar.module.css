@@ -28,7 +28,7 @@
   border: solid black 1px;
 }
 
-.contactElementsDiv > * {
+.contactElementsDiv a > * {
   margin: 0 8px;
   transform: translateY(4px);
 }
@@ -88,10 +88,24 @@
   .feedbackBtn {
     display: none;
   }
+
+  .contactElementsDiv {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 555px) {
   .navContainer a {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .contactElementsDiv {
-    font-size: 1rem;
+    display: none;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .navContainer a {
+    font-size: 1.1rem;
   }
 }

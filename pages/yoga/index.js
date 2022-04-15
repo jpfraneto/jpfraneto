@@ -17,7 +17,7 @@ export default function YogaLogs({ yogaLogs }) {
   return (
     <div>
       <Head>
-        <title>Yoga</title>
+        <title>· jp · yoga</title>
       </Head>
       <PageLayout>
         <h1>Yoga</h1>

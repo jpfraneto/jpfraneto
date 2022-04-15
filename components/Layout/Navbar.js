@@ -25,8 +25,12 @@ const Navbar = () => {
           <a>Jorge Pablo Franetovic Stocker</a>
         </Link>
         <div className={styles.contactElementsDiv}>
-          <AiOutlineWhatsApp />
-          <AiOutlineMail />
+          <a target='_blank' href='https://wa.link/h20gg2'>
+            <AiOutlineWhatsApp />
+          </a>
+          <a target='_blank' href='mailto:jpfraneto@gmail.com'>
+            <AiOutlineMail />
+          </a>
         </div>
       </div>
       <nav className={styles.actualNavbar}>

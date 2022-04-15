@@ -11,11 +11,10 @@ export async function getStaticProps() {
 }
 
 export default function Sadhana({ sadhanas }) {
-  console.log('building', sadhanas);
   return (
     <div>
       <Head>
-        <title>Sadhana Entries</title>
+        <title>· jp · sadhana</title>
       </Head>
       <PageLayout>
         <h1>Sadhana</h1>

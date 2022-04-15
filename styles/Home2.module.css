@@ -95,9 +95,46 @@
   color: yellow;
 }
 
+.mobileBottomNavbar {
+  display: none;
+  color: black;
+}
+
+.mobileBottomNavbar {
+  padding-right: 10px;
+}
+
+.bottomNavIcon a > * {
+  margin: 0 2px;
+  transform: translateY(2px);
+}
+
 @media only screen and (max-width: 800px) {
   .main {
     font-size: 1rem;
     text-align: right;
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  .bottomNavbar {
+    display: none;
+  }
+  .mobileBottomNavbar {
+    height: 22px;
+    background-color: #85ffbd;
+    display: block;
+    background-color: #ffe53b;
+    background-image: linear-gradient(
+      147deg,
+      #ffe53b 0%,
+      #ff2525 70%,
+      #ffffff 100%
+    );
+    border-top: 2px solid black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
   }
 }

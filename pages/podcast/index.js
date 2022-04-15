@@ -17,31 +17,14 @@ export default function PodcastLogs({ podcastLogs }) {
   return (
     <div>
       <Head>
-        <title>JPcast</title>
+        <title>· jp · podcast</title>
       </Head>
+
       <PageLayout>
-        <h1>My Podcast</h1>
-        <h2>This is a breathwork session divided in three parts:</h2>
-        <div className={styles.podcastImage}>
-          <div>
-            <h4>Presentation</h4>
-            <p>
-              On which I will talk about the particular album that I will listen
-              in that session and why that one
-            </p>
-          </div>
-          <div>
-            <h4>Listening</h4>
-            <p>
-              On which I will listen to the album doing 31 minutes of breathwork
-              and then the rest listen to it integrating what just happened
-            </p>
-          </div>
-          <div>
-            <h4>Talking</h4>
-            <p>On which I will talk whatever comes to my mind in that moment</p>
-          </div>
-        </div>
+        <h1>Timeless Integration Podcast</h1>
+        <h2>
+          If you died tomorrow, what album would you take to the other side?
+        </h2>
         <ElementsList>
           <Component components={{ ...components }} />
         </ElementsList>

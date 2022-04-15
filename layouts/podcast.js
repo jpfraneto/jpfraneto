@@ -11,10 +11,24 @@ export default function PodcastLayout({ children, content }) {
     <PodcastContainer date={content.date}>
       <article className={styles.contentContainer}>
         <h2>{content.album}</h2>
-        <p>{content.date}</p>
         <h3>
           {content.author} - {content.year}
         </h3>
+        <p>{content.date}</p>
+        <h4>
+          Conversation with
+          <a
+            style={{
+              color: 'white',
+              marginLeft: '4px',
+              textDecoration: 'none',
+            }}
+            target='_blank'
+            href={`https://www.instagram.com/${content.guest}`}
+          >
+            @{content.guest}
+          </a>
+        </h4>
         <Image src={content.albumImageUrl} width='300' height='300' />
         <div className={styles.playerWrapper}>
           <ReactPlayer
