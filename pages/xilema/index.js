@@ -2,11 +2,16 @@ import React from 'react';
 import Head from 'next/head';
 import styles from './Xilema.module.css';
 import PageLayout from '../../components/Layout/PageLayout';
-import { works } from '../../data/xilema/works';
+import { allXilemaPages } from 'contentlayer/generated';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Xilema = () => {
+export async function getStaticProps() {
+  console.log(allXilemaPages);
+  return { props: { arts: allXilemaPages } };
+}
+
+const Xilema = ({ arts }) => {
   return (
     <>
       <Head>
@@ -19,13 +24,22 @@ const Xilema = () => {
           pencils.
         </h2>
         <div className={styles.xilemaWorksDisplay}>
-          {works.map(work => {
+          {/* {arts.map(work => {
             return (
               <Link href={`/xilema/${work.slug}`}>
                 <div className={styles.imageWrapper}>
                   <Image src={work.image} width='222px' height='222px' />
                 </div>
               </Link>
+            );
+          })} */}
+          {arts.map((art, index) => {
+            return (
+              <div key={index}>
+                {art.imageUrl && (
+                  <Image src={art.imageUrl} width='200' height='200' />
+                )}
+              </div>
             );
           })}
         </div>

@@ -129,6 +129,9 @@ export const ProgrammingProjects = defineDocumentType(() => ({
     slug: {
       type: 'string',
     },
+    githubrepo: {
+      type: 'string',
+    },
   },
 }));
 
@@ -137,7 +140,13 @@ export const EducationPage = defineDocumentType(() => ({
   filePathPattern: `education/*.mdx`,
   contentType: 'mdx',
   fields: {
-    dbname: {
+    title: {
+      type: 'string',
+    },
+    university: {
+      type: 'string',
+    },
+    slug: {
       type: 'string',
     },
   },
@@ -208,7 +217,16 @@ export const XilemaPage = defineDocumentType(() => ({
   filePathPattern: `xilema/*.mdx`,
   contentType: 'mdx',
   fields: {
-    dbname: {
+    title: {
+      type: 'string',
+    },
+    category: {
+      type: 'string',
+    },
+    slug: {
+      type: 'string',
+    },
+    imageUrl: {
       type: 'string',
     },
   },
@@ -221,6 +239,9 @@ export const Poem = defineDocumentType(() => ({
   fields: {
     albumtitle: {
       type: 'string',
+    },
+    index: {
+      type: 'number',
     },
     albumartist: {
       type: 'string',

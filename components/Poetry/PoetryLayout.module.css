@@ -1,0 +1,16 @@
+.poemsContainer {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.poemsContainer > * {
+  margin: 8px;
+  cursor: pointer;
+}
+
+.poemsContainer > *:hover {
+  filter: blur(1px);
+}

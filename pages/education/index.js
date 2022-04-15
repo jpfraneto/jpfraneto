@@ -26,7 +26,13 @@ const EducationPage = ({ logs }) => {
           brought into who I am now.
         </h2>
         <ElementsList>
-          <Component components={{ ...components }} />
+          {logs.map((log, index) => {
+            return (
+              <Link href={`/education/${log.slug}`}>
+                <a>{log.title}</a>
+              </Link>
+            );
+          })}
         </ElementsList>
       </PageLayout>
     </>

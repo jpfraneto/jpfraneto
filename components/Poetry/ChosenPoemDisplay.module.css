@@ -1,0 +1,31 @@
+.mainContainer {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 300px;
+  margin: 4px;
+  height: 300px;
+}
+
+.poemContainer {
+  background-color: aliceblue;
+  border-radius: 4px;
+  color: black;
+  overflow-y: scroll;
+  text-align: left;
+  padding: 8px;
+  line-height: 18px;
+  height: 300px;
+  width: 300px;
+}
+
+@media only screen and (max-width: 800px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+}

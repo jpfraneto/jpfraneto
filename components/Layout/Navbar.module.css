@@ -19,6 +19,10 @@
   font-family: 'Barlow Condensed', sans-serif;
 }
 
+.navContainer a:hover {
+  color: orange;
+}
+
 .contactElementsDiv {
   position: absolute;
   right: 22px;
@@ -31,6 +35,10 @@
 .contactElementsDiv a > * {
   margin: 0 8px;
   transform: translateY(4px);
+}
+
+.contactElementsDiv a > *:hover {
+  color: orange;
 }
 
 .feedbackBtn:hover {

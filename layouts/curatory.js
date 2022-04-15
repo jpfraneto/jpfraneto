@@ -4,10 +4,11 @@ import styles from './curatory.module.css';
 import ReactPlayer from 'react-player';
 import ButtonBack from '../components/Layout/ButtonBack';
 import React from 'react';
+import ShareButtons from '../components/Layout/ShareButtons';
 
 export default function CuratoryLayout({ children, content }) {
   return (
-    <Container title={content.title} date={content.date}>
+    <Container title={'· jp · thoughts · ' + content.title} date={content.date}>
       <article className={styles.contentContainer}>
         <h1>{content.title}</h1>
         {content.author && (

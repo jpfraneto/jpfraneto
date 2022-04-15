@@ -4,6 +4,7 @@ import LinkedButton from '../Utils/LinkedButton';
 import { useRouter } from 'next/router';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { MDXProvider } from '@mdx-js/react';
+import ShareButtons from './ShareButtons';
 
 const components = {
   em: props => <i {...props} />,

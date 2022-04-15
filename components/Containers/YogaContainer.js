@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function YogaContainer(props) {
+  console.log('the props are.', props);
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
   useEffect(() => {
@@ -19,7 +20,9 @@ export default function YogaContainer(props) {
   return (
     <div>
       <Head>
-        <title>Class with {meta.teacher}</title>
+        <title>
+          · jp · yoga · {props.type.toLowerCase()} · {props.date}
+        </title>
         <meta content={meta.description} name='description' />
         <meta
           property='og:url'

@@ -6,7 +6,11 @@ import ButtonBack from '../components/Layout/ButtonBack';
 
 export default function YogaLayout({ children, content }) {
   return (
-    <YogaContainer teacher={content.teacher} date={content.date}>
+    <YogaContainer
+      teacher={content.teacher}
+      date={content.date}
+      type={content.yogatype}
+    >
       <article className={styles.contentContainer}>
         <h1>
           {content.yogatype} -{' '}

@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 import Link from 'next/link';
 
 export default function ProgrammingContainer(props) {
+  console.log(props);
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
   useEffect(() => {

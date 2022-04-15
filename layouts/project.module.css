@@ -63,6 +63,26 @@
   width: 100%;
   height: 100%;
 }
+.githubIcon {
+  color: white;
+}
+
+.githubIcon:hover {
+  color: orange;
+}
+
+.githubIcon > * {
+  transform: translateY(4px);
+}
+
+.productionUrlLink {
+  color: white;
+  text-decoration: none;
+}
+
+.productionUrlLink:hover {
+  color: pink;
+}
 
 @media only screen and (max-width: 800px) {
   .contentContainer h1 {

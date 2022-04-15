@@ -1,16 +1,12 @@
 import Link from 'next/link';
 import EducationLayout from '../../layouts/education';
 import components from '../../components/MDXcomponents';
-import { ObjectId } from 'mongodb';
+import { allEducationPages } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import { connectToDatabase } from '../../lib/mongodb';
 
 export async function getStaticPaths() {
-  const { db } = await connectToDatabase();
-  const allEducationLogs = await db.collection('education').find({}).toArray();
-  console.log('in here, all education logs are: ', allEducationLogs);
-  const paths = allEducationLogs.map(log => {
-    return { params: { id: log._id.toString() } };
+  const paths = allEducationPages.map(log => {
+    return { params: { slug: log.slug } };
   });
   return {
     paths,
@@ -19,11 +15,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const { db } = await connectToDatabase();
-  const thisEducationLog = await db
-    .collection('education')
-    .findOne({ _id: new ObjectId(params.id) });
-  console.log('this education log is: ', thisEducationLog);
+  const thisEducationLog = allEducationPages.find(
+    log => log.slug === params.slug
+  );
   return { props: { log: JSON.parse(JSON.stringify(thisEducationLog)) } };
 }
 

@@ -17,7 +17,7 @@ export default function PodcastContainer(props) {
   return (
     <div>
       <Head>
-        <title>{meta.title}</title>
+        <title>{props.title}</title>
         <meta content={meta.description} name='description' />
         <meta
           property='og:url'

@@ -8,7 +8,10 @@ import React from 'react';
 
 export default function PodcastLayout({ children, content }) {
   return (
-    <PodcastContainer date={content.date}>
+    <PodcastContainer
+      title={`· jp · podcast · @${content.guest}`}
+      date={content.date}
+    >
       <article className={styles.contentContainer}>
         <h2>{content.album}</h2>
         <h3>

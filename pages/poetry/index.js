@@ -6,13 +6,15 @@ import { allPoems } from 'contentlayer/generated';
 import ElementsList from '../../components/Layout/ElementsList';
 import { MDXProvider } from '@mdx-js/react';
 import Head from 'next/head';
+import PoetryLayout from '../../components/Poetry/PoetryLayout';
 
 export async function getStaticProps({ params }) {
+  console.log(allPoems);
+  allPoems.sort((x, y) => (x.index < y.index ? 1 : -1));
   return { props: { poems: allPoems } };
 }
 
 const Poetry = ({ poems }) => {
-  const [displayPoem, setDisplayPoem] = useState(null);
   return (
     <>
       <Head>
@@ -30,6 +32,7 @@ const Poetry = ({ poems }) => {
             @jpfraneto
           </a>
         </h2>
+        <PoetryLayout poems={poems} />
       </PageLayout>
     </>
   );

@@ -71,7 +71,7 @@ export default function Home() {
               </h3>
               <h3>
                 I live by the belief that{' '}
-                <Link href='/sadhanas'>
+                <Link href='/sadhana'>
                   <a>consistency and perseverance</a>
                 </Link>{' '}
                 is what drives success.
