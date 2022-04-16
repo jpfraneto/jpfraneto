@@ -212,6 +212,38 @@ export const SadhanaPage = defineDocumentType(() => ({
   },
 }));
 
+export const Season1 = defineDocumentType(() => ({
+  name: 'Season1',
+  filePathPattern: `sadhanas/programming-logs/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+    },
+    date: {
+      type: 'string',
+    },
+    index: {
+      type: 'number',
+    },
+    description: {
+      type: 'string',
+    },
+    loomRecording: {
+      type: 'string',
+    },
+    music: {
+      type: 'string',
+    },
+    building: {
+      type: 'string',
+    },
+    sessionDuration: {
+      type: 'string',
+    },
+  },
+}));
+
 export const XilemaPage = defineDocumentType(() => ({
   name: 'XilemaPage',
   filePathPattern: `xilema/*.mdx`,
@@ -276,5 +308,6 @@ export default makeSource({
     XilemaPage,
     Poem,
     Draft,
+    Season1,
   ],
 });

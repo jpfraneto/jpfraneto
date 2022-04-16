@@ -12,6 +12,7 @@ const PoetryLayout = ({ poems }) => {
         {poems.map((poem, index) => {
           return (
             <div
+              key={index}
               onClick={() => setChosenPoem(poem)}
               className={styles.imageContainer}
             >

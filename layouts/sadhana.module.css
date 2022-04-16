@@ -5,6 +5,17 @@
   margin: 30px auto;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
+.musicLink {
+  color: white;
+  text-decoration: none;
+  margin: 4px 0;
+}
+.musicLink:hover {
+  color: orange;
+  transform: scale(120%);
 }
 
 .contentContainer h1 {

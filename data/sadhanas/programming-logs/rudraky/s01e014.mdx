@@ -1,0 +1,24 @@
+---
+title: Sharing data within the application
+date: 092022II
+index: 14
+description: Day 014 of 108 - The Open Source Factory Last Sprint
+loomRecording: https://www.loom.com/share/5db3a05870e9484db9c549b4d004b336
+music: https://www.youtube.com/watch?v=tk5Uturacx8&ab_channel=AVROTROSKlassiek
+---
+
+Dia 19.
+
+The challenge that I see now is related to how to fetch the data and use it in the application so that there is a flow that enables not calling the api each time that a new recording will be displayed. How can I reuse the data that is called when the /recordings route is fetched?
+
+Through the research I have been able to recognize that getStaticProps is related to build time, and the thing is that the comment section will be dynamic, since it will be created after build time. So do I need getServerSideProps to make it dynamic?
+
+`Both getStaticProps and getStaticPaths run only at build time. That is the purpose of these functions. You are using it correctly.` (https://stackoverflow.com/questions/61037728/next-js-getstaticprops-and-getstaticpaths-with-dynamic-routes-to-generate-stati)
+
+`You can't make calls to Next.js API routes inside getStaticProps or getStaticPaths. These functions are executed at build time, so there is no server is running to handle requests. You need to make request to DB directly.` (https://stackoverflow.com/questions/62623411/creating-dynamic-routes-using-getstaticpaths-and-getstaticprops-in-nextjs)
+
+Should I use cache to solve this issue? With this, I can save the information in the user's browser and be able to fetch it only once and when it is running.
+
+---
+
+This was a session that leaves me happy, since I was able to get into stuff that I don't know about and I realize that I was avoiding to tackle. The issue of how information is shared withing routes and within the whole application is central to the development of a project that works smoothly so that I don't have to fetch the data over and over again, and I'm beginning to realize where I need to study and work on so that I can wrap my mind around this topic and be able to build useful stuff. This is an issue that has come up over and over again, and it will be important to find an appropiate solution!

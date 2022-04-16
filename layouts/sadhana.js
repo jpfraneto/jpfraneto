@@ -3,6 +3,7 @@ import SadhanaContainer from '../components/Containers/SadhanaContainer';
 import styles from './sadhana.module.css';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
+import ButtonBack from '../components/Layout/ButtonBack';
 
 export default function SadhanaLayout({ children, content }) {
   return (
@@ -16,9 +17,18 @@ export default function SadhanaLayout({ children, content }) {
         {content.sessionDuration && (
           <h5>Duration: {content.sessionDuration} </h5>
         )}
-        <a href={content.music} target={'_blank'}>
-          Music
-        </a>
+        {content.music ? (
+          <a
+            className={styles.musicLink}
+            href={content.music}
+            target={'_blank'}
+          >
+            Listen to the music of this day
+          </a>
+        ) : (
+          <p>There is no music for today</p>
+        )}
+
         {content.loomRecording && (
           <div className={styles.loomRecordingContainer}>
             <div
@@ -47,9 +57,10 @@ export default function SadhanaLayout({ children, content }) {
         )}
 
         <div className={styles.contentTextContainer}>{children}</div>
-        <Link href={`/sadhanas/${content.sadhanaslug}`}>
-          <a>Back to {content.sadhana}</a>
-        </Link>
+        <ButtonBack
+          linkReference='/sadhana/tosf-season1-last-sprint'
+          msg='Back'
+        />
       </article>
     </SadhanaContainer>
   );

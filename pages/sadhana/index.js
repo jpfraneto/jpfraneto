@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { connectToDatabase } from '../../lib/mongodb';
+// import { connectToDatabase } from '../../lib/mongodb';
+import { sadhanas } from '../../data/sadhanas/sadhanas';
 import PageLayout from '../../components/Layout/PageLayout';
+import ElementsList from '../../components/Layout/ElementsList';
 
 export async function getStaticProps() {
-  const { db } = await connectToDatabase();
-  const sadhanas = await db.collection('sadhanas').find({}).toArray();
   return { props: { sadhanas: JSON.parse(JSON.stringify(sadhanas)) } };
 }
 
@@ -25,6 +25,15 @@ export default function Sadhana({ sadhanas }) {
           the work when you dont want to is the best predictor of long term
           results.
         </h2>
+        <ElementsList>
+          {sadhanas.map((sadhana, index) => {
+            return (
+              <Link href={`/sadhana/${sadhana.slug}`}>
+                <a>{sadhana.title}</a>
+              </Link>
+            );
+          })}
+        </ElementsList>
       </PageLayout>
     </div>
   );

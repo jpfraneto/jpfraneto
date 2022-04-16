@@ -22,7 +22,6 @@ export async function getStaticProps({ params }) {
 }
 
 export default function ProgrammingProjectPage({ episode }) {
-  console.log('the episode is: ', episode);
   const Component = useMDXComponent(episode.body.code);
   return (
     <PodcastLayout content={episode}>

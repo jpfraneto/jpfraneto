@@ -9,7 +9,6 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import ElementsList from '../../components/Layout/ElementsList';
 
 export async function getStaticProps() {
-  console.log(allThoughtsPages);
   return { props: { thoughtLogs: allThoughtsPages } };
 }
 

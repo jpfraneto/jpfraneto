@@ -9,7 +9,6 @@ import Head from 'next/head';
 import PoetryLayout from '../../components/Poetry/PoetryLayout';
 
 export async function getStaticProps({ params }) {
-  console.log(allPoems);
   allPoems.sort((x, y) => (x.index < y.index ? 1 : -1));
   return { props: { poems: allPoems } };
 }
