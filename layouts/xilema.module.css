@@ -1,0 +1,53 @@
+.contentContainer {
+  width: 94%;
+  padding: 0 8px;
+  max-width: 777px;
+  margin: 30px auto;
+  text-align: center;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.contentContainer h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.tag {
+  color: red;
+  background-color: black;
+  margin: 0 2px;
+  padding: 0 2px;
+  border: solid 0.5px black;
+  cursor: pointer;
+}
+
+.contentContainer h5 {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  font-style: oblique;
+}
+
+.tag:hover {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+.contentTextContainer {
+  width: 100%;
+  text-align: justify;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.contentTextContainer p {
+  margin: 20px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .contentContainer {
+    width: 100vw;
+  }
+}

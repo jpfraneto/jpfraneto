@@ -5,5 +5,10 @@
   justify-content: center;
 }
 
-.imageWrapper > div {
+.xilemaWorksDisplay > * {
+  cursor: pointer;
+}
+
+.imageContainer {
+  margin: 8px;
 }

@@ -7,6 +7,7 @@ import ButtonBack from '../components/Layout/ButtonBack';
 import React from 'react';
 
 export default function PodcastLayout({ children, content }) {
+  console.log('content', content);
   return (
     <PodcastContainer
       title={`· jp · podcast · @${content.guest}`}

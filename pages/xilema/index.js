@@ -7,7 +7,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export async function getStaticProps() {
-  console.log(allXilemaPages);
   return { props: { arts: allXilemaPages } };
 }
 
@@ -24,21 +23,19 @@ const Xilema = ({ arts }) => {
           pencils.
         </h2>
         <div className={styles.xilemaWorksDisplay}>
-          {/* {arts.map(work => {
-            return (
-              <Link href={`/xilema/${work.slug}`}>
-                <div className={styles.imageWrapper}>
-                  <Image src={work.image} width='222px' height='222px' />
-                </div>
-              </Link>
-            );
-          })} */}
           {arts.map((art, index) => {
             return (
-              <div key={index}>
-                {art.imageUrl && (
-                  <Image src={art.imageUrl} width='200' height='200' />
-                )}
+              <div key={index} className={styles.imageContainer}>
+                <Link href={`/xilema/${art.slug}`}>
+                  {art.imageUrl && (
+                    <Image
+                      key={index}
+                      src={art.imageUrl}
+                      width='200'
+                      height='200'
+                    />
+                  )}
+                </Link>
               </div>
             );
           })}

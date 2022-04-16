@@ -17,7 +17,7 @@ const Teaching = ({ classes }) => {
       <PageLayout>
         <h1>Teaching</h1>
         <h2>This is me sharing what I know with the world.</h2>
-        {!false && <p>I still don't know anything</p>}
+        {!false && <p>I still don't know anything, but I will soon</p>}
       </PageLayout>
     </>
   );
