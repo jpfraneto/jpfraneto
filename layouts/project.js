@@ -35,7 +35,7 @@ export default function ProjectLayout({ children, content }) {
         <div className={styles.playerWrapper}>
           <ReactPlayer
             className={styles.player}
-            playing
+            controls='true'
             url={content.videourl}
             width='100%'
             height='100%'

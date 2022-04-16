@@ -38,6 +38,7 @@ export default function PodcastLayout({ children, content }) {
           <ReactPlayer
             width='100%'
             height='100%'
+            controls='true'
             className={styles.player}
             url={content.videourl}
           />
