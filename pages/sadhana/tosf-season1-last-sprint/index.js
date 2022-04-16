@@ -5,6 +5,7 @@ import { allSeason1s } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Head from 'next/head';
 import PageLayout from '../../../components/Layout/PageLayout';
+import ButtonBack from '../../../components/Layout/ButtonBack';
 import ElementsList from '../../../components/Layout/ElementsList';
 
 export async function getStaticProps({ params }) {
@@ -35,6 +36,7 @@ const XilemaArtPage = ({ elements }) => {
               <a>{x.date}</a>
             </Link>
           ))}
+          <ButtonBack linkReference='/sadhana' msg='Back to Sadhana' />
         </ElementsList>
       </PageLayout>
     </div>
