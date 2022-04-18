@@ -34,6 +34,10 @@ export default function PodcastLayout({ children, content }) {
           </a>
         </h4>
         <Image src={content.albumImageUrl} width='300' height='300' />
+        <p>
+          Listen in Spotify{' '}
+          <a href='https://open.spotify.com/playlist/3pFAyDA9349wc0sYM6bKAb?si=26963b1e67fb4ffa'></a>
+        </p>
         <div className={styles.playerWrapper}>
           <ReactPlayer
             width='100%'

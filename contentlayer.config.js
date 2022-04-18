@@ -174,6 +174,9 @@ export const PodcastEpisode = defineDocumentType(() => ({
     guest: {
       type: 'string',
     },
+    guestname: {
+      type: 'string',
+    },
     album: {
       type: 'string',
     },
@@ -196,6 +199,9 @@ export const PodcastEpisode = defineDocumentType(() => ({
       type: 'string',
     },
     spotifyLink: {
+      type: 'string',
+    },
+    slug: {
       type: 'string',
     },
   },
