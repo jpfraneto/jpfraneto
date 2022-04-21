@@ -7,7 +7,6 @@ import ButtonBack from '../components/Layout/ButtonBack';
 import React from 'react';
 
 export default function PodcastLayout({ children, content }) {
-  console.log('content', content);
   return (
     <PodcastContainer
       title={`· jp · podcast · @${content.guest}`}
@@ -20,19 +19,24 @@ export default function PodcastLayout({ children, content }) {
         </h3>
         <p>{content.date}</p>
         <h4>
-          Conversation with
-          <a
-            style={{
-              color: 'white',
-              marginLeft: '4px',
-              textDecoration: 'none',
-            }}
-            target='_blank'
-            href={`https://www.instagram.com/${content.guest}`}
-          >
-            @{content.guest}
-          </a>
+          Conversation with{' '}
+          {content.guest ? (
+            <a
+              style={{
+                color: 'white',
+                marginLeft: '4px',
+                textDecoration: 'none',
+              }}
+              target='_blank'
+              href={`https://www.instagram.com/${content.guest}`}
+            >
+              @{content.guestname}
+            </a>
+          ) : (
+            <span>{content.guestname}</span>
+          )}
         </h4>
+
         <Image src={content.albumImageUrl} width='300' height='300' />
         <p>
           <a
@@ -43,7 +47,6 @@ export default function PodcastLayout({ children, content }) {
             Listen in Spotify
           </a>
         </p>
-
         <div className={styles.contentTextContainer}>{children}</div>
         <ButtonBack linkReference='/podcast' msg='Back to Podcast' />
       </article>
