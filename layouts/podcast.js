@@ -35,18 +35,15 @@ export default function PodcastLayout({ children, content }) {
         </h4>
         <Image src={content.albumImageUrl} width='300' height='300' />
         <p>
-          Listen in Spotify{' '}
-          <a href='https://open.spotify.com/playlist/3pFAyDA9349wc0sYM6bKAb?si=26963b1e67fb4ffa'></a>
+          <a
+            className={styles.spotifyLink}
+            target='_blank'
+            href={content.spotifyLink}
+          >
+            Listen in Spotify
+          </a>
         </p>
-        <div className={styles.playerWrapper}>
-          <ReactPlayer
-            width='100%'
-            height='100%'
-            controls='true'
-            className={styles.player}
-            url={content.videourl}
-          />
-        </div>{' '}
+
         <div className={styles.contentTextContainer}>{children}</div>
         <ButtonBack linkReference='/podcast' msg='Back to Podcast' />
       </article>
