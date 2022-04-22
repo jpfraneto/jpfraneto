@@ -36,8 +36,15 @@ export default function PodcastLayout({ children, content }) {
             <span>{content.guestname}</span>
           )}
         </h4>
+        <div className={styles.imageContainer}>
+          <Image
+            style={{ marginTop: '10px' }}
+            src={content.albumImageUrl}
+            width='300'
+            height='300'
+          />
+        </div>
 
-        <Image src={content.albumImageUrl} width='300' height='300' />
         <p>
           <a
             className={styles.spotifyLink}
