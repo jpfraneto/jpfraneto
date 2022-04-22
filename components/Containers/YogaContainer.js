@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function YogaContainer(props) {
-  console.log('the props are.', props);
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
   useEffect(() => {

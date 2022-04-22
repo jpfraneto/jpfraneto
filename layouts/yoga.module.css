@@ -11,10 +11,18 @@
 .contentContainer h1 {
   font-size: 3rem;
   font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.contentContainer h1 a {
+  text-decoration: none;
+  color: white;
 }
 
 .teacherLink {
   text-decoration: none;
+  color: white;
   color: grey;
 }
 

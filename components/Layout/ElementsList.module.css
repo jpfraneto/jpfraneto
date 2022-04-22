@@ -5,6 +5,8 @@
 
 .listDisplay a {
   display: block;
+  text-decoration: none;
+  color: white;
 }
 
 .listDisplay a:hover {
@@ -22,6 +24,15 @@
 }
 
 .listDisplay ol li a:hover {
+  color: grey;
+}
+
+.listDisplay ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.listDisplay ul li a:hover {
   color: grey;
 }
 

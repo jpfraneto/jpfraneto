@@ -18,6 +18,7 @@ export default function YogaLayout({ children, content }) {
             target='_blank'
             href={`https://www.instagram.com/${content.teacherInstagram}`}
             className={styles.teacherLink}
+            style={{ textDecoration: 'none', color: 'white' }}
           >
             @{content.teacherInstagram}
           </a>
