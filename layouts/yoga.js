@@ -34,8 +34,8 @@ export default function YogaLayout({ children, content }) {
           >
             <iframe
               src={content.loomRecording.replace('share', 'embed')}
-              frameborder='0'
-              webkitAllowFullscreen
+              frameBorder='0'
+              webkitallowfullscreen
               mozAllowFullscreen
               allowFullScreen
               style={{
