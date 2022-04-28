@@ -1,0 +1,18 @@
+---
+title: Thinking and thinking how to pull it out!
+date: 272022III
+index: 91
+description: Day 091 of 108 - The Open Source Factory Last Sprint
+loomRecording: https://www.loom.com/share/37815acd3fc2406caff326d5eadd51b2
+music: https://soundcloud.com/caleesi/caleesi-bucht-der-traumer-2018-i-archipel-afterhour
+building: www.theinfinitejest.tv
+sessionDuration: 2hours34minutes
+---
+
+[[272022IV1241]]
+This is me thinking through writing. I'm understanding how to build this project, and the barrier that I'm standing in front of now is one of architecture of the system. Right now, I have built the front end UI, on which I have the different elements of the user, which are her different media types and the video that is in the present for each of those. As this system is a few levels of abstraction over Human Music, I'm faced right now with a big challenge. What to do with the algorythms that bring each piece of music into the present? In human music, this is easy, since there is only one thread that brings stuff from the future into the present and then to the past. There is only one future, one present and one past. In the case of the infinite jest system as I have built it until now, there is U*M different futures. U is the number of users of the systems. M is the number of mediatypes in each of those users. Since each mediatype has its own pool of elements which is 'the future' for that type, it is quite an interesting challenge to realize what to do with all these elements. How can I manage them so that I can have the kind of randomness that human music has but having in mind the scale of the system. It seems like a horrible system design to have U*M threads of timeouts running in the server at the same time. If there is 100 users with 10 mediatypes each, there will be at each time 1000 timeouts running. This seems like a horrible decision, really. Thinking that each of these elements is expensive, the process is not scalable. And what can I do now to have less demand on the server and translate that processing power? Where can I transfer it to? To the browser. That is the answer. The browser of each visitor of each person in the system. If X comes into my personal infinite jest website, her browser will fetch my information from the server and with it it will calculate what is going on there. Each user will have a different experience in my website. Even I, each time that I come in, will have a different experience in the website. And what comes to mind as a way of randomizing this experience is calculating for a random media element for each of the M elements, and within that chosen element, bring up a random timestamp within its duration. With this, I transfer all the complexity of the calculation into the browser, because if not the thing is not going to scale properly. What I can have in the server is a version of the infinite jest that is the main thread, which is connected to all the recommendations that have existed in the platform, and with those, I can create an eternal thread, human-music like. With all the ones that all the people from the world have shared. But only one thread, not the U\*M that I would need to have if I did it the other way around.
+
+[[272022IV1315]]
+Ending the session, it has been an amazing one. I always write about the understanding that I'm reaching and it is great. It has been a little bit non organized how I have worked, I have worked in 3 different repos, but this is what this is all about. Experimenting, testing things out, and discovering what to do with that. What a great adventure this project has been.
+
+---
