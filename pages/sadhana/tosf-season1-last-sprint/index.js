@@ -9,7 +9,7 @@ import ButtonBack from '../../../components/Layout/ButtonBack';
 import ElementsList from '../../../components/Layout/ElementsList';
 
 export async function getStaticProps({ params }) {
-  allSeason1s.sort((x, y) => (x.index > y.index ? 1 : -1));
+  allSeason1s.sort((x, y) => (x.index > y.index ? 1 : -1)).reverse();
   return { props: { elements: allSeason1s } };
 }
 
