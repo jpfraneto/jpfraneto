@@ -12,9 +12,19 @@ export default function EducationLayout({ children, content }) {
     >
       <article className={styles.contentContainer}>
         <h1>{content.title}</h1>
-        {content.author && (
-          <h3 className={styles.authorText}>{content.author}</h3>
-        )}
+
+        {content.keywords ||
+          (content.date && (
+            <h3>
+              {content.keywords &&
+                content.keywords
+                  .split(',')
+                  .map((x, index) => <span key={index}>{x} -</span>)}
+              {content.date && (
+                <span className={styles.authorText}> {content.date}</span>
+              )}
+            </h3>
+          ))}
         {content.tags && (
           <h3>
             Posted in{' '}
@@ -25,7 +35,7 @@ export default function EducationLayout({ children, content }) {
         )}
         <hr />
         <div className={styles.contentTextContainer}>{children}</div>
-        <ButtonBack linkReference='/education' msg='Back to Education' />
+        <ButtonBack linkReference={content.rawPath} msg='Back to Education' />
       </article>
     </Container>
   );

@@ -22,3 +22,7 @@ html {
   height: 70px;
   width: 100%;
 }
+
+p {
+  margin: 8px;
+}

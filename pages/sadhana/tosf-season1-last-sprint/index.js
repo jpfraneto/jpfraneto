@@ -24,16 +24,16 @@ const XilemaArtPage = ({ elements }) => {
       <PageLayout>
         <h1>The Open Source Factory Season 1 - Last Sprint</h1>
         <hr />
-        <h2>
-          I commit to do something and try my best to stick with it, so that the
-          repetition can teach me what I need to learn in order to evolve. Doing
-          the work when you dont want to is the best predictor of long term
-          results.
-        </h2>
+        <h2>What is this sadhana about? WRITE HERE!</h2>
         <ElementsList>
-          {elements.map(x => (
-            <Link href={`/sadhana/tosf-season1-last-sprint/${x.date}`}>
-              <a>{x.date}</a>
+          {elements.map((x, index) => (
+            <Link
+              key={index}
+              href={`/sadhana/tosf-season1-last-sprint/${x.date}`}
+            >
+              <a>
+                {elements.length - index} /// {x.date}
+              </a>
             </Link>
           ))}
           <ButtonBack linkReference='/sadhana' msg='Back to Sadhana' />

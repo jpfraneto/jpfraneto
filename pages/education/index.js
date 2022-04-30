@@ -6,13 +6,9 @@ import components from '../../components/MDXcomponents';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import PageLayout from '../../components/Layout/PageLayout';
 import ElementsList from '../../components/Layout/ElementsList';
-
-export async function getStaticProps() {
-  return { props: { logs: allEducationPages } };
-}
+import source from '../../data/education/educationSource';
 
 const EducationPage = ({ logs }) => {
-  const Component = useMDXComponent(logs[0].body.code);
   return (
     <>
       <Head>
@@ -26,10 +22,10 @@ const EducationPage = ({ logs }) => {
           brought into who I am now.
         </h2>
         <ElementsList>
-          {logs.map((log, index) => {
+          {source.map((education, index) => {
             return (
-              <Link href={`/education/${log.slug}`}>
-                <a>{log.title}</a>
+              <Link href={`/education/${education.slug}`}>
+                <a>{education.title}</a>
               </Link>
             );
           })}

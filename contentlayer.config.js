@@ -84,6 +84,18 @@ export const ThoughtsPage = defineDocumentType(() => ({
     dbname: {
       type: 'string',
     },
+    title: {
+      type: 'string',
+    },
+    description: {
+      type: 'string',
+    },
+    podcast: {
+      type: 'string',
+    },
+    url: {
+      type: 'string',
+    },
   },
 }));
 
@@ -137,16 +149,26 @@ export const ProgrammingProjects = defineDocumentType(() => ({
 
 export const EducationPage = defineDocumentType(() => ({
   name: 'EducationPage',
-  filePathPattern: `education/*.mdx`,
+  filePathPattern: `education/**/*.mdx`,
   contentType: 'mdx',
   fields: {
-    title: {
-      type: 'string',
-    },
     university: {
       type: 'string',
     },
+    universitySlug: {
+      type: 'string',
+    },
+    rawPath: {
+      type: 'string',
+    },
+    keywords: { type: 'string' },
+    title: {
+      type: 'string',
+    },
     slug: {
+      type: 'string',
+    },
+    date: {
       type: 'string',
     },
   },

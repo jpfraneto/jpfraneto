@@ -1,0 +1,23 @@
+.mainContainer {
+  width: 96%;
+  max-width: 888px;
+  margin: 0 auto;
+  height: auto;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.mainContainer h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3rem;
+}
+
+.mainContainer a {
+  text-decoration: none;
+  color: yellow;
+}
+
+.mainContainer a:hover {
+  color: red;
+}

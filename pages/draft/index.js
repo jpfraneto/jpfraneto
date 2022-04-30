@@ -31,7 +31,6 @@ const IndividualDraft = ({ children }) => {
     };
     const response = await fetch('/api/draft', reqParams);
     const data = await response.json();
-    console.log('the data is: ', data);
     setLoading(false);
     setPublished(data);
   };
