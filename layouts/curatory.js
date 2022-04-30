@@ -7,7 +7,6 @@ import React from 'react';
 import ShareButtons from '../components/Layout/ShareButtons';
 
 export default function CuratoryLayout({ children, content }) {
-  console.log('the content is:', content);
   return (
     <Container title={'· jp · thoughts · ' + content.title} date={content.date}>
       <article className={styles.contentContainer}>

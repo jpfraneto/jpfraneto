@@ -16,13 +16,15 @@ export default function ProjectLayout({ children, content }) {
       <article className={styles.contentContainer}>
         <h1>
           {content.name}{' '}
-          <a
-            href={content.githubrepo}
-            className={styles.githubIcon}
-            target='_blank'
-          >
-            <AiFillGithub />
-          </a>
+          {content.githubrepo && (
+            <a
+              href={content.githubrepo}
+              className={styles.githubIcon}
+              target='_blank'
+            >
+              <AiFillGithub />
+            </a>
+          )}
         </h1>
         <a
           className={styles.productionUrlLink}
