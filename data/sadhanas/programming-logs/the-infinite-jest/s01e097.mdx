@@ -1,0 +1,22 @@
+---
+title:
+date: 032022V
+index: 97
+description: Day 097 of 108 - The Open Source Factory Last Sprint
+loomRecording: https://www.loom.com/share/77077a7ffdda4000bdb27b5a8f2e8e3a
+music: https://soundcloud.com/madmotormiquel/madmotormiquel-amores-experience-2022-oaxaca-mexico-030322
+building: www.theinfinitejest.tv
+sessionDuration: 2hours22minutes
+---
+
+[[032022V15000]]
+
+Closing a new session, this one was a good one. Much better than yesterday's. I went to my mothers house to have a great conversation with her, and after that I came to the house to start working full power. I started getting into the maze of authentication, which didn't work with twitter, and now I ended up using Github and Google as the providers. There is still issues related to how the functionality of it works, but as I write this it seems that it is working. I will go now to the website and check what is going on.
+
+The auth takes forever when I click the google button, and that is not good in production! I wonder what is going on... The good thing is that I'm getting to a point where I could publish the app and it would be up and running, connected with the different layers of it and that feels good. theinfinitejest.tv has its own loop of eternal content, which is fed from the users that upload their content to their personal profiles in home.theinfinitejest.tv. I think I understood what is going on, so I will go back to the app and try to fix it and then come back and write. The callback of the login goes to 'https://theinfinitejest.tv/api/auth/signin/google', which is not the route that it should go. This is a problem. Let me go and handle it...
+
+[[032022V1513]]
+
+I need to be able to see a weird page if I go to a route with a user that doesn't exist! Right now I get a error 500.
+
+Besides that, the functionality of the user is not working properly, and I need to check that in order for the system to work in a good way. Time for that tomorrow!
