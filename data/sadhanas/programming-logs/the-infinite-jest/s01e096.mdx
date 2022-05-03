@@ -1,0 +1,18 @@
+---
+title: In the maze of authentication
+date: 022022V
+index: 96
+description: Day 096 of 108 - The Open Source Factory Last Sprint
+loomRecording: https://www.loom.com/share/e648c2b0f1074b5a9042e90554aa7ffd
+music: https://soundcloud.com/ost_end/ostend-mixtape-no-38-by-mira
+building: www.theinfinitejest.tv
+sessionDuration: 1hours32minutes
+---
+
+[[022022V2103]]
+
+Today was a tough day. I did not feel good for starting my session -I was procastinating a lot, trying to find excuses for eating, or doing whatever. I miss my family, and the space that the house has now is something very weird for me to deal with. I got used to being with my baby here, and not having her and my partner is intense. But I'm learning a lot in the process-.
+
+I spent most of the session trying to build the system for authentication, and now I don't feel completely done with it, but for now it is working. The implementation of next-auth with twitter is not working, I was not able to make it work at all, and I wonder if it is my problem or if there is something weird about it overall. At least I couldn't make it work, so I went on and installed the github oauth2 system so that I can authenticate users through that. Now it works, and I ended the session grabbing the session information for when the users signs in and adding to the user element the github username and id. That is one of the challenges that I have now with the app, having the information of the user available as a username in the session element itself. I want to connect the app with a particular username. That is one of my main missons, because the profile's videos will be accesible via the route /u/[username]. That's what I'm working on, and trying to find my way through its functionality so that I can make it work properly.
+
+I had a lot of fog today because I started working late, and tomorrow I'll fix that and start full power early in the day. I will commit to do the work in a better way so that I can make the progress that I need to make to have the app running when this cycle ends.
