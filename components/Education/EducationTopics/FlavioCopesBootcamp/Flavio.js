@@ -8,6 +8,12 @@ const Flavio = () => {
     { slug: 'week2', title: 'Week 2: Astro', description: '' },
     { slug: 'week3', title: 'Week 3: Javascript', description: '' },
     { slug: 'week4', title: 'Week 4: NodeJS', description: '' },
+    { slug: 'week5', title: 'Week 5: React & NextJS', description: '' },
+    {
+      slug: 'week6',
+      title: 'Week 6: Databases - SQL, PostgreSQL & Prisma',
+      description: '',
+    },
   ];
   return (
     <div className={styles.mainContainer}>

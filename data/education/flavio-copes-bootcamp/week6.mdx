@@ -1,0 +1,86 @@
+---
+title: Week 6 - Flavio Copes Bootcamp
+universitySlug: flavio-copes-bootcamp
+university: Flavio Copes Bootcamp 2022
+slug: week6
+date: 102022V
+rawPath: /education/flavio-copes-bootcamp
+keywords: Databases - SQL, PostgreSQL & Prisma
+---
+
+[[102022V0830]]
+
+## Databases
+
+A database is a place where a collection of information is stored. It is a service that is provided by a particular entity which gives me as a developer the ability to store and retrieve information. It must be:
+
+- _Efficient_: The storing and read of the information must be done fast.
+- _Reliable & Resilient_: It is important that I can access the information at all times.
+
+SQL databases follow the relational model, based on tables. noSQL databases don't use a relational model. We'll use a SQL database in the bootcamp called PostgreSQL.
+
+SQL databases consist of tables, which themselves consist of rows which hold values that can be of a particular type. Tables can reference other tables forming relationships. This is how data is linked together.
+
+For interacting with a relational database we use a language called SQL, which lets us create a database, define its table schema, fill tables with data and query the data when needed. In the bootcamp we'll not use SQL as a language for working with the database, we'll use a framework called [Prisma](www.prisma.io) that is built on top of it to avoid common mistakes and make it easy to get up and running.
+
+A SQL database is composed by one or more tables, which is created with the CREATE TABLE command, establishing the colums that each element of the database will have. For example,
+
+```
+CREATE TABLE people (
+    age INT,
+    name CHAR(20)
+)
+```
+
+Which creates a table with the name people, the first column being an age integer and then the second one a name string with the maximum of 20 characters. There are several different types of data that the table can hold.
+
+Basic Commands:
+
+- INSERT INTO people (age, name) VALUES (37, 'Flavio'), (8, 'Roger'); - Add information to this table
+- SELECT \* FROM people ORDER BY name DESC - Select all elements in the people table and order them descendinglively (?) by their names.
+- DELETE FROM people - Deletes all the information inside the table.
+- DELETE FROM people WHERE name='Jorge' - Eliminates the row with the name Jorge from the table.
+- DROP TABLE people - Deletes the whole table.
+- UPDATE people SET age=2 WHERE name='Mila' - Updates the age of Mila.
+- UPDATE people SET age=2 - Updates the age of all the rows in the table.
+- ALTER TABLE people ADD COLUMN born_year INT - Adding a new column to the table.
+- ALTER TABLE people DROP COLUMN born_year;
+
+A primary key is a unique key with which we identify a row in a table.
+
+```
+CREATE TABLE people (
+  id SERIAL PRIMARY KEY,
+  age INT NOT NULL,
+  name CHAR(20) NOT NULL
+);
+```
+
+Using the keyword SERIAL we tell the database that this value is built upon the last one, and it keeps adding one as the number of elements in the database grows.
+
+It is very important to define a serial key so:
+
+- We can always uniquely identify a row in the table.
+- We can have relationships within tables, so a table can reference a row in another table.
+- We can have data integrity and referential integrity.
+- It is important for speed, so the database can figure out how to optimize the table.
+
+We set up a database in [Railway](www.railway.app), and then we interact with it using a ORM, in this case Prisma. We use functions provided by the ORM to make our lifes easier.
+
+We can't connect to the database from frontend code that runs on the browser, that's why we need an API to interact with the database.
+
+I'm starting a new nextjs project, on which I'll instal the following command
+
+```
+npm install -D prisma
+```
+
+as a developer dependency so that it is not added to the production bundle.
+
+## Questions to myself - Answers from myself
+
+- ¿What is the difference between a SQL Database and a Non-SQL?
+
+- ¿What is a relational database?
+
+-
