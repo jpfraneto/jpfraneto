@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+  text-align: center;
+  border: solid black 2px;
+  padding: 8px;
+  margin: 8px;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.url {
+  text-decoration: none;
+  color: white;
+}
+
+.url:hover {
+  color: orange;
+}
