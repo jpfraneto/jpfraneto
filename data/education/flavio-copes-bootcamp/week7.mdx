@@ -1,0 +1,49 @@
+---
+title: Week 7 - Flavio Copes Bootcamp
+universitySlug: flavio-copes-bootcamp
+university: Flavio Copes Bootcamp 2022
+slug: week7
+date: 182022V
+rawPath: /education/flavio-copes-bootcamp
+keywords: APIS
+---
+
+It is important to be familiar with the codes that the API should return so that it makes sense for it being part of the system. Here are the status codes:
+
+- `200 OK`: this is the standard response for successful HTTP requests.
+- `201 Created`: Typically a response to a POST request. The request has been completed, and a new resource has been created.
+- `400 Bad Request` Due to a request error that was generated on the client, the server cannot process the request. Errors can include a malformed request, size too large to be handled, or others
+- `401 Unauthorized` Sent when authentication is required and the client is not authorized
+- `403 Forbidden` The resource is not available for various reasons. If the reason is authentication, prefer the 401 Unauthorized status code.
+- `404 Not Found` The requested resource could not be found.
+- `405 Method Not Allowed` The resource is not available through that HTTP method, but might be with another.
+- `500 Internal Server Error` A generic server error message, given when an unexpected condition was encountered and no more specific message is suitable.
+
+Process for building an API:
+
+- Getting to know about the project and which are the interfaces that are going to interact with the API.
+- Understanding the requirements. 
+- There are multiple design decisions that I have to have in mind as the creator of the API. 
+
+To setup a prisma DB in the project:
+
+```js
+npm install -D prisma
+npx prisma init
+```
+
+Then I create a railway db and connect it to the prisma schema by adding it to the .env file. Then I set up the models for the data, having in mind that a ? makes the column optional. To sync the database with the schema I run the following command:
+
+```js
+npx prisma migrate dev
+```
+
+To enable absolute imports, create a jsconfig.json file in the root and add this code:
+
+```js
+{
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}
+```
