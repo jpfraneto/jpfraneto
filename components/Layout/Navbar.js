@@ -7,7 +7,6 @@ import { AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
 const menuOptions = [
   { link: '/teaching', name: 'Teaching', id: 'kishan2133' },
   { link: '/thoughts', name: 'Thoughts', id: 'curatory230' },
-  { link: '/yoga', name: 'Yoga', id: 'yoga123' },
   { link: '/programming', name: 'Programming', id: 'programming123' },
   { link: '/education', name: 'Education', id: 'educastiro023' },
   { link: '/podcast', name: 'Podcast', id: 'podcast2135' },

@@ -41,13 +41,7 @@ export default function Home() {
                 </Link>
                 .
               </h3>
-              <h3>
-                I evolve by practicing{' '}
-                <Link href='/yoga'>
-                  <a>yoga</a>
-                </Link>
-                .
-              </h3>
+
               <h3>
                 I build what I want to bring into the world with{' '}
                 <Link href='/programming'>
@@ -90,10 +84,7 @@ export default function Home() {
                 </Link>
                 .
               </h3>
-              <p>
-                Welcome to my corner on the internet, where I discover who I am,
-                day by day.
-              </p>
+              <p>Welcome to my corner on the internet.</p>
             </div>
           </div>
         </div>

@@ -22,6 +22,8 @@ const theopensourcefactory = ({ projects }) => {
 };
 
 const Project = ({ x }) => {
+  console.log('x is: ', x);
+
   return (
     <div>
       <div className={styles.playerWrapper}>
@@ -35,9 +37,19 @@ const Project = ({ x }) => {
         />
       </div>
       {x.url !== '#' ? (
-        <a className={styles.url} href={x.url} target='_blank'>
-          {x.url}
-        </a>
+        x.url !== 'http://www.drip-work.app' ? (
+          <a className={styles.url} href={x.url} target='_blank'>
+            {x.url}
+          </a>
+        ) : (
+          <a
+            className={styles.url}
+            href='https://ancient-spire-82753.herokuapp.com/login'
+            target='_blank'
+          >
+            {x.url}
+          </a>
+        )
       ) : (
         <a className={styles.url} href='#'>
           Failed one!
