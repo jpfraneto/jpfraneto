@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { connectToDatabase } from '../lib/mongodb2';
 import styles from '../styles/TOSF.module.css';
 import ReactPlayer from 'react-player';
+import { AiFillGithub } from 'react-icons/ai';
+import { ImIcoMoon } from 'react-icons/im';
+import Link from 'next/link';
 
 export async function getStaticProps({ params }) {
   const { db } = await connectToDatabase();
@@ -22,10 +25,8 @@ const theopensourcefactory = ({ projects }) => {
 };
 
 const Project = ({ x }) => {
-  console.log('x is: ', x);
-
   return (
-    <div>
+    <div className={styles.projectContainer}>
       <div className={styles.playerWrapper}>
         <ReactPlayer
           className={styles.reactPlayer}
@@ -33,6 +34,7 @@ const Project = ({ x }) => {
           width='100%'
           height='100%'
           playing={true}
+          controls={true}
           muted={true}
         />
       </div>
@@ -56,7 +58,19 @@ const Project = ({ x }) => {
         </a>
       )}
 
-      <h3>{x.date}</h3>
+      <p className={styles.projectTagline}>{x.sentence}</p>
+      <div className={styles.iconsContainer}>
+        <a href={x.githubRepo} target='_blank' rel='noreferrer'>
+          <AiFillGithub />
+        </a>
+        <a
+          href={`https://www.theopensourcefactory.com/projects/${x.projectId}`}
+          target='_blank'
+          rel='noreferrer'
+        >
+          <ImIcoMoon size={16} />
+        </a>
+      </div>
     </div>
   );
 };
