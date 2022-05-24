@@ -1,0 +1,17 @@
+.indexCircle {
+  width: 33px;
+  height: 33px;
+  border: solid 1px white;
+  background-color: green;
+  border-radius: 50%;
+  font-weight: bold;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.indexCircle:hover {
+  filter: brightness(55%);
+}

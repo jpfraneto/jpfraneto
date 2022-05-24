@@ -30,3 +30,8 @@
 .url:hover {
   color: orange;
 }
+
+.circlesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}

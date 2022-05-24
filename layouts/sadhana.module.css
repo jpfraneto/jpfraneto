@@ -8,6 +8,17 @@
   color: white;
 }
 
+.contentHeader {
+  margin: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.centerHeaderContainer {
+  width: fit-content;
+}
+
 .musicLink {
   color: white;
   text-decoration: none;

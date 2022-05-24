@@ -6,7 +6,9 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import Head from 'next/head';
 import PageLayout from '../../../components/Layout/PageLayout';
 import ButtonBack from '../../../components/Layout/ButtonBack';
+import Circle from '../../../components/SadhanaLife/Circle';
 import ElementsList from '../../../components/Layout/ElementsList';
+import styles from '../../../styles/TOSF.module.css';
 
 export async function getStaticProps({ params }) {
   allSeason1s.sort((x, y) => (x.index > y.index ? 1 : -1)).reverse();
@@ -14,8 +16,9 @@ export async function getStaticProps({ params }) {
 }
 
 const XilemaArtPage = ({ elements }) => {
+  console.log('the elemsnts are: ', elements);
   return (
-    <div>
+    <>
       <Head>
         <title>
           · jp · sadhana · The Open Source Factory Season 1 Last Sprint
@@ -24,22 +27,36 @@ const XilemaArtPage = ({ elements }) => {
       <PageLayout>
         <h1>The Open Source Factory Season 1 - Last Sprint</h1>
         <hr />
-        <h2>What is this sadhana about? WRITE HERE!</h2>
+        <h2>
+          This is the world that I created to support my journey learning to
+          code. I knew that what I needed was consistency, so I created this
+          frame with which I brought consistency into my path. The best way to
+          learn how to code is to build stuff, and in this project I posed
+          myself the challenge of building an original app every month.
+        </h2>
+        <h2>
+          After my daughter was born, I was having trouble finding time to
+          organize the work every day, so I decided to pose myself the challenge
+          of programming at least 88 minutes every day, except saturdays, which
+          is family day. This sadhana is the consequence of that.
+        </h2>
+
         <ElementsList>
-          {elements.map((x, index) => (
-            <Link
-              key={index}
-              href={`/sadhana/tosf-season1-last-sprint/${x.date}`}
-            >
-              <a>
-                {elements.length - index} /// {x.date}
-              </a>
-            </Link>
-          ))}
-          <ButtonBack linkReference='/sadhana' msg='Back to Sadhana' />
+          <div className={styles.circlesContainer}>
+            {elements.map((x, index) => {
+              console.log(x, index);
+              return (
+                <Circle
+                  link={`/sadhana/tosf-season1-last-sprint/${x.date}`}
+                  i={x.index}
+                />
+              );
+            })}
+          </div>
         </ElementsList>
+        <ButtonBack linkReference='/sadhana' msg='Back to Sadhana' />
       </PageLayout>
-    </div>
+    </>
   );
 };
 
