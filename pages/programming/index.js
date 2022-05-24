@@ -36,6 +36,11 @@ const Programming = ({ projects }) => {
             );
           })}
         </ElementsList>
+        <Link href='/theopensourcefactory'>
+          <a className={styles.allProjectsBtn}>
+            Check out all projects at once
+          </a>
+        </Link>
       </PageLayout>
     </>
   );

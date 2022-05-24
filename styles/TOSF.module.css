@@ -22,8 +22,8 @@
 
 .iconsContainer {
   position: absolute;
-  right: 3px;
-  bottom: 3px;
+  right: 2px;
+  bottom: 16px;
 }
 
 .iconsContainer a {
@@ -33,7 +33,7 @@
 }
 
 .iconsContainer > * {
-  margin: 2px;
+  margin: 1px;
   cursor: pointer;
 }
 

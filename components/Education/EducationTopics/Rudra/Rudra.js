@@ -17,26 +17,13 @@ const Rudra = () => {
     <div className={styles.mainContainer}>
       <h1>Formación Yóguica Rudra 2021-2022</h1>
       <p>
-        Entré a esta formación a partir de unas profundas ganas de querer
-        entender mejor la práctica del yoga que estaba llevando a cabo tan
-        disciplinadamente. Se hizo necesario para mi complementar la práctica
-        con un proceso teórico, para así poder integrar de mejor forma todo el
-        conocimiento y avanzar en mi entendimiento de esta hermosa ciencia
-        ancestral cuyo objetivo es elevar la conciencia.
+        On 2019 I realized that I wanted to develop myself into the two key
+        skills that I want my life to circle about: Programming and Meditation.
       </p>
       <p>
-        Voy a ser un referente en el camino de vivir más desde la conciencia, y
-        profundizar en esta técnica es el medio para encontrar ese camino.
+        Wanting to deepen my Meditation practice I ended up in a teaching course
+        for becoming a Kundalini Yoga teacher.{' '}
       </p>
-      <div>
-        {rudraElements.map(x => (
-          <div>
-            <Link href={`/education/rudra/${x.slug}`}>
-              <a>{x.title}</a>
-            </Link>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

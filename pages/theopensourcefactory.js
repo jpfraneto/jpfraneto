@@ -64,7 +64,7 @@ const Project = ({ x }) => {
           <AiFillGithub />
         </a>
         <a
-          href={`https://www.theopensourcefactory.com/projects/${x.projectId}`}
+          href={`http://www.theopensourcefactory.com/projects/${x.projectId}`}
           target='_blank'
           rel='noreferrer'
         >

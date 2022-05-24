@@ -2,7 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 import LanguageContext from '../../context/Language';
 import styles from './Navbar.module.css';
-import { AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
+import {
+  AiOutlineWhatsApp,
+  AiOutlineMail,
+  AiOutlineTwitter,
+  AiOutlineGithub,
+} from 'react-icons/ai';
 
 const menuOptions = [
   { link: '/teaching', name: 'Teaching', id: 'kishan2133' },
@@ -17,6 +22,11 @@ const menuOptions = [
 
 const Navbar = () => {
   const value = useContext(LanguageContext);
+  const handleEmailBtn = e => {
+    e.preventDefault();
+    const res = confirm('Do you want to send me an email?');
+    if (res) window.open('mailto:jpfraneto@gmail.com', '_blank');
+  };
   return (
     <nav className={styles.navMainContainer}>
       <div className={styles.navContainer}>
@@ -24,10 +34,24 @@ const Navbar = () => {
           <a>Jorge Pablo Franetovic Stocker</a>
         </Link>
         <div className={styles.contactElementsDiv}>
-          <a target='_blank' href='https://wa.link/h20gg2'>
+          <a
+            target='_blank'
+            href='https://twitter.com/jpfraneto'
+            rel='noreferrer'
+          >
+            <AiOutlineTwitter />
+          </a>
+          <a
+            target='_blank'
+            href='https://github.com/jpfraneto'
+            rel='noreferrer'
+          >
+            <AiOutlineGithub />
+          </a>
+          <a target='_blank' href='https://wa.link/h20gg2' rel='noreferrer'>
             <AiOutlineWhatsApp />
           </a>
-          <a target='_blank' href='mailto:jpfraneto@gmail.com'>
+          <a onClick={handleEmailBtn}>
             <AiOutlineMail />
           </a>
         </div>

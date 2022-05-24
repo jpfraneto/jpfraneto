@@ -14,6 +14,16 @@ const Flavio = () => {
       title: 'Week 6: Databases - SQL, PostgreSQL & Prisma',
       description: '',
     },
+    {
+      slug: 'week7',
+      title: 'Week 7: Rest API',
+      description: '',
+    },
+    {
+      slug: 'week8',
+      title: 'Week 8: Forms and Authentication',
+      description: '',
+    },
   ];
   return (
     <div className={styles.mainContainer}>
