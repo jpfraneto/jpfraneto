@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-// import { connectToDatabase } from '../../lib/mongodb';
 import { sadhanas } from '../../data/sadhanas/sadhanas';
 import PageLayout from '../../components/Layout/PageLayout';
 import ElementsList from '../../components/Layout/ElementsList';

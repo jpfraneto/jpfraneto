@@ -5,7 +5,6 @@ import { GiTargeted } from 'react-icons/gi';
 import { useRouter } from 'next/router';
 
 const SadhanaCard = ({ sadhana }) => {
-  console.log('the sadhana is: ', sadhana);
   return (
     <div
       className={styles.cardContainer}

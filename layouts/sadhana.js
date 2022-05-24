@@ -17,7 +17,7 @@ export default function SadhanaLayout({ children, content }) {
         {content.sessionDuration && (
           <h5>Duration: {content.sessionDuration} </h5>
         )}
-        {content.music ? (
+        {content.music && content.music ? (
           <a
             className={styles.musicLink}
             href={content.music}
@@ -58,7 +58,7 @@ export default function SadhanaLayout({ children, content }) {
 
         <div className={styles.contentTextContainer}>{children}</div>
         <ButtonBack
-          linkReference='/sadhana/tosf-season1-last-sprint'
+          linkReference={`/sadhana/${content.sadhanaslug}`}
           msg='Back'
         />
       </article>

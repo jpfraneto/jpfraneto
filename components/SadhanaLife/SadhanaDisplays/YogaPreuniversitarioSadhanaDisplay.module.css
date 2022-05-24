@@ -1,0 +1,18 @@
+.articleContainer {
+  width: 100%;
+  margin: 20px 0;
+  background-color: rgb(46, 46, 46);
+  border-radius: 8px;
+  border: solid white 1px;
+  height: fit-content;
+  padding: 4px 8px;
+}
+
+.articleContainer h2 {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.sadhanaText {
+  margin: 10px;
+}
