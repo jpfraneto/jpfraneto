@@ -1,12 +1,8 @@
 import React from 'react';
 import LoomPlayer from '../../Layout/LoomPlayer';
-import styles from './YogaPreuniversitarioSadhanaDisplay.module.css';
+import styles from './CuarentenaSA.module.css';
 
-const YogaPreuniversitarioSadhanaDisplay = ({
-  chosenSadhana,
-  setChosenSadhana,
-  elements,
-}) => {
+const CuarentenaSA = ({ chosenSadhana, setChosenSadhana, elements }) => {
   const handleChangeSadhana = num => {
     console.log(parseInt(num));
     if (parseInt(num) === -1 && chosenSadhana.index === 1)
@@ -34,4 +30,4 @@ const YogaPreuniversitarioSadhanaDisplay = ({
   );
 };
 
-export default YogaPreuniversitarioSadhanaDisplay;
+export default CuarentenaSA;

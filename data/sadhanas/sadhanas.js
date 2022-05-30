@@ -9,7 +9,7 @@ export const sadhanas = [
     periodicity: 'days',
     scheduledDate: '2022-01-27',
     slug: 'tosf-season1-last-sprint',
-    status: 'Active',
+    status: 'Finished',
     tags: 'programming, open source',
     targetDuration: '108',
     title: 'TOSF Season 1 Last Sprint',
@@ -30,5 +30,20 @@ export const sadhanas = [
     targetDuration: '21',
     title: 'Yoga Preuniversitario Season 1',
     _id: '6243595d2af7ksjdi6b0b6c9',
+  },
+  {
+    description:
+      'Finishing my journey of education for being a Kundalini Yoga teacher by doing the 40 day sadhana.',
+    image:
+      'https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/4f/79/a2/4f79a261-544b-1b5c-ab0d-0bafab73f7e4/888295955560.jpg/1000x1000bb.webp',
+    motivation: '',
+    periodicity: 'days',
+    scheduledDate: '2022-05-29',
+    slug: 'cuarentena-sadhana-acuariano',
+    status: 'Active',
+    tags: 'yoga',
+    targetDuration: '40',
+    title: 'Cuarentena Sadhana Acuariano',
+    _id: '6242495d2af7ksjdi6b0b6c9',
   },
 ];

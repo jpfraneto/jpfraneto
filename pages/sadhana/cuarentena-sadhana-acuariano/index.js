@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Link from 'next/link';
 import XilemaLayout from '../../../layouts/xilema';
 import components from '../../../components/MDXcomponents';
@@ -7,45 +6,44 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import Head from 'next/head';
 import PageLayout from '../../../components/Layout/PageLayout';
 import ButtonBack from '../../../components/Layout/ButtonBack';
-import ElementsList from '../../../components/Layout/ElementsList';
-import styles from '../../../styles/SadhanaPage.module.css';
 import Circle from '../../../components/SadhanaLife/Circle';
+import ElementsList from '../../../components/Layout/ElementsList';
+import styles from '../../../styles/TOSF.module.css';
+import { useState } from 'react';
 import YogaPreuniversitarioSadhanaDisplay from '../../../components/SadhanaLife/SadhanaDisplays/YogaPreuniversitarioSadhanaDisplay';
 
 export async function getStaticProps({ params }) {
   const filtered = allSadhanaEntries.filter(
-    x => x.sadhanaslug === 'yoga-preuniversitario-season-1'
+    x => x.sadhanaslug === 'cuarentena-sadhana-acuariano'
   );
   filtered.sort((x, y) => (x.index > y.index ? 1 : -1));
   return { props: { elements: filtered } };
 }
-
 const XilemaArtPage = ({ elements }) => {
   const [chosenSadhana, setChosenSadhana] = useState(null);
+
   return (
-    <div>
+    <>
       <Head>
-        <title>· jp · sadhana · Yoga Preuniversitario</title>
+        <title>· jp · sadhana · Cuarentena Sadhana Acuariano</title>
       </Head>
       <PageLayout>
-        <h1>Yoga Preuniversitario</h1>
+        <h1>Cuarentena Sadhana Acuariano</h1>
         <hr />
         <h2>
-          I'm ending my education for being a Kundalini Yoga teacher with this
-          final project, on which I will teach yoga and meditation to young
-          people that are going through the hard phase of their life on which
-          they prepare to the admission test for higher education. They also
-          have to decide what they want to study, so there is a lot of stress
-          going on in this period of their life. I will use the tools and
-          techniques of yoga to help them, and through that understand where I
-          am at in my own path. Teaching builds mastery.
+          The last part of my teaching to be a Kundalini Yoga, coming back every
+          day at 5am to do the work. The Sadhana Acuariano is a practice that
+          consists of the chanting of a sacred chant called Jabji, followed by a
+          Kundalini Yoga practice, which in this case will be the Kriya for the
+          Heart and Soul. All this is ended by the resonating of the Aquarian
+          Mantras, which is a set of 7 mantras that are meditated and chanted in
+          a particular order.
         </h2>
         <ElementsList>
           <div className={styles.circlesContainer}>
             {elements.map((x, index) => {
               return (
                 <Circle
-                  link={`/sadhana/yoga-preuniversitario-season-1/${x.index}`}
                   i={x.index}
                   setChosenSadhana={setChosenSadhana}
                   el={x}
@@ -63,7 +61,7 @@ const XilemaArtPage = ({ elements }) => {
           />
         )}
       </PageLayout>
-    </div>
+    </>
   );
 };
 
