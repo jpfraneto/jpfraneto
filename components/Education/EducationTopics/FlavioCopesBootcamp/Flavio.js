@@ -24,6 +24,11 @@ const Flavio = () => {
       title: 'Week 8: Forms and Authentication',
       description: '',
     },
+    {
+      slug: 'week9',
+      title: 'Week 9: Twitter Clone',
+      description: '',
+    },
   ];
   return (
     <div className={styles.mainContainer}>
