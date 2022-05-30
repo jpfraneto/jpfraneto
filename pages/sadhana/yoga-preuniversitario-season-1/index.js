@@ -45,7 +45,6 @@ const XilemaArtPage = ({ elements }) => {
             {elements.map((x, index) => {
               return (
                 <Circle
-                  link={`/sadhana/yoga-preuniversitario-season-1/${x.index}`}
                   i={x.index}
                   setChosenSadhana={setChosenSadhana}
                   el={x}

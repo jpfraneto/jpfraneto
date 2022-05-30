@@ -1,11 +1,14 @@
 import React from 'react';
+import styles from './SadhanaElementDisplay.module.css';
 import LoomPlayer from '../../Layout/LoomPlayer';
-import styles from './CuarentenaSA.module.css';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 
-const CuarentenaSA = ({ chosenSadhana, setChosenSadhana, elements }) => {
+const SadhanaElementDisplay = ({
+  chosenSadhana,
+  elements,
+  setChosenSadhana,
+}) => {
   const handleChangeSadhana = num => {
-    console.log(parseInt(num));
     if (parseInt(num) === -1 && chosenSadhana.index === 1)
       return alert('You are in the first element');
     if (parseInt(num) === 1 && chosenSadhana.index === elements.length)
@@ -18,14 +21,20 @@ const CuarentenaSA = ({ chosenSadhana, setChosenSadhana, elements }) => {
   return (
     <article className={styles.articleContainer}>
       <h4>
-        <span onClick={() => handleChangeSadhana(-1)}>
-          {' '}
+        <span
+          className={styles.sadhanaChanger}
+          onClick={() => handleChangeSadhana(-1)}
+        >
           <GrFormPrevious color='white' />
           {'    '}
         </span>
         {chosenSadhana.index} / {chosenSadhana.total} - {chosenSadhana.date}
-        <span onClick={() => handleChangeSadhana(+1)}>
-          {'    '} <GrFormNext color='white' />
+        <span
+          className={styles.sadhanaChanger}
+          onClick={() => handleChangeSadhana(+1)}
+        >
+          {'    '}
+          <GrFormNext style={{ color: 'white' }} />
         </span>
       </h4>
       <h2>
@@ -37,4 +46,4 @@ const CuarentenaSA = ({ chosenSadhana, setChosenSadhana, elements }) => {
   );
 };
 
-export default CuarentenaSA;
+export default SadhanaElementDisplay;

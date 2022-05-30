@@ -2,21 +2,23 @@ import Link from 'next/link';
 import XilemaLayout from '../../../layouts/xilema';
 import components from '../../../components/MDXcomponents';
 import { allSeason1s } from 'contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer/hooks';
 import Head from 'next/head';
 import PageLayout from '../../../components/Layout/PageLayout';
 import ButtonBack from '../../../components/Layout/ButtonBack';
 import Circle from '../../../components/SadhanaLife/Circle';
 import ElementsList from '../../../components/Layout/ElementsList';
+import SadhanaElementDisplay from '../../../components/SadhanaLife/SadhanaDisplays/SadhanaElementDisplay';
 import styles from '../../../styles/TOSF.module.css';
+import { useState, useRef } from 'react';
 
 export async function getStaticProps({ params }) {
-  allSeason1s.sort((x, y) => (x.index > y.index ? 1 : -1)).reverse();
+  allSeason1s.sort((x, y) => (x.index > y.index ? 1 : -1));
   return { props: { elements: allSeason1s } };
 }
 
 const XilemaArtPage = ({ elements }) => {
-  console.log('the elemsnts are: ', elements);
+  const [chosenSadhana, setChosenSadhana] = useState(null);
+  const sadhanaContainer = useRef();
   return (
     <>
       <Head>
@@ -44,16 +46,25 @@ const XilemaArtPage = ({ elements }) => {
         <ElementsList>
           <div className={styles.circlesContainer}>
             {elements.map((x, index) => {
-              console.log(x, index);
               return (
                 <Circle
-                  link={`/sadhana/tosf-season1-last-sprint/${x.date}`}
                   i={x.index}
+                  setChosenSadhana={setChosenSadhana}
+                  el={x}
                 />
               );
             })}
           </div>
         </ElementsList>
+        <div ref={sadhanaContainer}>
+          {chosenSadhana && (
+            <SadhanaElementDisplay
+              elements={elements}
+              setChosenSadhana={setChosenSadhana}
+              chosenSadhana={chosenSadhana}
+            />
+          )}
+        </div>
         <ButtonBack linkReference='/sadhana' msg='Back to Sadhana' />
       </PageLayout>
     </>
