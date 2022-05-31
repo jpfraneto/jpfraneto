@@ -1,0 +1,1 @@
+ADD THIS PART! Create a json file with artists and their clientInformation, with links to their GrMusic.
