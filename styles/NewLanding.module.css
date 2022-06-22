@@ -1,0 +1,17 @@
+.firstSection {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+.presentationContainer {
+  height: 100%;
+  width: 50%;
+  background-color: red;
+}
+
+.imageContainer {
+  height: 100%;
+  width: 50%;
+  background-color: rebeccapurple;
+}

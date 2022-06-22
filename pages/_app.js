@@ -6,7 +6,6 @@ import MainLayout from '../components/Layout/MainLayout';
 import LanguageContext from '../context/Language';
 
 function App({ Component, pageProps }) {
-  const [languageSelected, setLanguageSelected] = useState('en');
   return (
     <Fragment>
       <Head>
@@ -18,21 +17,10 @@ function App({ Component, pageProps }) {
         />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
-      <LanguageContext.Provider
-        value={{
-          state: { languageSelected },
-          setLanguageSelected,
-        }}
-      >
-        <Navbar />
-        <MainLayout>
-          <Component {...pageProps} />
-        </MainLayout>
-      </LanguageContext.Provider>
+      <>
+        <Component {...pageProps} />
+      </>
     </Fragment>
-    // <main className='main'>
-    //   <Component {...pageProps} />
-    // </main>
   );
 }
 

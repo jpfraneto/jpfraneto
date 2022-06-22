@@ -14,7 +14,7 @@ import YogaPreuniversitarioSadhanaDisplay from '../../../components/SadhanaLife/
 
 export async function getStaticProps({ params }) {
   const filtered = allSadhanaEntries.filter(
-    x => x.sadhanaslug === 'cuarentena-sadhana-acuariano'
+    x => x.sadhanaslug === 'el-arte-de-sanar'
   );
   filtered.sort((x, y) => (x.index > y.index ? 1 : -1));
   return { props: { elements: filtered } };
@@ -25,19 +25,16 @@ const XilemaArtPage = ({ elements }) => {
   return (
     <>
       <Head>
-        <title>· jp · sadhana · Cuarentena Sadhana Acuariano</title>
+        <title>· jp · sadhana · El Arte de Sanar</title>
       </Head>
       <PageLayout>
-        <h1>Cuarentena Sadhana Acuariano</h1>
+        <h1>El Arte de Sanar</h1>
         <hr />
         <h2>
-          The last part of my teaching to be a Kundalini Yoga, coming back every
-          day at 5am to do the work. The Sadhana Acuariano is a practice that
-          consists of the chanting of a sacred chant called Jabji, followed by a
-          Kundalini Yoga practice, which in this case will be the Kriya for the
-          Heart and Soul. All this is ended by the resonating of the Aquarian
-          Mantras, which is a set of 7 mantras that are meditated and chanted in
-          a particular order.
+          Este es un ciclo de clases de hatha/ashtanga yoga que creó mi gran
+          maestra Diana Vergara (yogabonito.in), y que contemplaba 3 meses de
+          práctica que no pude hacer sincrónicamente asi que para ponerme al día
+          lo voy a comenzar a hacer hoy, todos los días menos el sábado.
         </h2>
         <ElementsList>
           <div className={styles.circlesContainer}>

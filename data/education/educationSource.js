@@ -17,6 +17,17 @@ const source = [
     slug: 'rudra',
     creator: 'Agni Yoga',
     creatorWebsite: 'https://agniyoga.cl',
+    active: false,
+  },
+  {
+    title: 'Ethereum and Solidity - The Complete Developers Guide',
+    dateStarted: '082022VI',
+    website:
+      'https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide',
+    description: '',
+    slug: 'ethereum-solidity-complete-developers-guide',
+    creator: 'Stephen Grider',
+    creatorWebsite: '',
     active: true,
   },
 ];
