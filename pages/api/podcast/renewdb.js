@@ -42,10 +42,8 @@ const dummyepisodes = [
 export default async function handler(req, res) {
   const { db } = await connectToDatabase();
   if (req.method === 'GET') {
-    console.log('IN HERE!');
     await db.collection('podcast').drop();
     const response = await db.collection('podcast').insertMany(dummyepisodes);
-    console.log('the response after trying to update the db is: ', response);
     res.json({ 123: 456 });
   }
 }

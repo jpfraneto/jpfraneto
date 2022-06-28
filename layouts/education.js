@@ -4,7 +4,6 @@ import ButtonBack from '../components/Layout/ButtonBack';
 import styles from './bloglayout.module.css';
 
 export default function EducationLayout({ children, content }) {
-  console.log('the title is: ', content);
   return (
     <Container
       title={`· jp · education · ${content.title}`}

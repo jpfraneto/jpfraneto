@@ -20,7 +20,6 @@ export async function getStaticProps({ params }) {
   const thisEducationPage = allEducationPages
     .filter(x => x.universitySlug === 'flavio-copes-bootcamp')
     .filter(x => x.slug === params.slug);
-  console.log(thisEducationPage);
   return {
     props: { education: JSON.parse(JSON.stringify(thisEducationPage[0])) },
   };

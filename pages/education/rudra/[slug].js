@@ -5,7 +5,6 @@ import EducationLayout from '../../../layouts/education';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
 export async function getStaticPaths() {
-  console.log('IN HERE!');
   const paths = allEducationPages
     .filter(x => x.universitySlug === 'rudra')
     .map(education => {

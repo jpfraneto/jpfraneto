@@ -9,7 +9,6 @@ const AddMusic = () => {
   };
   const handleFormSubmit = e => {
     e.preventDefault();
-    console.log('the new album is: ', newAlbum);
   };
   return (
     <div className={styles.mainContainer}>

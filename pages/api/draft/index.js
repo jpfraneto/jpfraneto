@@ -16,7 +16,6 @@ export default async function handler(req, res) {
         id: response.insertedId,
       });
     } catch (error) {
-      console.log(error);
       return res.json({ message: 'There was an error' });
     }
   }

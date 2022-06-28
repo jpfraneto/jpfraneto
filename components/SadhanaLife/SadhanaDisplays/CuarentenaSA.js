@@ -5,7 +5,6 @@ import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 
 const CuarentenaSA = ({ chosenSadhana, setChosenSadhana, elements }) => {
   const handleChangeSadhana = num => {
-    console.log(parseInt(num));
     if (parseInt(num) === -1 && chosenSadhana.index === 1)
       return alert('You are in the first element');
     if (parseInt(num) === 1 && chosenSadhana.index === elements.length)

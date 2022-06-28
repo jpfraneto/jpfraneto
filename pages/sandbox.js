@@ -13,7 +13,6 @@ export default function Sandbox() {
       const { supported, error } = await isSupported();
 
       if (!supported) {
-        console.warn(`Error setting up Loom: ${error}`);
         return;
       }
 
