@@ -10,14 +10,24 @@ import {
 } from 'react-icons/ai';
 
 const menuOptions = [
-  { link: '/teaching', name: 'Teaching', id: 'kishan2133' },
-  { link: '/thoughts', name: 'Thoughts', id: 'curatory230' },
+  {
+    link: 'https://jpfraneto.substack.com',
+    name: 'Thoughts',
+    id: 'curatory230',
+  },
   { link: '/programming', name: 'Programming', id: 'programming123' },
-  { link: '/education', name: 'Education', id: 'educastiro023' },
-  { link: '/podcast', name: 'Podcast', id: 'podcast2135' },
+  {
+    link: 'https://podcasts.apple.com/cl/podcast/learning-to-live/id1654771287',
+    name: 'Podcast',
+    id: 'podcast2135',
+  },
   { link: '/sadhana', name: 'Sadhana', id: 'sadhana2442' },
   { link: '/xilema', name: 'Xilema', id: 'asdkjdakblog' },
-  { link: '/poetry', name: 'Poetry', id: 'asdasd' },
+  {
+    link: 'https://www.instagram.com/poesiadeldespertar',
+    name: 'Poetry',
+    id: 'asdasd',
+  },
 ];
 
 const Navbar = () => {
@@ -58,11 +68,20 @@ const Navbar = () => {
       </div>
       <nav className={styles.actualNavbar}>
         <ul>
-          {menuOptions.map(item => (
-            <Link key={item.id} href={item.link}>
-              <li className={styles.navbarItemBtn}>{item.name}</li>
-            </Link>
-          ))}
+          {menuOptions.map(item => {
+            if (item.link.includes('http')) {
+              return (
+                <a target='_blank' href={item.link} rel='noreferrer'>
+                  {item.name}
+                </a>
+              );
+            }
+            return (
+              <Link key={item.id} href={item.link}>
+                <li className={styles.navbarItemBtn}>{item.name}</li>
+              </Link>
+            );
+          })}
         </ul>
       </nav>
     </nav>

@@ -36,9 +36,9 @@ export default function Home() {
                   <a>teaching</a>
                 </Link>
                 , I think by{' '}
-                <Link href='/thoughts'>
-                  <a>writing</a>
-                </Link>
+                <a target='_blank' href='https://jpfraneto.substack.com'>
+                  writing
+                </a>
                 .
               </h3>
 
@@ -49,18 +49,15 @@ export default function Home() {
                 </Link>
                 .
               </h3>
-              <h3>
-                I
-                <Link href='/education'>
-                  <a> educate </a>
-                </Link>
-                myself with what feels better at the time.
-              </h3>
+
               <h3>
                 I become more human by{' '}
-                <Link href='/podcast'>
-                  <a>talking</a>
-                </Link>{' '}
+                <a
+                  target='_blank'
+                  href='https://podcasts.apple.com/cl/podcast/learning-to-live/id1654771287'
+                >
+                  talking
+                </a>{' '}
                 with random people from all over the world.
               </h3>
               <h3>
@@ -79,12 +76,28 @@ export default function Home() {
               </h3>
               <h3>
                 I feel by writing{' '}
-                <Link href='/poetry'>
-                  <a>poems</a>
-                </Link>
+                <a
+                  target='_blank'
+                  href='https://www.instagram.com/poesiadeldespertar'
+                >
+                  poems
+                </a>
                 .
               </h3>
               <p>Welcome to my corner on the internet.</p>
+              <p>
+                ***I haven't updated this website for a while. You can stay
+                updated with what I'm doing on{' '}
+                <a target='_blank' href='https://www.twitter.com/kithkui'>
+                  twitter
+                </a>
+                , or just go into the app that I'm building and use it. Any
+                feedback is gold for me. It's here:{' '}
+                <a target='_blank' href='https://www.zadhana.xyz'>
+                  www.zadhana.xyz
+                </a>{' '}
+                ***
+              </p>
             </div>
           </div>
         </div>

@@ -24,11 +24,11 @@ export const sadhanas = [
       'Finishing my process of becoming a kundalini yoga teacher by building an adventure for my students that can transform them.',
     periodicity: 'days',
     scheduledDate: '2022-05-18',
-    slug: 'yoga-preuniversitario-season-1',
+    slug: 'dukkha',
     status: 'Active',
     tags: 'yoga',
     targetDuration: '21',
-    title: 'Yoga Preuniversitario Season 1',
+    title: 'Dukkha',
     _id: '6243595d2af7ksjdi6b0b6c9',
   },
   {

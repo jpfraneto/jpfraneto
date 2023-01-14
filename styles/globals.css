@@ -11,6 +11,15 @@ html {
   --secondary: orange;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
 * {
   margin: 0;
   padding: 0;

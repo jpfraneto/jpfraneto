@@ -10,6 +10,7 @@ import ElementsList from '../../../components/Layout/ElementsList';
 import SadhanaElementDisplay from '../../../components/SadhanaLife/SadhanaDisplays/SadhanaElementDisplay';
 import styles from '../../../styles/TOSF.module.css';
 import { useState, useRef } from 'react';
+import { connectToDatabase } from '../lib/mongodb';
 
 export async function getStaticProps({ params }) {
   allSeason1s.sort((x, y) => (x.index > y.index ? 1 : -1));
@@ -17,8 +18,14 @@ export async function getStaticProps({ params }) {
 }
 
 const XilemaArtPage = ({ elements }) => {
+  console.log('here', elements);
   const [chosenSadhana, setChosenSadhana] = useState(null);
   const sadhanaContainer = useRef();
+  const saveSadhanasToDB = async () => {
+    console.log(elements);
+    const { db } = await connectToDatabase();
+    const response = await db.collection('user').
+  };
   return (
     <>
       <Head>
@@ -65,6 +72,7 @@ const XilemaArtPage = ({ elements }) => {
             />
           )}
         </div>
+        <button onClick={saveSadhanasToDB}>Save to db</button>
         <ButtonBack linkReference='/sadhana' msg='Back to Sadhana' />
       </PageLayout>
     </>

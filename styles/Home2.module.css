@@ -72,11 +72,14 @@
   box-shadow: 0 0 5px 5px black;
 }
 
+.presentationContainer {
+  width: 444px;
+}
+
 .albumOfTheDayContainer {
   border: solid 2px white;
   display: inline-block;
   padding: 8px;
-  width: fit-content;
   margin-top: 11px;
   display: flex;
   border-radius: 8px;
