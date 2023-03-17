@@ -1,9 +1,13 @@
-This is the home for my creations.
+This is the home for my software craftmanship.
 
-I'm a full stack web developer whose mission is to learn how to build systems, to bring the ideas that I have into a reality.
+I see building software as an art, and I try my best to become the best developer that I can. This means envisioning over and over which is the functionality that the products I build will have, and how will they impact the life of the users. 
 
-One of the key components of what I build is an understanding that design is very important, both in the code and in the way the project is presented to the end user. If it is not appealing, no one will use it. If it doesn't work properly, it will be hard to maintain. I open source most of my projects, so it is very important for me to have in mind that more people (and myself!) will come later to check out the code.
+Software gave me the freedom to transform my ideas into a reality, and the pace on which that happens now is incredibly fast.
 
-You can check the projects that I have created in my website: (www.jpfraneto.com)[https://www.jpfraneto.com#portfolio]
+One of the key components of what I build is an understanding that design is very important, both in the code and in the way the project is presented to the end user. If it is not appealing, no one will use it. I'm not good at design (yet), but I'm trying my best to learn. 
 
-The list will keep growing.
+If the product doesn't work properly, it will be hard to maintain. I open source most of my projects, so it is very important for me to have in mind that more people (and myself!) will come later to check out the code.
+
+Most of the apps that I have built are not running right now, but there is one that is, and that fills me with joy because it is a 24/7 radio with the best music that I have encountered: www.humanmusic.xyz.
+
+I will keep evolving, and learning how to become more present as I practice my craft. 
