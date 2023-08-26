@@ -8,6 +8,8 @@ One of the key components of what I build is an understanding that design is ver
 
 If the product doesn't work properly, it will be hard to maintain. I open source most of my projects, so it is very important for me to have in mind that more people (and myself!) will come later to check out the code.
 
-Most of the apps that I have built are not running right now, but there is one that is, and that fills me with joy because it is a 24/7 radio with the best music that I have encountered: www.newen.lat
+Most of the apps that I have built are not running right now, but I'm putting all of my energy to build Anky.
+
+You can check it out here: https://www.anky.lat
 
 I will keep evolving, and learning how to become more present as I practice my craft. 
