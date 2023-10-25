@@ -10,6 +10,10 @@ If the product doesn't work properly, it will be hard to maintain. I open source
 
 Most of the apps that I have built are not running right now, but I'm putting all of my energy to build Anky.
 
-You can check it out here: https://www.anky.lat
+You can check it out here: https://www.anky.lat 
+You can contribute to it here: https://www.github.com/ankylat
+You can get your anky genesis NFT here: https://mint.anky.lat
+You can get to know about the lore behind the ankyverse here: https://wiki.anky.lat
+You can see how passionate i am for building this thing in this video: https://x.com/kithkui/status/1681375014170263570. lol.
 
-I will keep evolving, and learning how to become more present as I practice my craft. 
+I will keep evolving, and learning how to become more present as I practice my craft.
