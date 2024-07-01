@@ -10,7 +10,7 @@ If the product doesn't work properly, it will be hard to maintain. I open source
 
 Most of the apps that I have built are not running right now, but I'm putting all of my energy to build Anky.
 
-You can check it out here: https://www.anky.lat 
+You can check it out here: https://www.anky.bot 
 
 You can contribute to it here: https://www.github.com/ankylat
 
